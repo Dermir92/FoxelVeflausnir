@@ -5,27 +5,27 @@ const steps = [
   {
     title: "Sendu fyrirspurn",
     description:
-      "Fylltu út eyðublaðið hér að neðan eða hafðu samband við okkur. Við hlusum á hvað þú þarft og gefum þér hugmynd um hvað við getum gert.",
+      "Fylltu út eyðublaðið hér að neðan eða hafðu samband við okkur. Við hlustum á hvað þú þarft og útskýrum hvað við getum gert.",
   },
   {
     title: "Við komum með tillögu",
     description:
-      "Við sendum þér einfalda tillögu á hvað við mælum með og hvernig við höldum á málunum. Engir bindandi samningar fyrst.",
+      "Við sendum þér einfalda tillögu þar sem við útskýrum hvað við mælum með og hvernig við ætlum að ganga að verkinu. Engir bindandi samningar fyrst.",
   },
   {
     title: "Við söfnum efninu",
     description:
-      "Við hjálpum þér að safna saman upplýsingum, texta og myndum sem þarf fyrir síðuna. Þú þarft ekki að vera tilbúinn/n með allt.",
+      "Við hjálpum þér að safna saman upplýsingum, texta og myndum sem þarf fyrir síðuna. Þú þarft ekki að vera með allt tilbúið.",
   },
   {
     title: "Við setjum síðuna upp",
     description:
-      "Við hönnuðum og setjum upp síðuna. Við sendum þér drög til að fara yfir og gera breytingar ef þörf krefur.",
+      "Við hönnum og setjum upp síðuna. Við sendum þér drög til að fara yfir og gera breytingar ef þörf krefur.",
   },
   {
     title: "Síðan fer í loftið",
     description:
-      "Þegar þú ert sátt/sáttur kemur síðan í loftið. Við tryggum að allt virki eins og skyldi.",
+      "Þegar allt lítur vel út fer síðan í loftið. Við tryggum að allt virki eins og skyldi.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function ProcessSection() {
             <SectionHeading
               label="Ferlið"
               title="Svona gengur það"
-              subtitle="Lihverfið og einfalt — við leiðum þig í gegnum alla skrefin."
+              subtitle="Létt og einfalt — við leiðum þig í gegnum öll skrefin."
               centered={false}
             />
             <div className="mt-10 space-y-0">
@@ -62,7 +62,7 @@ export default function ProcessSection() {
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Fagleg og snyrtilegar vefsíða",
+                  "Fagleg og snyrtileg vefsíða",
                   "Farsímavæn uppsetning",
                   "Skýr kynning á þjónustu þinni",
                   "Sambandseyðublað og tengiliðaupplýsingar",

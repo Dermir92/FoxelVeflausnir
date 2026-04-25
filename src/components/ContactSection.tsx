@@ -22,7 +22,7 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 text-sm">Fljótur svar</h3>
+                  <h3 className="font-semibold text-slate-900 text-sm">Fljótt svar</h3>
                   <p className="mt-0.5 text-sm text-slate-600">
                     Við svörum yfirleitt innan einnar til tveggja virkra daga.
                   </p>

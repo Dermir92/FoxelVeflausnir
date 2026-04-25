@@ -11,14 +11,14 @@ const demos = [
   {
     category: "Snyrtistofa",
     name: "Hárverk Snyrtistofa",
-    description: "Fagleg síða fyrir snyrtistofu með þjónustulýsingu, bókunarmöguleika og myndir af verki.",
+    description: "Fagleg síða fyrir snyrtistofu með þjónustulýsingu, bókunarmöguleika og myndir af verkum.",
     tags: ["Fyrirtækjasíða", "Bókunarform", "Myndir"],
     color: "rose",
   },
   {
     category: "Þrifafyrirtæki",
     name: "Hreint & Gott",
-    description: "Skýr kynningarsíða sem útlistar þjónustu, þjónustusvæði og gefur viðskiptavinum auðvelda leið til að hafa samband.",
+    description: "Skýr kynningarsíða sem sýnir þjónustu, þjónustusvæði og gefur viðskiptavinum auðvelda leið til að hafa samband.",
     tags: ["Einföld síða", "Þjónustulisti", "Samband"],
     color: "green",
   },

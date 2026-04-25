@@ -23,7 +23,7 @@ const packages = [
       "Þjónustusíður eða þjónustukaflar",
       "Um okkur",
       "Myndir eða verkefni",
-      "FAQ",
+      "Algengar spurningar",
       "Hafðu samband",
     ],
     highlighted: true,

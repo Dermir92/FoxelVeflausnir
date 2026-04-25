@@ -20,9 +20,10 @@ export default function ProblemSection() {
                 samband.
               </p>
               <p>
-                Facebook síður eru ekki hannaðar til að kynna þjónustu á skýran
-                hátt. Þær líta ekki faglegar út í leit. Og ef þú ert ekki að
-                borga fyrir auglýsingar er erfitt að ná til nýrra viðskiptavina.
+                Síður á Facebook eru ekki hannaðar til að kynna þjónustu á
+                skýran hátt. Þær líta ekki faglegar út í leit. Og ef þú ert
+                ekki að borga fyrir auglýsingar er erfitt að ná til nýrra
+                viðskiptavina.
               </p>
               <p>
                 Fagleg vefsíða gefur fyrirtækinu þínu trúverðugleika og gerir

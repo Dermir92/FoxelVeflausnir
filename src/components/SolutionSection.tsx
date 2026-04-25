@@ -8,7 +8,7 @@ const features = [
       </svg>
     ),
     title: "Skýr kynning á þjónustu",
-    text: "Við hjálpum þér að setja fram hvað þú gerir á skýran og aðlaðandi hátt. Enginn rulingur.",
+    text: "Við hjálpum þér að setja fram hvað þú gerir á skýran og aðlaðandi hátt. Engin óþarfa flækja.",
   },
   {
     icon: (
@@ -53,7 +53,7 @@ const features = [
       </svg>
     ),
     title: "Fagleg niðurstaða",
-    text: "Lokaniðurstaðan er síða sem þú ert stoltur af og sem viðskiptavinir treysta.",
+    text: "Lokaniðurstaðan er síða sem þú hlakkar til að sýna viðskiptavinum og sem þeir treysta.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function SolutionSection() {
         <SectionHeading
           label="Lausnin"
           title="Þetta gerum við fyrir þig"
-          subtitle="Foxel setur upp einfaldar, faglegar og farsímavænar vefsíður. Við sjáum um uppsetninguna — þú sér um reksturinn."
+          subtitle="Foxel setur upp einfaldar, faglegar og farsímavænar vefsíður. Við sjáum um uppsetninguna — þú sérð um reksturinn."
         />
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature) => (

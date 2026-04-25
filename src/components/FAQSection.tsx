@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "Get ég sent myndir úr símanum?",
     answer:
-      "Já. Við getum hjálpað að velja myndir sem passa best. Ef myndir eru of fáar eða ekki af nógu góðum gæðum ræðum við við þig um hvað við getum gert.",
+      "Já. Við getum hjálpað að velja myndir sem passa best. Ef myndir eru of fáar eða ekki af nógu góðum gæðum ræðum við þig um hvað við getum gert.",
   },
   {
     question: "Get ég breytt síðunni seinna?",

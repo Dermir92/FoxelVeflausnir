@@ -8,7 +8,7 @@ const features = [
       </svg>
     ),
     title: "Forsíða",
-    text: "Fyrsta línan sem gestir sjá — skýr kynning á fyrirtækinu og hvað þú gerir.",
+    text: "Það fyrsta sem gestir sjá — skýr kynning á fyrirtækinu og hvað þú gerir.",
   },
   {
     icon: (

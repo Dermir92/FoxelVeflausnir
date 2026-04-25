@@ -3,7 +3,7 @@ export default function NoTechSection() {
     <section className="bg-blue-600 py-20 sm:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span className="inline-block text-blue-200 text-sm font-semibold tracking-wide uppercase mb-4">
-          Engin tækniþekking þarf
+          Engin tækniþekking þörf
         </span>
         <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
           Þú þarft ekki að kunna á tæknimál
@@ -17,18 +17,18 @@ export default function NoTechSection() {
           {[
             {
               step: "1",
-              title: "Þú seðst hvað þú gerir",
-              text: "Við hlustuðum á þig og skráum niður helstu upplýsingarnar.",
+              title: "Þú segir okkur hvað þú gerir",
+              text: "Við hlustum á þig og skráum niður helstu upplýsingarnar.",
             },
             {
               step: "2",
-              title: "Við hönnuðum síðuna",
+              title: "Við hönnum síðuna",
               text: "Við sjáum um alla uppsetningu, texta og útlit.",
             },
             {
               step: "3",
-              title: "Þú fær klárar síðuna",
-              text: "Þegar þú ert sátt/sáttur fer síðan í loftið.",
+              title: "Þú færð klára síðu",
+              text: "Þegar allt lítur vel út fer síðan í loftið.",
             },
           ].map((item) => (
             <div

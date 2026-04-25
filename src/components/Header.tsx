@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#thjonustan", label: "Þjónustan" },
@@ -18,7 +19,15 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded">
+          <a href="#" className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-lg">
+            <Image
+              src="/logo.png"
+              alt="Foxel logo"
+              width={36}
+              height={36}
+              className="rounded-sm flex-shrink-0"
+              priority
+            />
             <span className="text-blue-600 font-bold text-xl tracking-tight">
               Foxel
             </span>

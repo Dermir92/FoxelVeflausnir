@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const navLinks = [
   { href: "#thjonustan", label: "Þjónustan" },
   { href: "#fyrir-hverja", label: "Fyrir hverja" },
@@ -13,7 +15,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-1.5 mb-3">
+            <div className="flex items-center gap-2.5 mb-3">
+              <Image
+                src="/logo.png"
+                alt="Foxel logo"
+                width={32}
+                height={32}
+                className="rounded-sm flex-shrink-0"
+              />
               <span className="text-blue-400 font-bold text-lg">Foxel</span>
               <span className="text-white font-semibold text-lg">Veflausnir</span>
             </div>
@@ -74,7 +83,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-sm text-slate-500">
-            &copy; {new Date().getFullYear()} Foxel Veflausnir. Allur réttur áskilinn.
+            &copy; {new Date().getFullYear()} Foxel Veflausnir. Öll réttindi áskilin.
           </p>
           <p className="text-xs text-slate-600">
             Þjónusta frá Foxel
