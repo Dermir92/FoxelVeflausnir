@@ -2,9 +2,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
-import NoTechSection from "@/components/NoTechSection";
-import AudienceSection from "@/components/AudienceSection";
-import FeaturesSection from "@/components/FeaturesSection";
 import PackagesSection from "@/components/PackagesSection";
 import AddOnsSection from "@/components/AddOnsSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -21,13 +18,10 @@ export default function Home() {
         <Hero />
         <ProblemSection />
         <SolutionSection />
-        <NoTechSection />
-        <AudienceSection />
-        <FeaturesSection />
+        <PortfolioSection />
         <PackagesSection />
         <AddOnsSection />
         <ProcessSection />
-        <PortfolioSection />
         <FAQSection />
         <ContactSection />
       </main>

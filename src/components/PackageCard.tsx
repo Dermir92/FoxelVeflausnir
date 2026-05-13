@@ -83,7 +83,7 @@ export default function PackageCard({
               : "bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-600"
           }`}
         >
-          Fá verðtilboð
+          Senda fyrirspurn
         </a>
       </div>
     </div>

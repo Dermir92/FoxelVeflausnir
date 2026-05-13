@@ -6,25 +6,24 @@ export default function Hero() {
           {/* Text */}
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-tight tracking-tight">
-              Einföld og fagleg vefsíða{" "}
-              <span className="text-blue-600">fyrir fyrirtækið þitt</span>
+              Vefsíður fyrir lítil fyrirtæki sem vilja líta faglega út á netinu
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Við hjálpum iðnaðarmönnum, litlum fyrirtækjum og sjálfstætt starfandi
-              að komast á netið með skýra, snyrtilega og faglega vefsíðu.
+              Foxel hjálpar þér að setja þjónustuna skýrt fram, byggja upp traust
+              og gera viðskiptavinum auðvelt að taka næsta skref.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <a
-                href="#samband"
+                href="#pakkar"
                 className="inline-block bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-blue-700 transition-colors text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
-                Fá verðtilboð
+                Skoða lausnir
               </a>
               <a
-                href="#thjonustan"
+                href="#samband"
                 className="inline-block bg-white text-slate-700 font-semibold px-7 py-3.5 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-colors text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
-                Sjá hvað er innifalið
+                Hafa samband
               </a>
             </div>
           </div>
@@ -40,7 +39,7 @@ export default function Hero() {
                   <div className="w-3 h-3 rounded-full bg-slate-200" />
                 </div>
                 <div className="flex-1 bg-slate-100 rounded-md h-6 mx-2 flex items-center px-3">
-                  <span className="text-xs text-slate-400">www.fyrirtaekid.is</span>
+                  <span className="text-xs text-slate-400">www.pipari.is</span>
                 </div>
               </div>
 
@@ -56,19 +55,23 @@ export default function Hero() {
 
               {/* Mock hero area */}
               <div className="bg-blue-50 px-5 py-6">
-                <div className="w-48 h-5 bg-blue-200 rounded mb-2" />
-                <div className="w-64 h-3 bg-blue-100 rounded mb-1" />
-                <div className="w-56 h-3 bg-blue-100 rounded mb-4" />
-                <div className="w-28 h-9 bg-blue-600 rounded-lg" />
+                <p className="text-sm font-semibold text-slate-900">
+                  Pípulagnir og viðgerðir
+                </p>
+                <p className="mt-2 text-xs leading-relaxed text-slate-500">
+                  Þjónusta á höfuðborgarsvæðinu, skýr verðviðmið og einföld leið
+                  til að senda fyrirspurn.
+                </p>
+                <div className="mt-4 w-32 h-9 bg-blue-600 rounded-lg" />
               </div>
 
               {/* Mock sections */}
               <div className="px-5 py-4 grid grid-cols-2 gap-3">
                 {[
                   { label: "Þjónusta", icon: "⚙" },
-                  { label: "Um okkur", icon: "👤" },
-                  { label: "Myndir", icon: "📷" },
-                  { label: "Hafðu samband", icon: "✉" },
+                  { label: "Verkefni", icon: "▣" },
+                  { label: "Svæði", icon: "⌖" },
+                  { label: "Samband", icon: "✉" },
                 ].map((item) => (
                   <div
                     key={item.label}

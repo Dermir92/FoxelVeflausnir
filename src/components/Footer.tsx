@@ -2,10 +2,15 @@ import Image from "next/image";
 
 const navLinks = [
   { href: "#thjonustan", label: "Þjónustan" },
-  { href: "#fyrir-hverja", label: "Fyrir hverja" },
+  { href: "#pakkar", label: "Pakkar" },
   { href: "#ferlid", label: "Ferlið" },
   { href: "#spurningar", label: "Spurt og svarað" },
   { href: "#samband", label: "Hafðu samband" },
+];
+
+const legalLinks = [
+  { href: "/skilmalar", label: "Skilmálar" },
+  { href: "/personuvernd", label: "Persónuvernd" },
 ];
 
 export default function Footer() {
@@ -27,8 +32,8 @@ export default function Footer() {
               <span className="text-white font-semibold text-lg">Veflausnir</span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
-              Við hjálpum iðnaðarmönnum, litlum fyrirtækjum og sjálfstætt starfandi
-              að komast á netið með skýra og faglega vefsíðu.
+              Við hönnum skýrar og traustvekjandi vefsíður fyrir lítil fyrirtæki
+              sem vilja vera sýnileg og auðvelt að nálgast.
             </p>
           </div>
 
@@ -49,6 +54,21 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <h3 className="mt-8 text-sm font-semibold text-white uppercase tracking-wide mb-4">
+              Upplýsingar
+            </h3>
+            <ul className="space-y-2.5">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-slate-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact */}
@@ -57,6 +77,12 @@ export default function Footer() {
               Hafðu samband
             </h3>
             <ul className="space-y-2.5">
+              <li className="text-sm text-slate-400">
+                Kennitala: setja inn síðar
+              </li>
+              <li className="text-sm text-slate-400">
+                Heimilisfang: setja inn síðar
+              </li>
               <li className="flex items-center gap-2 text-sm text-slate-400">
                 <svg className="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -75,7 +101,7 @@ export default function Footer() {
                 href="#samband"
                 className="inline-block bg-blue-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
               >
-                Fá verðtilboð
+                Hafa samband
               </a>
             </div>
           </div>

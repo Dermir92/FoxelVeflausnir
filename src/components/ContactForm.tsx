@@ -283,7 +283,12 @@ export default function ContactForm() {
         {formState === "submitting" ? "Sendi..." : "Senda fyrirspurn"}
       </button>
       <p className="text-xs text-slate-500 text-center">
-        Við munum hafa samband við þig innan skamms.
+        Með því að senda fyrirspurn samþykkir þú að við notum upplýsingarnar til
+        að svara þér. Sjá nánar í{" "}
+        <a href="/personuvernd" className="text-blue-600 hover:underline">
+          persónuverndarstefnu
+        </a>
+        .
       </p>
     </form>
   );

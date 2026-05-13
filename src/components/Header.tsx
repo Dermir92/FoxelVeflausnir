@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const navLinks = [
   { href: "#thjonustan", label: "Þjónustan" },
-  { href: "#fyrir-hverja", label: "Fyrir hverja" },
+  { href: "#pakkar", label: "Pakkar" },
   { href: "#ferlid", label: "Ferlið" },
   { href: "#spurningar", label: "Spurt og svarað" },
   { href: "#samband", label: "Hafðu samband" },
@@ -55,7 +55,7 @@ export default function Header() {
               href="#samband"
               className="inline-block bg-blue-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
             >
-              Fá verðtilboð
+              Hafa samband
             </a>
           </div>
 
@@ -100,7 +100,7 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className="mt-3 mx-3 text-center bg-blue-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Fá verðtilboð
+                Hafa samband
               </a>
             </div>
           </nav>

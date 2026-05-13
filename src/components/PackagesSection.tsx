@@ -5,7 +5,7 @@ const packages = [
   {
     title: "Einföld síða",
     description:
-      "Fyrir fyrirtæki sem vill vera finnanlegt, líta faglega út og gera fólki auðvelt að hafa samband.",
+      "Fyrir fyrirtæki sem vill vera sýnilegt, líta faglega út og auðvelda fólki að hafa samband.",
     features: [
       "Ein síða",
       "Kynning á fyrirtæki",
@@ -17,7 +17,7 @@ const packages = [
   {
     title: "Fyrirtækjasíða",
     description:
-      "Fyrir fyrirtæki sem vill skýrari uppsetningu og fleiri kafla fyrir þjónustu, myndir og upplýsingar.",
+      "Fyrir fyrirtæki sem þarf skýrari uppbyggingu, fleiri kafla og betri kynningu á þjónustu eða verkefnum.",
     features: [
       "Forsíða",
       "Þjónustusíður eða þjónustukaflar",
@@ -32,7 +32,7 @@ const packages = [
   {
     title: "Sérlausn",
     description:
-      "Fyrir fyrirtæki sem þarf meira en einfalda kynningarsíðu.",
+      "Fyrir fyrirtæki sem þurfa meira en hefðbundna kynningarsíðu.",
     features: [
       "Bókunarform",
       "Spjallbox",
@@ -46,12 +46,12 @@ const packages = [
 
 export default function PackagesSection() {
   return (
-    <section className="bg-slate-50 py-20 sm:py-24">
+    <section id="pakkar" className="bg-white py-20 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Þjónustupakkar"
           title="Veldu pakka sem hentar þér"
-          subtitle="Við finnum lausn sem passar við þarfir þínar. Verð fer eftir umfangi — hafðu samband og við komum með tillögu."
+          subtitle="Við finnum lausn sem passar við umfangið. Sendu okkur línu og við komum með skýra tillögu."
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {packages.map((pkg) => (
@@ -66,7 +66,7 @@ export default function PackagesSection() {
           ))}
         </div>
         <p className="mt-8 text-center text-slate-500 text-sm">
-          Ekki viss hvað passar? Hafðu samband og við hjálpum þér að velja.
+          Ekki viss hvað hentar? Hafðu samband og við hjálpum þér að velja rétta leið.
         </p>
       </div>
     </section>

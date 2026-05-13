@@ -8,13 +8,13 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Foxel Veflausnir | Einfaldar vefsíður fyrir lítil fyrirtæki",
+  title: "Foxel Veflausnir | Vefsíður fyrir lítil fyrirtæki",
   description:
-    "Foxel Veflausnir hjálpar iðnaðarmönnum, litlum fyrirtækjum og sjálfstætt starfandi að komast á netið með skýra og faglega vefsíðu.",
+    "Foxel Veflausnir hannar skýrar og traustvekjandi vefsíður fyrir lítil fyrirtæki sem vilja líta faglega út á netinu.",
   openGraph: {
-    title: "Foxel Veflausnir | Einfaldar vefsíður fyrir lítil fyrirtæki",
+    title: "Foxel Veflausnir | Vefsíður fyrir lítil fyrirtæki",
     description:
-      "Foxel Veflausnir hjálpar iðnaðarmönnum, litlum fyrirtækjum og sjálfstætt starfandi að komast á netið með skýra og faglega vefsíðu.",
+      "Foxel Veflausnir hannar skýrar og traustvekjandi vefsíður fyrir lítil fyrirtæki sem vilja líta faglega út á netinu.",
     locale: "is_IS",
     type: "website",
   },

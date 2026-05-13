@@ -50,12 +50,12 @@ const colorMap: Record<string, { bg: string; text: string; border: string; tag: 
 
 export default function PortfolioSection() {
   return (
-    <section className="bg-white py-20 sm:py-24">
+    <section className="bg-slate-50 py-20 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          label="Sýnishorn"
-          title="Sýnishorn af síðum sem við getum sett upp"
-          subtitle="Þar sem þjónustan er ný sýnum við hér dæmi um hvers konar síður við setjum upp."
+          label="Dæmi"
+          title="Hvernig gæti síðan þín litið út?"
+          subtitle="Hér eru dæmi um einfaldar kynningarsíður fyrir ólíkar þjónustur. Þau sýna uppbyggingu, ekki tilbúin viðskiptaverkefni."
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {demos.map((demo) => {
@@ -107,7 +107,7 @@ export default function PortfolioSection() {
           })}
         </div>
         <p className="mt-8 text-center text-slate-500 text-sm">
-          Við getum sett upp svipaðar síður og þessar, eða eitthvað alveg annað sem hentar þínu fyrirtæki.
+          Við byrjum á því sem skiptir fyrirtækið þitt máli og byggjum síðuna út frá því.
         </p>
       </div>
     </section>
