@@ -10,8 +10,8 @@ export default function ContactSection() {
           <div>
             <SectionHeading
               label="Hafðu samband"
-              title="Fáðu verðtilboð"
-              subtitle="Fylltu út eyðublaðið og við munum hafa samband við þig fljótlega með tillögu."
+              title="Segðu okkur frá verkefninu"
+              subtitle="Sendu okkur nokkrar línur um fyrirtækið og hvað þig vantar. Við svörum með næstu skrefum."
               centered={false}
             />
             <div className="mt-8 space-y-5">
@@ -24,7 +24,7 @@ export default function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-slate-900 text-sm">Fljótt svar</h3>
                   <p className="mt-0.5 text-sm text-slate-600">
-                    Við svörum yfirleitt innan einnar til tveggja virkra daga.
+                    Við svörum yfirleitt innan eins til tveggja virkra daga.
                   </p>
                 </div>
               </div>
@@ -37,7 +37,7 @@ export default function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-slate-900 text-sm">Án skuldbindingar</h3>
                   <p className="mt-0.5 text-sm text-slate-600">
-                    Fyrirspurnin er ókeypis og án skuldbindinga. Við komum með tillögu og þú ákveður.
+                    Fyrirspurnin er ókeypis. Við komum með tillögu og þú ákveður framhaldið.
                   </p>
                 </div>
               </div>

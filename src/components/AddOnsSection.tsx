@@ -4,43 +4,43 @@ const addons = [
   {
     icon: "📅",
     title: "Bókunarkerfi",
-    text: "Leyfðu viðskiptavinum að bóka tíma eða þjónustu beint af vefsíðunni.",
+    text: "Leyfðu viðskiptavinum að bóka tíma eða þjónustu beint á vefsíðunni.",
   },
   {
     icon: "💬",
     title: "Spjallbox",
-    text: "Einföld leið fyrir viðskiptavini að senda skilaboð á meðan þeir eru á síðunni.",
+    text: "Einföld leið fyrir gesti til að senda skilaboð á meðan þeir skoða síðuna.",
   },
   {
     icon: "🤖",
     title: "Spjallvélmenni",
-    text: "Fyrir fyrirtæki sem fá margar endurteknar spurningar getum við skoðað einfalt spjallbox eða spjallvélmenni sem svarar algengum spurningum.",
+    text: "Fyrir fyrirtæki sem fá margar svipaðar spurningar getum við skoðað spjallvélmenni sem svarar algengum spurningum.",
   },
   {
     icon: "🛒",
     title: "Netverslun",
-    text: "Ef þú vilt selja vörur eða þjónustu beint af síðunni.",
+    text: "Fyrir fyrirtæki sem vilja selja vörur eða þjónustu beint á síðunni.",
   },
   {
     icon: "🔧",
     title: "Viðhald og uppfærslur",
-    text: "Við getum séð um viðhald og uppfærslur á síðunni svo þú þurfir ekki að hafa áhyggjur.",
+    text: "Við getum séð um breytingar, viðhald og uppfærslur svo síðan haldist í lagi.",
   },
   {
     icon: "♻️",
     title: "Endurgerð eldri síðu",
-    text: "Ef þú ert með gamla síðu sem lítur ekki vel út eða virkar ekki eins og skyldi.",
+    text: "Fyrir eldri síður sem þurfa skýrara útlit, betri texta eða tæknilega yfirhalningu.",
   },
 ];
 
 export default function AddOnsSection() {
   return (
-    <section className="bg-white py-20 sm:py-24">
+    <section className="bg-slate-50 py-20 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Aukavalkostir"
           title="Hægt er að bæta við meira"
-          subtitle="Við getum bætt við ýmsum hlutum eftir þörfum — alltaf í samráði við þig."
+          subtitle="Við bætum við virkni eftir þörfum og veljum aðeins það sem nýtist fyrirtækinu þínu."
         />
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {addons.map((addon) => (
