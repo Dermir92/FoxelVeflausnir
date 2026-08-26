@@ -1,6 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { CONTACT_EMAIL } from "@/lib/site";
+
+/**
+ * Formspree form id (the part after /f/ in the endpoint, e.g. "xldbgkqw").
+ * Set NEXT_PUBLIC_FORMSPREE_ID in .env.local and in the Vercel project env.
+ * It is not a secret — Formspree endpoints are public by design.
+ */
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -32,6 +40,9 @@ export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>(initialData);
   const [formState, setFormState] = useState<FormState>("idle");
   const [errors, setErrors] = useState<Partial<FormData>>({});
+  // Honeypot. Hidden from people, filled in by bots; Formspree discards any
+  // submission where _gotcha is non-empty.
+  const [honeypot, setHoneypot] = useState("");
 
   function validate(): boolean {
     const newErrors: Partial<FormData> = {};
@@ -53,11 +64,31 @@ export default function ContactForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!validate()) return;
+    if (!FORMSPREE_ID) {
+      // Fail loudly rather than showing a success screen for a lost inquiry.
+      console.error(
+        "NEXT_PUBLIC_FORMSPREE_ID is not set — the inquiry was NOT sent."
+      );
+      setFormState("error");
+      return;
+    }
+
     setFormState("submitting");
-    // TODO: Connect to Formspree, Resend or an API route
-    // Example: await fetch("/api/contact", { method: "POST", body: JSON.stringify(formData) })
-    await new Promise((r) => setTimeout(r, 800));
-    setFormState("success");
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ ...formData, _gotcha: honeypot }),
+      });
+      if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
+      setFormState("success");
+    } catch (err) {
+      console.error("Contact form submission failed:", err);
+      setFormState("error");
+    }
   }
 
   function handleChange(
@@ -269,9 +300,27 @@ export default function ContactForm() {
         />
       </div>
 
+      {/* Honeypot — not visible to people, so anything in it came from a bot. */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="_gotcha">Ekki fylla út þennan reit</label>
+        <input
+          id="_gotcha"
+          name="_gotcha"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+        />
+      </div>
+
       {formState === "error" && (
-        <p className="text-sm text-red-600">
-          Eitthvað fór úrskeiðis. Vinsamlegast reyndu aftur eða hafðu samband beint.
+        <p className="text-sm text-red-600" role="alert">
+          Ekki tókst að senda fyrirspurnina. Reyndu aftur, eða sendu okkur línu á{" "}
+          <a href={`mailto:${CONTACT_EMAIL}`} className="font-medium underline">
+            {CONTACT_EMAIL}
+          </a>
+          .
         </p>
       )}
 
