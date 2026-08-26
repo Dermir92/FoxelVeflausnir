@@ -1,5 +1,14 @@
+/**
+ * Þetta eru hagnýt drög að þjónustuskilmálum. Þau ætti að yfirfara með
+ * lögfræðingi áður en þau eru notuð sem bindandi samningsskilmálar.
+ *
+ * Stóð sem gulur kassi efst á síðunni; tekið af vefnum því það sagði
+ * viðskiptavinum að skilmálarnir væru ófullgerðir. Athugasemdin stendur hér
+ * svo fyrirvarinn hverfi ekki úr repo-inu.
+ */
 import type { Metadata } from "next";
 import Link from "next/link";
+import { KENNITALA, LEGAL_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Skilmálar | Foxel Veflausnir",
@@ -11,7 +20,7 @@ const terms = [
   {
     title: "1. Um þjónustuna",
     content: [
-      "Foxel Veflausnir veitir þjónustu við hönnun, uppsetningu og þróun vefsíðna fyrir lítil fyrirtæki og sjálfstætt starfandi einstaklinga.",
+      `${LEGAL_NAME}, kt. ${KENNITALA} (hér eftir „Foxel Veflausnir“), veitir þjónustu við hönnun, uppsetningu og þróun vefsíðna fyrir lítil fyrirtæki og sjálfstætt starfandi einstaklinga.`,
       "Þjónustan getur meðal annars falið í sér ráðgjöf, textavinnu, uppsetningu vefsíðu, aðlögun fyrir farsíma, grunnstillingar fyrir leitarvélar, tengiliðaform, einfaldar sérlausnir og aðstoð við birtingu síðu.",
     ],
   },
@@ -138,12 +147,7 @@ export default function TermsPage() {
 
       <section className="py-14 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm leading-relaxed text-amber-900">
-            Þetta eru hagnýt drög að þjónustuskilmálum. Þau ætti að yfirfara með
-            lögfræðingi áður en þau eru notuð sem bindandi samningsskilmálar.
-          </div>
-
-          <div className="mt-10 space-y-10">
+          <div className="space-y-10">
             {terms.map((section) => (
               <article key={section.title}>
                 <h2 className="text-xl font-semibold text-slate-900">

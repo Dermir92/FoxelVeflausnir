@@ -1,5 +1,15 @@
+/**
+ * Þessi texti er hagnýt fyrstu útgáfa og ætti að yfirfara með lögfræðingi
+ * áður en vefurinn fer í fulla notkun, sérstaklega þegar endanlegar
+ * fyrirtækjaupplýsingar, formvinnsla og þjónustuaðilar liggja fyrir.
+ *
+ * Stóð sem gulur kassi efst á síðunni; tekið af vefnum því það sagði
+ * viðskiptavinum að stefnan væri ófullgerð. Athugasemdin stendur hér svo
+ * fyrirvarinn hverfi ekki úr repo-inu.
+ */
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CONTACT_EMAIL, KENNITALA, LEGAL_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Persónuverndarstefna | Foxel Veflausnir",
@@ -12,7 +22,7 @@ const sections = [
     title: "1. Ábyrgðaraðili",
     content: [
       "Foxel Veflausnir er ábyrgðaraðili að vinnslu persónuupplýsinga sem fer fram í tengslum við vefinn og fyrirspurnir sem berast í gegnum hann.",
-      "Upplýsingar um kennitölu, heimilisfang, netfang og síma verða settar inn þegar þær liggja fyrir.",
+      `${LEGAL_NAME}, kt. ${KENNITALA}. Netfang: ${CONTACT_EMAIL}.`,
     ],
   },
   {
@@ -41,7 +51,7 @@ const sections = [
     content: [
       "Við seljum ekki persónuupplýsingar og miðlum þeim ekki til óviðkomandi aðila.",
       "Við kunnum að nota þjónustuaðila fyrir hýsingu, tölvupóst, eyðublöð, greiningar, bókhald eða verkefnastjórnun. Slíkir aðilar vinna þá upplýsingar fyrir okkar hönd eða sem sjálfstæðir ábyrgðaraðilar eftir eðli þjónustunnar.",
-      "Ef vefurinn verður tengdur við þjónustu eins og tölvupóstkerfi, Formspree, Resend, CRM, Google Analytics eða önnur greiningartól þarf að uppfæra þessa stefnu með nánari upplýsingum.",
+      `Fyrirspurnir sem sendar eru í gegnum formið á vefnum fara um þjónustuna Formspree (Formspree, Inc., Bandaríkjunum), sem afhendir okkur þær í tölvupósti. Um er að ræða nafn, netfang, símanúmer og efni fyrirspurnarinnar. Formspree geymir afrit af fyrirspurnum í eigin kerfi. Þú getur óskað eftir því að afritinu verði eytt með því að senda okkur póst á ${CONTACT_EMAIL}.`,
     ],
   },
   {
@@ -105,14 +115,7 @@ export default function PrivacyPage() {
 
       <section className="py-14 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm leading-relaxed text-amber-900">
-            Þessi texti er hagnýt fyrstu útgáfa og ætti að yfirfara með
-            lögfræðingi áður en vefurinn fer í fulla notkun, sérstaklega þegar
-            endanlegar fyrirtækjaupplýsingar, formvinnsla og þjónustuaðilar liggja
-            fyrir.
-          </div>
-
-          <div className="mt-10 space-y-10">
+          <div className="space-y-10">
             {sections.map((section) => (
               <article key={section.title}>
                 <h2 className="text-xl font-semibold text-slate-900">
