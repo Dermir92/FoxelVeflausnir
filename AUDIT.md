@@ -342,7 +342,7 @@ Verified missing at `origin/master`:
 
 ## NICE-TO-HAVE
 
-- **N1 — Dead code.** `AudienceSection.tsx`, `FeaturesSection.tsx`, `NoTechSection.tsx` exist at `origin/master` but are imported **nowhere** (verified: 0 references each). Delete them — git has the history if you want the copy back.
+- **N1 — Dead code.** `AudienceSection.tsx`, `FeaturesSection.tsx`, `NoTechSection.tsx` were imported **nowhere** (verified: 0 references each). `AudienceSection.tsx` and `NoTechSection.tsx` deleted in Phase 1. `FeaturesSection.tsx` still there and still unreferenced — delete it too; git has the history if you want the copy back.
 - **N2 — Unused boilerplate assets.** `public/file.svg`, `globe.svg`, `next.svg`, `vercel.svg`, `window.svg` — 0 references each. `create-next-app` leftovers.
 - **N3 — README is untouched boilerplate.** Still the generic Next.js "Getting Started" text. For a client-facing business repo, one paragraph on what this is and how to deploy.
 - **N4 — FAQ accordion could drop its client JS.** `FAQItem` is `"use client"` purely to toggle one boolean. Native `<details>/<summary>` gives correct keyboard and screen-reader behaviour for free and makes the whole section a server component. Currently only 3 client components (`Header`, `ContactForm`, `FAQItem`) — this removes one.
@@ -371,19 +371,9 @@ Three problems compound:
 
 The disclaimer is honest. The framing around it is not, and honest-but-buried loses you the credit for the honesty.
 
-**Strongest honest framing — two options, in order of preference:**
+**Resolved (Phase 1).** Option A shipped. The section is now `Verkefni` — three live, clickable cards: two real client sites (`hahreinu.is`, `ijhreinsun.is`), badged `Verk okkar` and footnoted `Unnið af teyminu okkar.`, and one demo (`demo.foxel.is`) badged `Sýnidæmi` and footnoted `Ímyndað fyrirtæki, búið til af Foxel. Ekki viðskiptavinur.` No invented company names on the cards, no grey placeholder mocks. The earlier Option B fallback — `Pípulagningamaður` / `Snyrtistofa` / `Þrifafyrirtæki` structure cards — is obsolete and should not be reintroduced.
 
-**Option A (best): build one real demo site and link it.** One complete, clickable, real page at `demo.foxel.is` beats three fictional cards absolutely. It is real work, it is verifiable, and it is exactly the thing the buyer wants to see before hiring you. This converts the page's weakest section into its strongest. You are a web design shop — the demo *is* the portfolio, and it can double as your own testing ground.
-
-**Option B (do now, cheap): drop the fake names and sell the structure honestly.** Reframe from "here are sites" to "here is how we'd structure yours." Remove the invented business names — use the industry as the title:
-
-> **Uppbygging**
-> ### Svona byggjum við upp síðu
-> Þrjú dæmi um uppbyggingu fyrir ólíkar þjónustur — hvernig efnið raðast og hvað er sett fremst.
-
-...with card titles `Pípulagningamaður` / `Snyrtistofa` / `Þrifafyrirtæki` and no personal names. Same information, no implied client list, nothing to retract. Then replace it with Option A as soon as you have one real demo.
-
-**Do not** simply delete the section — a services site with no visual evidence at all is weaker still. Fix the framing, then upgrade to real work.
+**Still open:** `demo.foxel.is` does not label itself as a demo. It presents "Handverk & Þjónusta ehf." as a real company with contact details, which weakens the `Sýnidæmi` badge the moment a visitor clicks through. Add a banner there.
 
 ---
 
@@ -395,7 +385,7 @@ The disclaimer is honest. The framing around it is not, and honest-but-buried lo
 |---|---|---|---|---|
 | 1 | **Hero** | Keep, sharpen | 45 | Primary CTA → `#samband`, not `#pakkar`. "Skoða lausnir" becomes secondary. |
 | 2 | **Af hverju heimasíða?** | **Merge** Vandinn + Þjónustan | 120 | Keep `"Facebook er ekki heimasíða"`. 3 paragraphs → 1 conclusion-first lead. Keep Vandinn's 3 cards; **cut** Þjónustan's 4 outcome cards (H3). |
-| 3 | **Uppbygging** (was Dæmi) | Keep, reframe | 70 | Drop invented company names (see above). Move **up** — visual proof early. |
+| 3 | **Verkefni** (was Dæmi) | **Done** | 95 | Two real client sites + one labelled demo, all live links. Already sits **above** Pakkar — evidence before prices. |
 | 4 | **Pakkar** | Keep + absorb | 150 | Absorb "Algengt innihald" as `"Allir pakkar innihalda"`. Absorb add-ons as a one-line chip row (H2). |
 | 5 | **Ferlið** | Trim | 90 | Keep the 5 steps. **Delete** the "Hvað fær þú?" box (H1) — pure duplication. |
 | 6 | **Spurt og svarað** | Keep | 45 visible | Already collapsed by default — the right pattern. Native `<details>` (N4). |
@@ -448,7 +438,7 @@ The disclaimer is honest. The framing around it is not, and honest-but-buried lo
 22. `LocalBusiness` JSON-LD — **after** C1 supplies the real business details. *(M7)*
 
 **Phase 5 — the real fix for credibility**
-23. Build one real demo site; replace the fictional cards. *(Dæmi, Option A)*
+23. ~~Build one real demo site; replace the fictional cards.~~ **Done** — see "Honest assessment" above. Remaining: label `demo.foxel.is` as a demo on the demo site itself.
 24. Complete the legal pages, remove the draft banners, un-noindex. *(C3)*
 
 ---
