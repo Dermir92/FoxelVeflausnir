@@ -54,9 +54,9 @@ export default function ContactForm() {
     }
     if (!formData.company.trim()) newErrors.company = "Nafn fyrirtækis vantar";
     if (!formData.business.trim()) newErrors.business = "Lýsing á starfsemi vantar";
-    if (!formData.hasWebsite) newErrors.hasWebsite = "Veldu einn valkost";
-    if (!formData.needs) newErrors.needs = "Veldu einn valkost";
-    if (!formData.timeline) newErrors.timeline = "Veldu einn valkost";
+    if (!formData.hasWebsite) newErrors.hasWebsite = "Valkost vantar";
+    if (!formData.needs) newErrors.needs = "Valkost vantar";
+    if (!formData.timeline) newErrors.timeline = "Valkost vantar";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   }
@@ -223,7 +223,7 @@ export default function ContactForm() {
       {/* Has website */}
       <div>
         <label htmlFor="hasWebsite" className="block text-sm font-medium text-slate-700 mb-1.5">
-          Ertu með heimasíðu í dag? <span className="text-red-500">*</span>
+          Ertu með vefsíðu? <span className="text-red-500">*</span>
         </label>
         <select
           id="hasWebsite"
@@ -253,12 +253,12 @@ export default function ContactForm() {
           className={inputClass("needs")}
         >
           <option value="">Veldu...</option>
-          <option value="einföld-heimasida">Einfalda heimasíðu</option>
+          <option value="einföld-heimasida">Einfalda vefsíðu</option>
           <option value="ny-sida">Nýja síðu í stað gamallar</option>
-          <option value="landing-page">Landing page</option>
+          <option value="landing-page">Lendingarsíða</option>
           <option value="bokunarkerfi">Bókunarkerfi</option>
           <option value="netverslun">Netverslun</option>
-          <option value="spjallbox">Spjallbox eða spjallvélmenni</option>
+          <option value="spjallbox">Netspjall eða spjallvélmenni</option>
           <option value="annad">Annað</option>
         </select>
         {errors.needs && <p className="mt-1 text-xs text-red-600">{errors.needs}</p>}
@@ -329,7 +329,7 @@ export default function ContactForm() {
         disabled={formState === "submitting"}
         className="w-full bg-blue-600 text-white font-semibold py-3.5 px-6 rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
       >
-        {formState === "submitting" ? "Sendi..." : "Senda fyrirspurn"}
+        {formState === "submitting" ? "Sendum..." : "Senda fyrirspurn"}
       </button>
       <p className="text-xs text-slate-500 text-center">
         Með því að senda fyrirspurn samþykkir þú að við notum upplýsingarnar til

@@ -58,7 +58,7 @@ export default function PortfolioSection() {
         <SectionHeading
           label="Verkefni"
           title="Síður sem eru í loftinu"
-          subtitle="Tvö verkefni sem teymið okkar hefur unnið og eitt sýnidæmi. Allar síðurnar eru opnar — smelltu og skoðaðu."
+          subtitle="Tvö verkefni sem teymið okkar hefur unnið og eitt sýnidæmi. Þú getur skoðað þær allar."
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project) => {
@@ -114,7 +114,7 @@ export default function PortfolioSection() {
                   >
                     {project.linkLabel}
                     <span aria-hidden="true">↗</span>
-                    <span className="sr-only">(opnast í nýjum glugga)</span>
+                    <span className="sr-only">opnast í nýjum flipa</span>
                   </a>
                   <p className="mt-2 text-xs text-slate-500 leading-relaxed">
                     {project.footnote}

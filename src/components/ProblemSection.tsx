@@ -14,8 +14,7 @@ export default function ProblemSection() {
             <div className="mt-6 space-y-4 text-slate-600 leading-relaxed text-base sm:text-lg">
               <p>
                 Facebook og Instagram geta verið fín til að sýna frá deginum og
-                halda sambandi við fólk. En þau koma ekki í staðinn fyrir skýra
-                heimasíðu sem segir strax hvað þú gerir, hvar þú starfar og hvernig
+                halda sambandi við fólk. En þau koma ekki í staðinn fyrir skýra vefsíðu sem segir strax hvað þú gerir, hvar þú starfar og hvernig
                 hægt er að hafa samband.
               </p>
               <p>

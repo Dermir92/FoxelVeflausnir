@@ -17,7 +17,7 @@ export default function Hero() {
                 href="#pakkar"
                 className="inline-block bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-blue-700 transition-colors text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
-                Skoða lausnir
+                Sjá pakkana
               </a>
               <a
                 href="#samband"

@@ -23,14 +23,14 @@ const faqs = [
       "Já. Við getum séð um breytingarnar fyrir þig, eða sett upp einfalda leið fyrir þig til að uppfæra efnið.",
   },
   {
-    question: "Getið þið lagað gamla síðu?",
+    question: "Getið þið lagað gamla heimasíðu?",
     answer:
       "Já. Við skoðum hvort það borgi sig að laga núverandi síðu eða byggja nýja. Stundum er einfaldara og hagkvæmara að byrja upp á nýtt.",
   },
   {
     question: "Bjóðið þið upp á spjallvélmenni?",
     answer:
-      "Já, í ákveðnum tilvikum. Fyrst skoðum við hvað fyrirtækið þarf. Stundum dugar einfalt fyrirspurnarform eða spjallbox, en fyrir fyrirtæki sem fá margar endurteknar spurningar getur spjallvélmenni verið góður aukavalkostur.",
+      "Já, í ákveðnum tilvikum. Fyrst skoðum við hvað fyrirtækið þarf. Stundum dugar einfalt fyrirspurnarform eða netspjall, en fyrir fyrirtæki sem fá margar endurteknar spurningar getur spjallvélmenni verið góður aukavalkostur.",
   },
 ];
 

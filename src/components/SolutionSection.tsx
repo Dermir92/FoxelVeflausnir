@@ -2,7 +2,7 @@ import SectionHeading from "./SectionHeading";
 
 const outcomes = [
   {
-    title: "Fyrsta sýn sem vinnur með þér",
+    title: "Fyrstu kynni sem vinna með þér",
     text: "Síðan útskýrir strax hver þú ert, hvað þú gerir og hvers vegna fólk ætti að treysta þér.",
   },
   {
@@ -34,7 +34,7 @@ export default function SolutionSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Þjónustan"
-          title="Við byggjum síðuna í kringum það sem viðskiptavinurinn þarf að vita"
+          title="Við byggjum síðuna út frá því sem viðskiptavinurinn þarf að vita"
           subtitle="Markmiðið er ekki bara falleg síða. Markmiðið er að fólk skilji þjónustuna þína, treysti fyrirtækinu og viti nákvæmlega hvernig það á að hafa samband."
         />
 

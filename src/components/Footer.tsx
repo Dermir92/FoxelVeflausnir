@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-3">
               <Image
                 src="/logo.png"
-                alt="Foxel logo"
+                alt=""
                 width={32}
                 height={32}
                 className="rounded-sm flex-shrink-0"

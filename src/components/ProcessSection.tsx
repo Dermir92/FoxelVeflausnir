@@ -92,7 +92,7 @@ export default function ProcessSection() {
                   href="#samband"
                   className="block text-center bg-blue-600 text-white font-semibold px-5 py-3 rounded-xl hover:bg-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                 >
-                  Ræða verkefnið
+                  Hafa samband
                 </a>
               </div>
             </div>

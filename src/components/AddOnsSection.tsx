@@ -8,7 +8,7 @@ const addons = [
   },
   {
     icon: "💬",
-    title: "Spjallbox",
+    title: "Netspjall",
     text: "Einföld leið fyrir gesti til að senda skilaboð á meðan þeir skoða síðuna.",
   },
   {
@@ -39,7 +39,7 @@ export default function AddOnsSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Aukavalkostir"
-          title="Hægt er að bæta við meira"
+          title="Þú getur bætt við virkni síðar"
           subtitle="Við bætum við virkni eftir þörfum og veljum aðeins það sem nýtist fyrirtækinu þínu."
         />
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -48,7 +48,7 @@ export default function AddOnsSection() {
               key={addon.title}
               className="flex gap-4 bg-slate-50 rounded-xl p-5 border border-slate-100"
             >
-              <span className="text-2xl flex-shrink-0 mt-0.5" role="img" aria-hidden="true">
+              <span className="text-2xl flex-shrink-0 mt-0.5" aria-hidden="true">
                 {addon.icon}
               </span>
               <div>

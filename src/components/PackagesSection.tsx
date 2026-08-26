@@ -32,12 +32,12 @@ const packages = [
   {
     title: "Sérlausn",
     description:
-      "Fyrir fyrirtæki sem þurfa meira en hefðbundna kynningarsíðu.",
+      "Fyrir fyrirtæki sem þarf meira en hefðbundna kynningarsíðu.",
     features: [
       "Bókunarform",
-      "Spjallbox",
+      "Netspjall",
       "Spjallvélmenni fyrir algengar spurningar",
-      "Netverslunarlending",
+      "Netverslun",
       "Fleiri tungumál",
       "Viðhald og uppfærslur",
     ],
@@ -49,7 +49,7 @@ export default function PackagesSection() {
     <section id="pakkar" className="bg-white py-20 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          label="Þjónustupakkar"
+          label="Pakkar"
           title="Veldu pakka sem hentar þér"
           subtitle="Við finnum lausn sem passar við umfangið. Sendu okkur línu og við komum með skýra tillögu."
         />
