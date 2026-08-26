@@ -22,7 +22,7 @@ export default function Header() {
           <a href="#" className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-lg">
             <Image
               src="/logo.png"
-              alt="Foxel logo"
+              alt=""
               width={36}
               height={36}
               className="rounded-sm flex-shrink-0"
@@ -82,7 +82,7 @@ export default function Header() {
         {menuOpen && (
           <nav
             className="lg:hidden border-t border-slate-100 py-4"
-            aria-label="Farsíma valmynd"
+            aria-label="Valmynd"
           >
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (

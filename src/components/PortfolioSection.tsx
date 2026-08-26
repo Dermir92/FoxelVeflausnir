@@ -19,7 +19,7 @@ const projects: Project[] = [
     trade: "Ræsting og teppahreinsun",
     name: "HÁ Hreinu",
     description:
-      "Fjölskyldufyrirtæki í ræstingum frá 2001. Síðan setur þjónustuna fram í skýrum flokkum — húsfélagaþrif, flutningsþrif og teppahreinsun — og gerir tilboðsbeiðni að næsta skrefi.",
+      "Fjölskyldufyrirtæki í ræstingum frá 2001. Síðan setur þjónustuna fram í skýrum flokkum – húsfélagaþrif, flutningsþrif og teppahreinsun – og gerir tilboðsbeiðni að næsta skrefi.",
     tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Samband og opnunartími"],
     href: "https://hahreinu.is",
     linkLabel: "Skoða hahreinu.is",
@@ -31,7 +31,7 @@ const projects: Project[] = [
     trade: "Sótthreinsun og háþrýstiþvottur",
     name: "I.J. Hreinsun",
     description:
-      "Systurfyrirtæki HÁ Hreinu. Sérhæfðari þjónusta — sótthreinsun og háþrýstiþvottur á sorptunnum, tunnuskipti og garðaúðun — sett fram þannig að húsfélög og fyrirtæki rati beint á það sem þau leita að. Síðurnar tvær vísa hvor á aðra.",
+      "Systurfyrirtæki HÁ Hreinu. Sérhæfðari þjónusta – sótthreinsun og háþrýstiþvottur á sorptunnum, tunnuskipti og garðaúðun – sett fram þannig að húsfélög og fyrirtæki rati beint á það sem þau leita að. Síðurnar tvær vísa hvor á aðra.",
     tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Systursíða"],
     href: "https://ijhreinsun.is",
     linkLabel: "Skoða ijhreinsun.is",
@@ -43,7 +43,7 @@ const projects: Project[] = [
     trade: "Heimilis- og handverksþjónusta",
     name: "Handverk & Þjónusta",
     description:
-      "Sýnidæmi sem við smíðuðum til að sýna aðra grein en verkefnin hér fyrir ofan: fyrirtæki sem býður margar handverksþjónustur — pípulagnir, rafmagn, smíði og málningu — á einni síðu, hverja í sínum kafla.",
+      "Sýnidæmi sem við smíðuðum til að sýna aðra grein en verkefnin hér fyrir ofan: fyrirtæki sem býður margar handverksþjónustur – pípulagnir, rafmagn, smíði og málningu – á einni síðu, hverja í sínum kafla.",
     tags: ["Margar þjónustur", "Kaflaskipting", "Samband"],
     href: "https://demo.foxel.is",
     linkLabel: "Skoða demo.foxel.is",
@@ -58,7 +58,7 @@ export default function PortfolioSection() {
         <SectionHeading
           label="Verkefni"
           title="Síður sem eru í loftinu"
-          subtitle="Tvö verkefni sem teymið okkar hefur unnið og eitt sýnidæmi. Allar síðurnar eru opnar — smelltu og skoðaðu."
+          subtitle="Tvö verkefni sem teymið okkar hefur unnið og eitt sýnidæmi. Þú getur skoðað þær allar."
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project) => {
@@ -114,7 +114,7 @@ export default function PortfolioSection() {
                   >
                     {project.linkLabel}
                     <span aria-hidden="true">↗</span>
-                    <span className="sr-only">(opnast í nýjum glugga)</span>
+                    <span className="sr-only">opnast í nýjum flipa</span>
                   </a>
                   <p className="mt-2 text-xs text-slate-500 leading-relaxed">
                     {project.footnote}
@@ -124,9 +124,6 @@ export default function PortfolioSection() {
             );
           })}
         </div>
-        <p className="mt-8 text-center text-slate-500 text-sm">
-          Við byrjum á því sem skiptir fyrirtækið þitt máli og byggjum síðuna út frá því.
-        </p>
       </div>
     </section>
   );

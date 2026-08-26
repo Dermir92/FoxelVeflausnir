@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-3">
               <Image
                 src="/logo.png"
-                alt="Foxel logo"
+                alt=""
                 width={32}
                 height={32}
                 className="rounded-sm flex-shrink-0"
@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
               Við hönnum skýrar og traustvekjandi vefsíður fyrir lítil fyrirtæki
-              sem vilja vera sýnileg og auðvelt að nálgast.
+              sem vilja vera sýnileg og aðgengileg.
             </p>
           </div>
 
@@ -106,9 +106,6 @@ export default function Footer() {
         <div className="mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} Foxel Veflausnir. Öll réttindi áskilin.
-          </p>
-          <p className="text-xs text-slate-600">
-            Þjónusta frá Foxel
           </p>
         </div>
       </div>
