@@ -7,15 +7,16 @@ export default function ProblemSection() {
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="flex-1">
             <SectionHeading
-              label="Vandinn"
-              title="Facebook er ekki heimasíða"
+              label="Af hverju vefsíða?"
+              title="Vefsíðan og samfélagsmiðlarnir vinna saman"
               centered={false}
             />
             <div className="mt-6 space-y-4 text-slate-600 leading-relaxed text-base sm:text-lg">
               <p>
-                Facebook og Instagram geta verið fín til að sýna frá deginum og
-                halda sambandi við fólk. En þau koma ekki í staðinn fyrir skýra vefsíðu sem segir strax hvað þú gerir, hvar þú starfar og hvernig
-                hægt er að hafa samband.
+                Facebook og Instagram halda sambandi við fólkið sem þekkir þig
+                þegar. Vefsíðan tekur við þeim sem eru að kynnast þér – hún segir
+                strax hvað þú gerir, hvar þú starfar og hvernig hægt er að hafa
+                samband.
               </p>
               <p>
                 Góð vefsíða vinnur þá vinnu fyrir þig: hún kynnir fyrirtækið,
