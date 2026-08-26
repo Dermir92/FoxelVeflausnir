@@ -82,7 +82,7 @@ export default function Header() {
         {menuOpen && (
           <nav
             className="lg:hidden border-t border-slate-100 py-4"
-            aria-label="Farsíma valmynd"
+            aria-label="Valmynd"
           >
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (

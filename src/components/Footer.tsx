@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
               Við hönnum skýrar og traustvekjandi vefsíður fyrir lítil fyrirtæki
-              sem vilja vera sýnileg og auðvelt að nálgast.
+              sem vilja vera sýnileg og aðgengileg.
             </p>
           </div>
 

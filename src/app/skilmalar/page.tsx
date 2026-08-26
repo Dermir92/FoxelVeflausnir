@@ -11,7 +11,7 @@ const terms = [
   {
     title: "1. Um þjónustuna",
     content: [
-      "Foxel Veflausnir veitir þjónustu við hönnun, uppsetningu og þróun vefsíðna fyrir lítil fyrirtæki og sjálfstætt starfandi.",
+      "Foxel Veflausnir veitir þjónustu við hönnun, uppsetningu og þróun vefsíðna fyrir lítil fyrirtæki og sjálfstætt starfandi einstaklinga.",
       "Þjónustan getur meðal annars falið í sér ráðgjöf, textavinnu, uppsetningu vefsíðu, aðlögun fyrir farsíma, grunnstillingar fyrir leitarvélar, tengiliðaform, einfaldar sérlausnir og aðstoð við birtingu síðu.",
     ],
   },

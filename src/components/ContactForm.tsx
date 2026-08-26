@@ -161,7 +161,7 @@ export default function ContactForm() {
             autoComplete="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="jon@dæmi.is"
+            placeholder="jon@daemi.is"
             className={inputClass("email")}
           />
           {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
@@ -181,7 +181,7 @@ export default function ContactForm() {
             autoComplete="tel"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="555-1234"
+            placeholder="555 1234"
             className={inputClass("phone")}
           />
         </div>
@@ -235,7 +235,7 @@ export default function ContactForm() {
           <option value="">Veldu...</option>
           <option value="nei">Nei</option>
           <option value="ja">Já</option>
-          <option value="ja-laga">Já, en hún þarf að laga</option>
+          <option value="ja-laga">Já, en hana þarf að laga</option>
         </select>
         {errors.hasWebsite && <p className="mt-1 text-xs text-red-600">{errors.hasWebsite}</p>}
       </div>
@@ -278,7 +278,7 @@ export default function ContactForm() {
         >
           <option value="">Veldu...</option>
           <option value="sem-fyrst">Sem fyrst</option>
-          <option value="innan-manadár">Innan mánaðar</option>
+          <option value="innan-manadar">Innan mánaðar</option>
           <option value="ekki-viss">Ekki viss</option>
         </select>
         {errors.timeline && <p className="mt-1 text-xs text-red-600">{errors.timeline}</p>}
@@ -295,7 +295,7 @@ export default function ContactForm() {
           rows={4}
           value={formData.message}
           onChange={handleChange}
-          placeholder="Segðu okkur meira um hvað þú þarft eða hafðu spurningar..."
+          placeholder="Segðu okkur meira um verkefnið eða spurðu okkur um það sem þú vilt vita."
           className={`${inputClass("message")} resize-none`}
         />
       </div>

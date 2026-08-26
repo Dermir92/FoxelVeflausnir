@@ -20,12 +20,12 @@ const faqs = [
   {
     question: "Get ég breytt síðunni seinna?",
     answer:
-      "Já. Við getum annað hvort séð um breytingar fyrir þig eða skoðað einfalda leið fyrir þig til að uppfæra efni sjálf/ur.",
+      "Já. Við getum séð um breytingarnar fyrir þig, eða sett upp einfalda leið fyrir þig til að uppfæra efnið.",
   },
   {
     question: "Getið þið lagað gamla síðu?",
     answer:
-      "Já. Við skoðum hvort borgi sig að laga núverandi síðu eða byggja nýja. Stundum er einfaldara og hagkvæmara að byrja upp á nýtt.",
+      "Já. Við skoðum hvort það borgi sig að laga núverandi síðu eða byggja nýja. Stundum er einfaldara og hagkvæmara að byrja upp á nýtt.",
   },
   {
     question: "Bjóðið þið upp á spjallvélmenni?",
