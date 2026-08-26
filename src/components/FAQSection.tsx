@@ -28,7 +28,7 @@ const faqs = [
       "Já. Við skoðum hvort það borgi sig að laga núverandi síðu eða byggja nýja. Stundum er einfaldara og hagkvæmara að byrja upp á nýtt.",
   },
   {
-    question: "Bjóðið þið upp á spjallvélmenni?",
+    question: "Bjóðið þið spjallvélmenni?",
     answer:
       "Já, í ákveðnum tilvikum. Fyrst skoðum við hvað fyrirtækið þarf. Stundum dugar einfalt fyrirspurnarform eða netspjall, en fyrir fyrirtæki sem fá margar endurteknar spurningar getur spjallvélmenni verið góður aukavalkostur.",
   },
@@ -41,7 +41,7 @@ export default function FAQSection() {
         <SectionHeading
           label="Spurt og svarað"
           title="Algengar spurningar"
-          subtitle="Finnur þú ekki svarið sem þú leitar að? Sendu okkur línu og við svörum."
+          subtitle="Finnur þú ekki svarið? Hafðu samband og við svörum."
         />
         <div className="mt-10 space-y-3">
           {faqs.map((faq) => (

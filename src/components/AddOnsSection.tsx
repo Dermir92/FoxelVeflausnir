@@ -14,7 +14,7 @@ const addons = [
   {
     icon: "🤖",
     title: "Spjallvélmenni",
-    text: "Fyrir fyrirtæki sem fá margar svipaðar spurningar getum við skoðað spjallvélmenni sem svarar algengum spurningum.",
+    text: "Svarar algengustu spurningunum sjálfkrafa. Hentar ef þú fær sömu spurninguna oft.",
   },
   {
     icon: "🛒",
@@ -40,7 +40,6 @@ export default function AddOnsSection() {
         <SectionHeading
           label="Aukavalkostir"
           title="Þú getur bætt við virkni síðar"
-          subtitle="Við bætum við virkni eftir þörfum og veljum aðeins það sem nýtist fyrirtækinu þínu."
         />
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {addons.map((addon) => (

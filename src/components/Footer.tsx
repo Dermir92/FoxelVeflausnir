@@ -107,9 +107,6 @@ export default function Footer() {
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} Foxel Veflausnir. Öll réttindi áskilin.
           </p>
-          <p className="text-xs text-slate-600">
-            Þjónusta frá Foxel
-          </p>
         </div>
       </div>
     </footer>

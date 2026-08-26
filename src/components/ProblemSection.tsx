@@ -18,11 +18,6 @@ export default function ProblemSection() {
                 hægt er að hafa samband.
               </p>
               <p>
-                Þegar einhver leitar að þjónustunni þinni þarf hann ekki að fletta
-                í gegnum færslur, myndaalbúm eða gömul skilaboð til að finna
-                grunnupplýsingar.
-              </p>
-              <p>
                 Góð vefsíða vinnur þá vinnu fyrir þig: hún kynnir fyrirtækið,
                 svarar helstu spurningum og leiðir fólk í næsta skref.
               </p>

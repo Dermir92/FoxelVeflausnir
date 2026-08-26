@@ -51,7 +51,7 @@ export default function PackagesSection() {
         <SectionHeading
           label="Pakkar"
           title="Veldu pakka sem hentar þér"
-          subtitle="Við finnum lausn sem passar við umfangið. Sendu okkur línu og við komum með skýra tillögu."
+          subtitle="Við finnum lausn sem passar við umfangið."
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {packages.map((pkg) => (

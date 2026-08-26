@@ -10,7 +10,7 @@ const outcomes = [
     text: "Þjónusta, þjónustusvæði, myndir, sími og fyrirspurnarform eru sett fram án óþarfa flækju.",
   },
   {
-    title: "Texti sem hljómar eins og fyrirtækið þitt",
+    title: "Texti á mannamáli",
     text: "Við hjálpum þér að móta texta sem er skýr, eðlilegur og laus við tæknimál.",
   },
   {
@@ -35,7 +35,7 @@ export default function SolutionSection() {
         <SectionHeading
           label="Þjónustan"
           title="Við byggjum síðuna út frá því sem viðskiptavinurinn þarf að vita"
-          subtitle="Markmiðið er ekki bara falleg síða. Markmiðið er að fólk skilji þjónustuna þína, treysti fyrirtækinu og viti nákvæmlega hvernig það á að hafa samband."
+          subtitle="Markmiðið er að fólk skilji þjónustuna þína og viti hvernig það hefur samband."
         />
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 items-start">

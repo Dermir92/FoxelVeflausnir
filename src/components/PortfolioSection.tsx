@@ -124,9 +124,6 @@ export default function PortfolioSection() {
             );
           })}
         </div>
-        <p className="mt-8 text-center text-slate-500 text-sm">
-          Við byrjum á því sem skiptir fyrirtækið þitt máli og byggjum síðuna út frá því.
-        </p>
       </div>
     </section>
   );

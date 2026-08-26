@@ -41,8 +41,8 @@ const terms = [
   {
     title: "5. Greiðslur",
     content: [
-      "Greiðslufyrirkomulag er ákveðið í tilboði eða samningi. Algengt getur verið að hluti greiðslu sé greiddur við upphaf verkefnis og eftirstöðvar við afhendingu eða birtingu.",
-      "Verð eru sett fram án eða með virðisaukaskatti eftir því sem við á og skal það koma skýrt fram í tilboði.",
+      "Greiðslufyrirkomulag er ákveðið í tilboði eða samningi. Oft er hluti greiddur við upphaf verkefnis og eftirstöðvar við afhendingu eða birtingu.",
+      "Í tilboði kemur fram hvort verð er með eða án virðisaukaskatts.",
       "Viðbótarvinna, rekstur, hýsing, viðhald, leyfi, áskriftir og þjónusta þriðju aðila geta verið rukkuð sérstaklega ef þau eru ekki sérstaklega innifalin.",
     ],
   },
