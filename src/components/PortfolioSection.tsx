@@ -51,6 +51,11 @@ const projects: Project[] = [
   },
 ];
 
+/** hahreinu.is — the address bar shows what the visitor would type. */
+function domainOf(href: string) {
+  return new URL(href).host.replace(/^www\./, "");
+}
+
 export default function PortfolioSection() {
   return (
     <section className="bg-slate-50 py-20 sm:py-24">
@@ -60,65 +65,100 @@ export default function PortfolioSection() {
           title="Síður sem eru í loftinu"
           subtitle="Tvö verkefni sem teymið okkar hefur unnið og eitt sýnidæmi. Þú getur skoðað þær allar."
         />
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => {
             const isDemo = project.kind === "demo";
             return (
               <div
                 key={project.name}
-                className={`flex flex-col rounded-2xl border bg-white shadow-sm p-6 ${
+                className={`flex flex-col overflow-hidden rounded-2xl border bg-white shadow-sm transition-shadow hover:shadow-md ${
                   isDemo ? "border-amber-200" : "border-slate-100"
                 }`}
               >
-                <span
-                  className={`self-start text-xs font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full ${
+                {/* Browser chrome — same visual language as the hero mock. */}
+                <div
+                  className={`flex items-center gap-2.5 border-b px-4 py-3 ${
                     isDemo
-                      ? "border border-dashed border-amber-400 text-amber-700"
-                      : "bg-blue-600 text-white"
+                      ? "border-amber-200 bg-amber-50"
+                      : "border-slate-100 bg-slate-50"
                   }`}
                 >
-                  {project.badge}
-                </span>
-
-                <p className="mt-4 text-sm font-medium text-slate-500">
-                  {project.trade}
-                </p>
-                <h3 className="mt-1 text-lg font-semibold text-slate-900">
-                  {project.name}
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className={`inline-block text-xs font-medium px-2.5 py-1 rounded-full ${
-                        isDemo
-                          ? "bg-amber-50 text-amber-700"
-                          : "bg-slate-100 text-slate-700"
-                      }`}
-                    >
-                      {tag}
+                  <div className="flex flex-shrink-0 gap-1.5" aria-hidden="true">
+                    {[0, 1, 2].map((dot) => (
+                      <div
+                        key={dot}
+                        className={`h-2.5 w-2.5 rounded-full ${
+                          isDemo ? "bg-amber-200" : "bg-slate-200"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <div
+                    className={`flex h-6 min-w-0 flex-1 items-center rounded-md bg-white px-2.5 ${
+                      isDemo ? "border border-dashed border-amber-300" : ""
+                    }`}
+                  >
+                    <span className="truncate text-xs text-slate-500">
+                      {domainOf(project.href)}
                     </span>
-                  ))}
+                  </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100">
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
+                <div className="flex flex-1 flex-col p-6">
+                  <span
+                    className={`self-start text-xs font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full ${
+                      isDemo
+                        ? "border border-dashed border-amber-400 text-amber-700"
+                        : "bg-blue-600 text-white"
+                    }`}
                   >
-                    {project.linkLabel}
-                    <span aria-hidden="true">↗</span>
-                    <span className="sr-only">opnast í nýjum flipa</span>
-                  </a>
-                  <p className="mt-2 text-xs text-slate-500 leading-relaxed">
-                    {project.footnote}
+                    {project.badge}
+                  </span>
+
+                  <p className="mt-4 text-sm font-medium text-slate-500">
+                    {project.trade}
                   </p>
+                  <h3 className="mt-1 text-lg font-semibold text-slate-900">
+                    {project.name}
+                  </h3>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className={`inline-block text-xs font-medium px-2.5 py-1 rounded-full ${
+                          isDemo
+                            ? "bg-amber-50 text-amber-700"
+                            : "bg-slate-100 text-slate-700"
+                        }`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* mt-auto pins the link row to the card floor, so all three
+                      cards line up however long the descriptions run. */}
+                  <div className="mt-auto pt-6">
+                    <div className="border-t border-slate-100 pt-4">
+                      <a
+                        href={project.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
+                      >
+                        {project.linkLabel}
+                        <span aria-hidden="true">↗</span>
+                        <span className="sr-only">opnast í nýjum flipa</span>
+                      </a>
+                      <p className="mt-2 text-xs text-slate-500 leading-relaxed">
+                        {project.footnote}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             );
