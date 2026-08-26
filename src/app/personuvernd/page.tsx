@@ -1,3 +1,12 @@
+/**
+ * Þessi texti er hagnýt fyrstu útgáfa og ætti að yfirfara með lögfræðingi
+ * áður en vefurinn fer í fulla notkun, sérstaklega þegar endanlegar
+ * fyrirtækjaupplýsingar, formvinnsla og þjónustuaðilar liggja fyrir.
+ *
+ * Stóð sem gulur kassi efst á síðunni; tekið af vefnum því það sagði
+ * viðskiptavinum að stefnan væri ófullgerð. Athugasemdin stendur hér svo
+ * fyrirvarinn hverfi ekki úr repo-inu.
+ */
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CONTACT_EMAIL } from "@/lib/site";
@@ -106,14 +115,7 @@ export default function PrivacyPage() {
 
       <section className="py-14 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm leading-relaxed text-amber-900">
-            Þessi texti er hagnýt fyrstu útgáfa og ætti að yfirfara með
-            lögfræðingi áður en vefurinn fer í fulla notkun, sérstaklega þegar
-            endanlegar fyrirtækjaupplýsingar, formvinnsla og þjónustuaðilar liggja
-            fyrir.
-          </div>
-
-          <div className="mt-10 space-y-10">
+          <div className="space-y-10">
             {sections.map((section) => (
               <article key={section.title}>
                 <h2 className="text-xl font-semibold text-slate-900">
