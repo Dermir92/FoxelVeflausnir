@@ -8,6 +8,7 @@
  */
 import type { Metadata } from "next";
 import Link from "next/link";
+import { KENNITALA, LEGAL_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Skilmálar | Foxel Veflausnir",
@@ -19,7 +20,7 @@ const terms = [
   {
     title: "1. Um þjónustuna",
     content: [
-      "Foxel Veflausnir veitir þjónustu við hönnun, uppsetningu og þróun vefsíðna fyrir lítil fyrirtæki og sjálfstætt starfandi einstaklinga.",
+      `${LEGAL_NAME}, kt. ${KENNITALA} (hér eftir „Foxel Veflausnir“), veitir þjónustu við hönnun, uppsetningu og þróun vefsíðna fyrir lítil fyrirtæki og sjálfstætt starfandi einstaklinga.`,
       "Þjónustan getur meðal annars falið í sér ráðgjöf, textavinnu, uppsetningu vefsíðu, aðlögun fyrir farsíma, grunnstillingar fyrir leitarvélar, tengiliðaform, einfaldar sérlausnir og aðstoð við birtingu síðu.",
     ],
   },
