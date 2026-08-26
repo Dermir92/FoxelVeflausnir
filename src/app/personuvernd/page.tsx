@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Persónuverndarstefna | Foxel Veflausnir",
@@ -41,7 +42,7 @@ const sections = [
     content: [
       "Við seljum ekki persónuupplýsingar og miðlum þeim ekki til óviðkomandi aðila.",
       "Við kunnum að nota þjónustuaðila fyrir hýsingu, tölvupóst, eyðublöð, greiningar, bókhald eða verkefnastjórnun. Slíkir aðilar vinna þá upplýsingar fyrir okkar hönd eða sem sjálfstæðir ábyrgðaraðilar eftir eðli þjónustunnar.",
-      "Ef vefurinn verður tengdur við þjónustu eins og tölvupóstkerfi, Formspree, Resend, CRM, Google Analytics eða önnur greiningartól þarf að uppfæra þessa stefnu með nánari upplýsingum.",
+      `Fyrirspurnir sem sendar eru í gegnum formið á vefnum fara um þjónustuna Formspree (Formspree, Inc., Bandaríkjunum), sem afhendir okkur þær í tölvupósti. Um er að ræða nafn, netfang, símanúmer og efni fyrirspurnarinnar. Formspree geymir afrit af fyrirspurnum í eigin kerfi. Þú getur óskað eftir því að afritinu verði eytt með því að senda okkur póst á ${CONTACT_EMAIL}.`,
     ],
   },
   {
