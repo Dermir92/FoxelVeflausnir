@@ -1,5 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import ContactForm from "./ContactForm";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export default function ContactSection() {
   return (
@@ -50,20 +51,12 @@ export default function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-slate-900 text-sm">Netfang</h3>
                   <p className="mt-0.5 text-sm text-slate-600">
-                    Setja inn síðar
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 text-sm">Sími</h3>
-                  <p className="mt-0.5 text-sm text-slate-600">
-                    Setja inn síðar
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      className="text-blue-600 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded"
+                    >
+                      {CONTACT_EMAIL}
+                    </a>
                   </p>
                 </div>
               </div>

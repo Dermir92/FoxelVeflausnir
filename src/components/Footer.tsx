@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CONTACT_EMAIL, KENNITALA, LEGAL_NAME } from "@/lib/site";
 
 const navLinks = [
   { href: "#thjonustan", label: "Þjónustan" },
@@ -77,23 +78,18 @@ export default function Footer() {
               Hafðu samband
             </h3>
             <ul className="space-y-2.5">
-              <li className="text-sm text-slate-400">
-                Kennitala: setja inn síðar
-              </li>
-              <li className="text-sm text-slate-400">
-                Heimilisfang: setja inn síðar
-              </li>
+              <li className="text-sm text-slate-400">{LEGAL_NAME}</li>
+              <li className="text-sm text-slate-400">Kt. {KENNITALA}</li>
               <li className="flex items-center gap-2 text-sm text-slate-400">
-                <svg className="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Netfang: setja inn síðar
-              </li>
-              <li className="flex items-center gap-2 text-sm text-slate-400">
-                <svg className="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                Sími: setja inn síðar
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+                >
+                  {CONTACT_EMAIL}
+                </a>
               </li>
             </ul>
             <div className="mt-6">
