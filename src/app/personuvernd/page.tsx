@@ -9,7 +9,7 @@
  */
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { CONTACT_EMAIL, KENNITALA, LEGAL_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Persónuverndarstefna | Foxel Veflausnir",
@@ -22,7 +22,7 @@ const sections = [
     title: "1. Ábyrgðaraðili",
     content: [
       "Foxel Veflausnir er ábyrgðaraðili að vinnslu persónuupplýsinga sem fer fram í tengslum við vefinn og fyrirspurnir sem berast í gegnum hann.",
-      "Upplýsingar um kennitölu, heimilisfang, netfang og síma verða settar inn þegar þær liggja fyrir.",
+      `${LEGAL_NAME}, kt. ${KENNITALA}. Netfang: ${CONTACT_EMAIL}.`,
     ],
   },
   {
