@@ -19,7 +19,7 @@ const projects: Project[] = [
     trade: "Ræsting og teppahreinsun",
     name: "HÁ Hreinu",
     description:
-      "Fjölskyldufyrirtæki í ræstingum frá 2001. Síðan setur þjónustuna fram í skýrum flokkum — húsfélagaþrif, flutningsþrif og teppahreinsun — og gerir tilboðsbeiðni að næsta skrefi.",
+      "Fjölskyldufyrirtæki í ræstingum frá 2001. Síðan setur þjónustuna fram í skýrum flokkum – húsfélagaþrif, flutningsþrif og teppahreinsun – og gerir tilboðsbeiðni að næsta skrefi.",
     tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Samband og opnunartími"],
     href: "https://hahreinu.is",
     linkLabel: "Skoða hahreinu.is",
@@ -31,7 +31,7 @@ const projects: Project[] = [
     trade: "Sótthreinsun og háþrýstiþvottur",
     name: "I.J. Hreinsun",
     description:
-      "Systurfyrirtæki HÁ Hreinu. Sérhæfðari þjónusta — sótthreinsun og háþrýstiþvottur á sorptunnum, tunnuskipti og garðaúðun — sett fram þannig að húsfélög og fyrirtæki rati beint á það sem þau leita að. Síðurnar tvær vísa hvor á aðra.",
+      "Systurfyrirtæki HÁ Hreinu. Sérhæfðari þjónusta – sótthreinsun og háþrýstiþvottur á sorptunnum, tunnuskipti og garðaúðun – sett fram þannig að húsfélög og fyrirtæki rati beint á það sem þau leita að. Síðurnar tvær vísa hvor á aðra.",
     tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Systursíða"],
     href: "https://ijhreinsun.is",
     linkLabel: "Skoða ijhreinsun.is",
@@ -43,7 +43,7 @@ const projects: Project[] = [
     trade: "Heimilis- og handverksþjónusta",
     name: "Handverk & Þjónusta",
     description:
-      "Sýnidæmi sem við smíðuðum til að sýna aðra grein en verkefnin hér fyrir ofan: fyrirtæki sem býður margar handverksþjónustur — pípulagnir, rafmagn, smíði og málningu — á einni síðu, hverja í sínum kafla.",
+      "Sýnidæmi sem við smíðuðum til að sýna aðra grein en verkefnin hér fyrir ofan: fyrirtæki sem býður margar handverksþjónustur – pípulagnir, rafmagn, smíði og málningu – á einni síðu, hverja í sínum kafla.",
     tags: ["Margar þjónustur", "Kaflaskipting", "Samband"],
     href: "https://demo.foxel.is",
     linkLabel: "Skoða demo.foxel.is",

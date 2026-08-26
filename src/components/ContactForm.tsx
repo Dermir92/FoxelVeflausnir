@@ -214,7 +214,7 @@ export default function ContactForm() {
           type="text"
           value={formData.business}
           onChange={handleChange}
-          placeholder="T.d. pípulagning, þrif, þjálfun..."
+          placeholder="T.d. pípulagning, þrif, þjálfun…"
           className={inputClass("business")}
         />
         {errors.business && <p className="mt-1 text-xs text-red-600">{errors.business}</p>}
@@ -232,7 +232,7 @@ export default function ContactForm() {
           onChange={handleChange}
           className={inputClass("hasWebsite")}
         >
-          <option value="">Veldu...</option>
+          <option value="">Veldu…</option>
           <option value="nei">Nei</option>
           <option value="ja">Já</option>
           <option value="ja-laga">Já, en hana þarf að laga</option>
@@ -252,7 +252,7 @@ export default function ContactForm() {
           onChange={handleChange}
           className={inputClass("needs")}
         >
-          <option value="">Veldu...</option>
+          <option value="">Veldu…</option>
           <option value="einföld-heimasida">Einfalda vefsíðu</option>
           <option value="ny-sida">Nýja síðu í stað gamallar</option>
           <option value="landing-page">Lendingarsíða</option>
@@ -276,7 +276,7 @@ export default function ContactForm() {
           onChange={handleChange}
           className={inputClass("timeline")}
         >
-          <option value="">Veldu...</option>
+          <option value="">Veldu…</option>
           <option value="sem-fyrst">Sem fyrst</option>
           <option value="innan-manadar">Innan mánaðar</option>
           <option value="ekki-viss">Ekki viss</option>
@@ -329,7 +329,7 @@ export default function ContactForm() {
         disabled={formState === "submitting"}
         className="w-full bg-blue-600 text-white font-semibold py-3.5 px-6 rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
       >
-        {formState === "submitting" ? "Sendum..." : "Senda fyrirspurn"}
+        {formState === "submitting" ? "Sendum…" : "Senda fyrirspurn"}
       </button>
       <p className="text-xs text-slate-500 text-center">
         Með því að senda fyrirspurn samþykkir þú að við notum upplýsingarnar til
