@@ -5,14 +5,14 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Text */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-tight tracking-tight">
+            <h1 className="reveal reveal-1 text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-slate-900 leading-tight tracking-tight">
               Vefsíður fyrir lítil fyrirtæki sem vilja líta faglega út á netinu
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="reveal reveal-2 mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
               Foxel hjálpar þér að setja þjónustuna skýrt fram, byggja upp traust
               og gera viðskiptavinum auðvelt að taka næsta skref.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <div className="reveal reveal-3 mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <a
                 href="#pakkar"
                 className="inline-block bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-blue-700 transition-colors text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
@@ -29,7 +29,7 @@ export default function Hero() {
           </div>
 
           {/* Website mock card */}
-          <div className="flex-1 w-full max-w-sm lg:max-w-md mx-auto lg:mx-0">
+          <div className="reveal reveal-4 flex-1 w-full max-w-sm lg:max-w-md mx-auto lg:mx-0">
             <div className="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
               {/* Browser bar */}
               <div className="bg-slate-50 border-b border-slate-100 px-4 py-3 flex items-center gap-2">
