@@ -25,7 +25,7 @@ export default function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-slate-900 text-sm">Skýrt verð</h3>
                   <p className="mt-0.5 text-sm text-slate-600">
-                    Grunnpakkinn kostar 129.000 kr. án vsk. og umfangið er skilgreint fyrirfram.
+                    Grunnpakkinn kostar 129.000 kr. án vsk. og umfangið liggur fyrir áður en vinna hefst.
                   </p>
                 </div>
               </div>
@@ -38,7 +38,7 @@ export default function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-slate-900 text-sm">Fljótt svar</h3>
                   <p className="mt-0.5 text-sm text-slate-600">
-                    Við svörum yfirleitt innan eins til tveggja virkra daga.
+                    Við svörum yfirleitt innan eins til tveggja virkra daga og leggjum til næstu skref.
                   </p>
                 </div>
               </div>

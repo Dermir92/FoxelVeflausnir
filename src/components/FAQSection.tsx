@@ -5,17 +5,17 @@ const faqs = [
   {
     question: "Af hverju ætti fyrirtækið mitt að vera með vefsíðu?",
     answer:
-      "Eigin vefsíða gefur fyrirtækinu fastan stað sem þú stjórnar sjálfur. Þar getur fólk séð hvað þú gerir, hvar þú starfar og hvernig það nær í þig — hvort sem það fann þig á Google, samfélagsmiðlum eða með meðmælum. Skýr vefsíða styrkir traust og auðveldar viðskiptavinum að taka næsta skref.",
+      "Eigin vefsíða gefur fyrirtækinu fastan stað sem þú stjórnar sjálfur. Þar sér fólk hvað þú gerir, hvar þú starfar og hvernig það nær í þig, hvort sem það fann þig á Google, samfélagsmiðlum eða með meðmælum. Skýr vefsíða styrkir traust og auðveldar viðskiptavinum að taka næsta skref.",
   },
   {
     question: "Er verðið raunverulega fast?",
     answer:
-      "Já. Grunnpakkinn kostar 129.000 kr. án vsk. svo lengi sem verkefnið er innan þess umfangs sem lýst er á síðunni. Við samþykkjum sérstaklega verð á viðbótum áður en vinna við þær hefst.",
+      "Já. Grunnpakkinn kostar 129.000 kr. án vsk. svo lengi sem verkefnið er innan þess umfangs sem lýst er á síðunni. Ef þú vilt bæta einhverju við samþykkjum við verðið áður en sú vinna hefst.",
   },
   {
     question: "Þarf ég að vera með tilbúna texta?",
     answer:
-      "Nei. Þú segir okkur hvað þú gerir, hvar þú starfar og hvað viðskiptavinir þurfa að vita. Við hjálpum þér að skrifa og fínpússa íslenska textann.",
+      "Nei. Þú segir okkur hvað þú gerir, hvar þú starfar og hvað viðskiptavinir þurfa að vita. Við hjálpum þér að skrifa íslenska textann og fínpússa hann.",
   },
   {
     question: "Þarf ég að eiga lén?",
@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "Hvað gerist ef ég þarf stærri breytingar síðar?",
     answer:
-      "Minniháttar textabreytingar falla undir mánaðarlega umsjón. Nýjar síður, bókunarkerfi, netverslanir og flóknari samþættingar eru metnar og verðlagðar sérstaklega.",
+      "Minniháttar textabreytingar falla undir mánaðarlega umsjón. Nýjar síður, bókunarkerfi, netverslanir og flóknari tengingar eru metnar og verðlagðar sérstaklega.",
   },
 ];
 

@@ -24,7 +24,7 @@ const sections = [
   {
     title: "1. Ábyrgðaraðili",
     content: [
-      "Foxel Veflausnir er ábyrgðaraðili vinnslu persónuupplýsinga sem fer fram í tengslum við vefinn og fyrirspurnir sem berast í gegnum hann.",
+      "Foxel Veflausnir er ábyrgðaraðili vinnslu persónuupplýsinga í tengslum við vefinn og fyrirspurnir sem berast í gegnum hann.",
       `${LEGAL_NAME}, kt. ${KENNITALA}. Netfang: ${CONTACT_EMAIL}.`,
     ],
   },

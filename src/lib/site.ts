@@ -3,7 +3,7 @@
  *
  * These appear in several places (footer, contact section, contact form error
  * fallback, and later in LocalBusiness structured data). Keeping them here
- * stops one of them drifting out of date — which is how the site ended up
+ * stops one of them drifting out of date, which is how the site ended up
  * shipping "setja inn síðar" in four places.
  */
 

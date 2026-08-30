@@ -5,17 +5,17 @@ const steps = [
   {
     title: "Segðu okkur frá fyrirtækinu",
     description:
-      "Sendu stuttar upplýsingar um þjónustuna, starfssvæðið og það sem þú vilt að vefsíðan geri fyrir þig.",
+      "Sendu okkur stuttar upplýsingar um þjónustuna, starfssvæðið og það sem vefsíðan á að hjálpa þér með.",
   },
   {
     title: "Við söfnum efninu og smíðum síðuna",
     description:
-      "Við hjálpum með texta og myndaval, hönnum síðuna og sendum þér drög. Tvær umferðir af breytingum eru innifaldar.",
+      "Við hjálpum með texta og myndaval, hönnum síðuna og sendum þér drög. Tvær yfirferðir með breytingum eru innifaldar.",
   },
   {
     title: "Við birtum og sjáum um tæknina",
     description:
-      "Síðan fer yfirleitt í loftið innan 7–10 virkra daga eftir að efnið berst. Eftir það sjáum við um hýsingu, viðhald og grunnvöktun.",
+      "Síðan fer yfirleitt í loftið innan 7 til 10 virkra daga eftir að efnið berst. Eftir það sjáum við um hýsingu, viðhald og grunnvöktun.",
   },
 ];
 

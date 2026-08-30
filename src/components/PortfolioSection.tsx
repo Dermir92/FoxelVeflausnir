@@ -91,7 +91,7 @@ export default function PortfolioSection() {
         <SectionHeading
           label="Verkefni"
           title="Skoðaðu síður sem eru í loftinu"
-          subtitle="Tvö raunveruleg verkefni og eitt skýrt merkt sýnidæmi fyrir handverksþjónustu."
+          subtitle="Tvö raunveruleg verkefni og eitt skýrt merkt sýnidæmi fyrir þjónustufyrirtæki."
         />
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => {

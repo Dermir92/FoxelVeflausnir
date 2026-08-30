@@ -4,17 +4,17 @@ const includedGroups = [
   {
     number: "01",
     title: "Skýr kynning á þjónustunni",
-    text: "Allt að fimm þjónustur, starfssvæði og skýr leið til að hringja eða biðja um tilboð.",
+    text: "Allt að fimm þjónustur, starfssvæði og einföld leið til að hringja eða biðja um tilboð.",
   },
   {
     number: "02",
     title: "Myndir og umsagnir sem byggja traust",
-    text: "Myndasafn með allt að átta myndum og pláss fyrir umsagnir frá viðskiptavinum.",
+    text: "Myndasafn með allt að átta myndum frá þér og rými fyrir umsagnir viðskiptavina.",
   },
   {
     number: "03",
     title: "Aðstoð við íslenska textann",
-    text: "Þú sendir okkur helstu upplýsingarnar. Við mótum og fínpússum textann svo hann verði skýr og eðlilegur.",
+    text: "Þú sendir okkur helstu upplýsingarnar. Við mótum textann og fínpússum hann svo hann verði skýr og eðlilegur.",
   },
   {
     number: "04",
@@ -24,12 +24,12 @@ const includedGroups = [
   {
     number: "05",
     title: "Grunnur að sýnileika á Google",
-    text: "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð gögn um fyrirtækið.",
+    text: "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð fyrirtækjagögn.",
   },
   {
     number: "06",
     title: "Birting án tæknivesens",
-    text: "Við setjum upp lén, DNS, fyrirspurnarform og persónuverndarsíðu og komum vefnum í loftið.",
+    text: "Við setjum upp lén, DNS, fyrirspurnarform og persónuverndarsíðu og birtum vefinn.",
   },
 ];
 

@@ -1,4 +1,4 @@
-const highlights = ["5–7 kaflar", "Tvær yfirferðir", "7–10 virkir dagar"];
+const highlights = ["5 til 7 kaflar", "Tvær yfirferðir", "7 til 10 virkir dagar"];
 
 const mockSections = [
   { label: "Þjónusta", icon: "01" },
@@ -14,14 +14,14 @@ export default function Hero() {
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
           <div className="flex-1 text-center lg:text-left">
             <p className="reveal reveal-1 text-sm font-bold uppercase tracking-[0.16em] text-blue-700">
-              Ein skýr lausn · fast verð
+              Ein skýr lausn á föstu verði
             </p>
             <h1 className="reveal reveal-1 mt-3 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-[3.25rem]">
               Einföld vefsíða fyrir iðnaðar- og þjónustufyrirtæki
             </h1>
             <p className="reveal reveal-2 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl lg:mx-0">
-              Við setjum þjónustuna, starfssvæðið, myndir af verkum og
-              sambandsupplýsingar á eina skýra síðu sem auðveldar
+              Við setjum þjónustuna, starfssvæðið, myndir af verkum og leiðir
+              til að hafa samband á eina skýra síðu sem auðveldar
               viðskiptavinum að taka næsta skref.
             </p>
             <div className="reveal reveal-3 mt-7 flex flex-col items-center gap-1 lg:items-start">

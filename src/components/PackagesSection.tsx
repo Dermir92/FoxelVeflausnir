@@ -1,34 +1,34 @@
 import SectionHeading from "./SectionHeading";
 
 const packageFeatures = [
-  "Ein vefsíða með 5–7 köflum",
+  "Ein vefsíða með 5 til 7 köflum",
   "Allt að fimm þjónustur",
-  "Starfssvæði og smellanlegt símanúmer",
+  "Starfssvæði og símanúmer sem hægt er að smella á",
   "Myndasafn með allt að átta myndum frá þér",
   "Umsagnir viðskiptavina",
   "Sambands- og tilboðsform",
   "Aðstoð við að skrifa og fínpússa íslenskan texta",
   "Hönnun sem miðar fyrst við farsíma",
-  "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð gögn",
+  "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð fyrirtækjagögn",
   "Uppsetning á léni og DNS",
   "Persónuverndarsíða fyrir fyrirspurnarformið",
-  "Tvær umferðir af breytingum",
-  "Birting innan 7–10 virkra daga eftir að efni berst",
+  "Tvær yfirferðir með breytingum",
+  "Birting innan 7 til 10 virkra daga eftir að efni berst",
 ];
 
 const managementFeatures = [
   "Hýsing",
   "Tæknilegt viðhald",
   "Öryggisuppfærslur",
-  "Grunnvöktun á aðgengi vefs og virkni forms",
+  "Grunnvöktun á aðgengi vefsins og virkni formsins",
   "Minniháttar textabreytingar",
 ];
 
 const addOns = [
-  { title: "Viðbótarþjónustusíða", price: "25.000 kr." },
+  { title: "Auka þjónustusíða", price: "25.000 kr." },
   { title: "Ensk útgáfa", price: "39.000 kr." },
   { title: "Uppsetning á Google Business Profile", price: "29.000 kr." },
-  { title: "Viðbótarumferð af breytingum", price: "15.000 kr." },
+  { title: "Auka yfirferð", price: "15.000 kr." },
 ];
 
 function CheckIcon() {
@@ -57,7 +57,7 @@ export default function PackagesSection() {
         <SectionHeading
           label="Pakkinn"
           title="Einföld vefsíða á föstu verði"
-          subtitle="Skýrt umfang fyrir lítil iðnaðar- og þjónustufyrirtæki — eitt verð og enginn falinn stofnkostnaður."
+          subtitle="Skýrt umfang fyrir lítil iðnaðar- og þjónustufyrirtæki. Eitt verð og enginn falinn stofnkostnaður."
         />
 
         <div className="mt-10 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60">
@@ -147,7 +147,7 @@ export default function PackagesSection() {
             <div>
               <h3 className="text-xl font-bold text-slate-900">Viðbætur</h3>
               <p className="mt-1 text-sm text-slate-600">
-                Fyrir afmarkaðar viðbætur við grunnpakkann.
+                Fyrir skýrt afmarkaðar viðbætur við grunnpakkann.
               </p>
             </div>
             <p className="text-sm text-slate-600">Öll verð eru án vsk.</p>

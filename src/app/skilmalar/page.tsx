@@ -31,7 +31,7 @@ const terms = [
     title: "2. Tilboð og samkomulag",
     content: [
       "Verkefni hefst ekki fyrr en aðilar hafa samþykkt umfang, verð, áætlaða tímalínu og helstu forsendur verkefnisins skriflega, til dæmis með tölvupósti.",
-      "Tilboð byggist á þeim upplýsingum sem liggja fyrir þegar það er gert. Ef umfang breytist, til dæmis vegna viðbótarsíðna, nýrrar virkni eða aukinnar texta- og hönnunarvinnu, getur verð og tímalína breyst.",
+      "Tilboð byggist á þeim upplýsingum sem liggja fyrir þegar það er gert. Ef umfang breytist, til dæmis vegna aukasíðna, nýrrar virkni eða meiri texta- og hönnunarvinnu, getur verð og tímalína breyst.",
     ],
   },
   {
@@ -46,7 +46,7 @@ const terms = [
     title: "4. Breytingar og yfirferð",
     content: [
       "Drög að vefsíðu eru send viðskiptavini til yfirferðar áður en hún fer í loftið.",
-      "Innifalinn fjöldi yfirferða eða breytingahringja er ákveðinn í tilboði. Breytingar umfram samþykkt umfang geta verið rukkaðar sérstaklega.",
+      "Innifalinn fjöldi yfirferða er ákveðinn í tilboði. Breytingar umfram samþykkt umfang geta verið rukkaðar sérstaklega.",
       "Ef viðskiptavinur bregst ekki við yfirferð eða beiðni um efni innan hæfilegs tíma getur afhending verkefnis tafist.",
     ],
   },
@@ -55,7 +55,7 @@ const terms = [
     content: [
       "Greiðslufyrirkomulag er ákveðið í tilboði eða samningi. Oft er hluti greiddur við upphaf verkefnis og eftirstöðvar við afhendingu eða birtingu.",
       "Í tilboði kemur fram hvort verð er með eða án virðisaukaskatts.",
-      "Viðbótarvinna, rekstur, hýsing, viðhald, leyfi, áskriftir og þjónusta þriðju aðila geta verið rukkuð sérstaklega ef þau eru ekki sérstaklega innifalin.",
+      "Aukavinna, rekstur, hýsing, viðhald, leyfi, áskriftir og þjónusta þriðju aðila geta verið rukkuð sérstaklega ef þau eru ekki sérstaklega innifalin.",
     ],
   },
   {

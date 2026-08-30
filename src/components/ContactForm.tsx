@@ -51,7 +51,7 @@ export default function ContactForm() {
 
     if (!FORMSPREE_ID) {
       console.error(
-        "NEXT_PUBLIC_FORMSPREE_ID is not set — the inquiry was NOT sent."
+        "NEXT_PUBLIC_FORMSPREE_ID is not set. The inquiry was NOT sent."
       );
       setFormState("error");
       return;
@@ -120,7 +120,7 @@ export default function ContactForm() {
           Takk fyrir fyrirspurnina!
         </h3>
         <p className="mx-auto mt-3 max-w-md text-base text-slate-600">
-          Við höfum tekið við skilaboðunum og svörum eins fljótt og við getum.
+          Við höfum móttekið skilaboðin og svörum eins fljótt og við getum.
         </p>
         <button
           type="button"
