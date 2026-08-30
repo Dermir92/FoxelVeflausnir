@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -8,15 +9,29 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Foxel Veflausnir | Vefsíður fyrir lítil fyrirtæki",
-  description:
-    "Foxel Veflausnir hannar skýrar og traustvekjandi vefsíður fyrir lítil fyrirtæki sem vilja líta faglega út á netinu.",
+  metadataBase: new URL(SITE_URL),
+  title: `${SITE_NAME} | Vefsíður fyrir iðnaðar- og þjónustufyrirtæki`,
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title: "Foxel Veflausnir | Vefsíður fyrir lítil fyrirtæki",
-    description:
-      "Foxel Veflausnir hannar skýrar og traustvekjandi vefsíður fyrir lítil fyrirtæki sem vilja líta faglega út á netinu.",
+    title: `${SITE_NAME} | Einfaldar vefsíður á föstu verði`,
+    description: SITE_DESCRIPTION,
+    siteName: SITE_NAME,
     locale: "is_IS",
     type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1024,
+        height: 1024,
+        alt: "Merki Foxel Veflausna",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: `${SITE_NAME} | Einfaldar vefsíður á föstu verði`,
+    description: SITE_DESCRIPTION,
+    images: ["/logo.png"],
   },
 };
 

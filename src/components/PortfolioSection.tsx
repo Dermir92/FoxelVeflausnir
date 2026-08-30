@@ -1,86 +1,114 @@
+import Image from "next/image";
 import SectionHeading from "./SectionHeading";
 
 type Project = {
+  number: string;
   kind: "client" | "demo";
   badge: string;
+  initials: string;
   trade: string;
   name: string;
   description: string;
   tags: string[];
   href: string;
-  linkLabel: string;
+  domain: string;
   footnote: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
+  previewClass: string;
+  accentClass: string;
+  glowClass: string;
 };
 
 const projects: Project[] = [
   {
+    number: "01",
     kind: "client",
-    badge: "Verk okkar",
+    badge: "Verkefni Foxel",
+    initials: "HÁ",
     trade: "Ræsting og teppahreinsun",
     name: "HÁ Hreinu",
     description:
-      "Fjölskyldufyrirtæki í ræstingum frá 2001. Síðan setur þjónustuna fram í skýrum flokkum – húsfélagaþrif, flutningsþrif og teppahreinsun – og gerir tilboðsbeiðni að næsta skrefi.",
-    tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Samband og opnunartími"],
+      "Þjónustan er flokkuð skýrt og tilboðsbeiðni er áberandi næsta skref fyrir húsfélög og fyrirtæki.",
+    tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Opnunartími"],
     href: "https://hahreinu.is",
-    linkLabel: "Skoða hahreinu.is",
-    footnote: "Unnið af teyminu okkar.",
+    domain: "hahreinu.is",
+    footnote: "Raunverulegt viðskiptaverkefni.",
+    image: {
+      src: "/projects/hahreinu-hero.jpg",
+      alt: "Íslenskt íbúðarhverfi, mynd af vef HÁ Hreinu",
+    },
+    previewClass: "from-sky-950 via-blue-900 to-blue-700",
+    accentClass: "bg-sky-300 text-sky-950",
+    glowClass: "bg-sky-400",
   },
   {
+    number: "02",
     kind: "client",
-    badge: "Verk okkar",
+    badge: "Verkefni Foxel",
+    initials: "IJ",
     trade: "Sótthreinsun og háþrýstiþvottur",
     name: "I.J. Hreinsun",
     description:
-      "Systurfyrirtæki HÁ Hreinu. Sérhæfðari þjónusta – sótthreinsun og háþrýstiþvottur á sorptunnum, tunnuskipti og garðaúðun – sett fram þannig að húsfélög og fyrirtæki rati beint á það sem þau leita að. Síðurnar tvær vísa hvor á aðra.",
-    tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Systursíða"],
+      "Sérhæfð þjónusta sett fram þannig að húsfélög og fyrirtæki rati fljótt á rétta lausn og geti óskað eftir tilboði.",
+    tags: ["Sérhæfð þjónusta", "Tilboðsbeiðni", "Systursíða"],
     href: "https://ijhreinsun.is",
-    linkLabel: "Skoða ijhreinsun.is",
-    footnote: "Unnið af teyminu okkar.",
+    domain: "ijhreinsun.is",
+    footnote: "Raunverulegt viðskiptaverkefni.",
+    image: {
+      src: "/projects/ijhreinsun-hero.jpg",
+      alt: "Reykjavík úr lofti, mynd af vef I.J. Hreinsunar",
+    },
+    previewClass: "from-slate-950 via-cyan-950 to-cyan-700",
+    accentClass: "bg-cyan-300 text-cyan-950",
+    glowClass: "bg-cyan-400",
   },
   {
+    number: "03",
     kind: "demo",
-    badge: "Sýnidæmi",
+    badge: "Sýnidæmi · ekki viðskiptavinur",
+    initials: "HÞ",
     trade: "Heimilis- og handverksþjónusta",
     name: "Handverk & Þjónusta",
     description:
-      "Sýnidæmi sem við smíðuðum til að sýna aðra grein en verkefnin hér fyrir ofan: fyrirtæki sem býður margar handverksþjónustur – pípulagnir, rafmagn, smíði og málningu – á einni síðu, hverja í sínum kafla.",
-    tags: ["Margar þjónustur", "Kaflaskipting", "Samband"],
+      "Sýnidæmi um hvernig vefsíða fyrir iðnaðar- og þjónustufyrirtæki getur kynnt margar þjónustur á einni skýrri síðu.",
+    tags: ["Margar þjónustur", "Starfssvæði", "Samband"],
     href: "https://demo.foxel.is",
-    linkLabel: "Skoða demo.foxel.is",
-    footnote: "Ímyndað fyrirtæki, búið til af Foxel. Ekki viðskiptavinur.",
+    domain: "demo.foxel.is",
+    footnote: "Ímyndað fyrirtæki, búið til af Foxel.",
+    previewClass: "from-slate-950 via-amber-950 to-amber-700",
+    accentClass: "bg-amber-300 text-amber-950",
+    glowClass: "bg-amber-400",
   },
 ];
 
-/** hahreinu.is — the address bar shows what the visitor would type. */
-function domainOf(href: string) {
-  return new URL(href).host.replace(/^www\./, "");
-}
-
 export default function PortfolioSection() {
   return (
-    <section className="bg-slate-50 py-20 sm:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="verkefni" className="scroll-mt-16 bg-white py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Verkefni"
-          title="Síður sem eru í loftinu"
-          subtitle="Tvö verkefni sem teymið okkar hefur unnið og eitt sýnidæmi. Þú getur skoðað þær allar."
+          title="Skoðaðu síður sem eru í loftinu"
+          subtitle="Tvö raunveruleg verkefni og eitt skýrt merkt sýnidæmi fyrir þjónustufyrirtæki."
         />
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => {
             const isDemo = project.kind === "demo";
+
             return (
-              <div
+              <article
                 key={project.name}
-                className={`flex flex-col overflow-hidden rounded-2xl border bg-white shadow-sm transition-shadow hover:shadow-md ${
-                  isDemo ? "border-amber-200" : "border-slate-100"
+                className={`group flex flex-col overflow-hidden rounded-3xl border bg-white shadow-[0_12px_35px_-22px_rgba(15,23,42,0.45)] motion-safe:transition motion-safe:duration-300 motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-[0_22px_45px_-24px_rgba(15,23,42,0.5)] ${
+                  isDemo ? "border-amber-300" : "border-slate-200"
                 }`}
               >
-                {/* Browser chrome — same visual language as the hero mock. */}
                 <div
-                  className={`flex items-center gap-2.5 border-b px-4 py-3 ${
+                  className={`flex items-center gap-2.5 border-b px-4 py-3.5 ${
                     isDemo
                       ? "border-amber-200 bg-amber-50"
-                      : "border-slate-100 bg-slate-50"
+                      : "border-slate-200 bg-slate-50"
                   }`}
                 >
                   <div className="flex flex-shrink-0 gap-1.5" aria-hidden="true">
@@ -88,40 +116,123 @@ export default function PortfolioSection() {
                       <div
                         key={dot}
                         className={`h-2.5 w-2.5 rounded-full ${
-                          isDemo ? "bg-amber-200" : "bg-slate-200"
+                          isDemo ? "bg-amber-300" : "bg-slate-300"
                         }`}
                       />
                     ))}
                   </div>
-                  <div
-                    className={`flex h-6 min-w-0 flex-1 items-center rounded-md bg-white px-2.5 ${
-                      isDemo ? "border border-dashed border-amber-300" : ""
-                    }`}
-                  >
-                    <span className="truncate text-xs text-slate-500">
-                      {domainOf(project.href)}
+                  <div className="flex h-7 min-w-0 flex-1 items-center rounded-lg border border-slate-200 bg-white px-3 shadow-sm">
+                    <span className="truncate text-xs text-slate-700">
+                      {project.domain}
                     </span>
                   </div>
                 </div>
 
-                <div className="flex flex-1 flex-col p-6">
-                  <span
-                    className={`self-start text-xs font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full ${
-                      isDemo
-                        ? "border border-dashed border-amber-400 text-amber-700"
-                        : "bg-blue-600 text-white"
-                    }`}
+                {project.image ? (
+                  <div className="relative isolate min-h-52 overflow-hidden text-white">
+                    <Image
+                      src={project.image.src}
+                      alt={project.image.alt}
+                      fill
+                      sizes="(min-width: 1024px) 352px, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover motion-safe:transition motion-safe:duration-500 motion-safe:group-hover:scale-[1.03]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-slate-950/10" />
+                    <div className="relative flex min-h-52 flex-col justify-between p-5">
+                      <div className="flex items-start justify-between gap-4">
+                        <span
+                          className={`flex h-11 w-11 items-center justify-center rounded-xl text-sm font-black shadow-lg ${project.accentClass}`}
+                        >
+                          {project.initials}
+                        </span>
+                        <span className="font-mono text-xs font-semibold tracking-wider text-white/80">
+                          {project.number}
+                        </span>
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-white/80">
+                          {project.trade}
+                        </p>
+                        <p className="mt-1 text-lg font-bold tracking-tight">
+                          {project.name}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className={`relative isolate min-h-52 overflow-hidden bg-gradient-to-br p-5 text-white ${project.previewClass}`}
+                    aria-hidden="true"
                   >
-                    {project.badge}
-                  </span>
+                    <div
+                      className={`absolute -right-12 -top-16 h-44 w-44 rounded-full opacity-25 blur-3xl ${project.glowClass}`}
+                    />
+                    <div className="absolute -bottom-16 -left-8 h-36 w-36 rounded-full bg-white/15 blur-3xl" />
 
-                  <p className="mt-4 text-sm font-medium text-slate-500">
+                    <div className="relative flex items-start justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <span
+                          className={`flex h-11 w-11 items-center justify-center rounded-xl text-sm font-black shadow-lg ${project.accentClass}`}
+                        >
+                          {project.initials}
+                        </span>
+                        <div>
+                          <p className="text-xs font-medium text-white/70">
+                            {project.trade}
+                          </p>
+                          <p className="mt-0.5 font-bold tracking-tight">
+                            {project.name}
+                          </p>
+                        </div>
+                      </div>
+                      <span className="font-mono text-xs font-semibold tracking-wider text-white/55">
+                        {project.number}
+                      </span>
+                    </div>
+
+                    <div className="relative mt-5 rounded-2xl border border-white/15 bg-white/10 p-4 shadow-xl backdrop-blur-sm">
+                      <div className="h-2 w-20 rounded-full bg-white/35" />
+                      <div className="mt-3 h-3 w-4/5 rounded-full bg-white/90" />
+                      <div className="mt-2 h-3 w-3/5 rounded-full bg-white/75" />
+                      <div className="mt-4 flex items-center justify-between gap-3">
+                        <span
+                          className={`rounded-lg px-3 py-2 text-[11px] font-bold ${project.accentClass}`}
+                        >
+                          Fá tilboð
+                        </span>
+                        <div className="flex gap-1.5">
+                          <span className="h-7 w-7 rounded-lg bg-white/10" />
+                          <span className="h-7 w-7 rounded-lg bg-white/10" />
+                          <span className="h-7 w-7 rounded-lg bg-white/10" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="flex items-center justify-between gap-3">
+                    <span
+                      className={`self-start rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide ${
+                        isDemo
+                          ? "border border-dashed border-amber-500 bg-amber-50 text-amber-900"
+                          : "bg-blue-50 text-blue-800"
+                      }`}
+                    >
+                      {project.badge}
+                    </span>
+                    <span className="font-mono text-xs font-semibold text-slate-400">
+                      {project.number}
+                    </span>
+                  </div>
+
+                  <p className="mt-5 text-sm font-medium text-slate-600">
                     {project.trade}
                   </p>
-                  <h3 className="mt-1 text-lg font-semibold text-slate-900">
+                  <h3 className="mt-1 text-xl font-bold tracking-tight text-slate-950">
                     {project.name}
                   </h3>
-                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
                     {project.description}
                   </p>
 
@@ -129,9 +240,9 @@ export default function PortfolioSection() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className={`inline-block text-xs font-medium px-2.5 py-1 rounded-full ${
+                        className={`inline-block rounded-full px-2.5 py-1 text-xs font-medium ${
                           isDemo
-                            ? "bg-amber-50 text-amber-700"
+                            ? "bg-amber-50 text-amber-800"
                             : "bg-slate-100 text-slate-700"
                         }`}
                       >
@@ -140,27 +251,30 @@ export default function PortfolioSection() {
                     ))}
                   </div>
 
-                  {/* mt-auto pins the link row to the card floor, so all three
-                      cards line up however long the descriptions run. */}
-                  <div className="mt-auto pt-6">
+                  <div className="mt-auto pt-7">
                     <div className="border-t border-slate-100 pt-4">
                       <a
                         href={project.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
+                        className="flex min-h-11 items-center justify-between gap-4 rounded-lg font-semibold text-blue-700 transition-colors hover:text-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
                       >
-                        {project.linkLabel}
-                        <span aria-hidden="true">↗</span>
+                        <span>Skoða {project.domain}</span>
+                        <span
+                          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-blue-50 text-lg transition-colors group-hover:bg-blue-100"
+                          aria-hidden="true"
+                        >
+                          ↗
+                        </span>
                         <span className="sr-only">opnast í nýjum flipa</span>
                       </a>
-                      <p className="mt-2 text-xs text-slate-500 leading-relaxed">
+                      <p className="mt-1 text-xs leading-relaxed text-slate-500">
                         {project.footnote}
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>

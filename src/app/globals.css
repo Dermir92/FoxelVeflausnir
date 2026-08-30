@@ -23,7 +23,7 @@ html {
 }
 
 /*
- * Hero entrance. One-shot, on load only — no scroll-triggered motion anywhere
+ * Hero entrance. One-shot, on load only. No scroll-triggered motion anywhere
  * on the site. `both` holds the from-state during the delay so staggered
  * elements do not flash in before their turn.
  */

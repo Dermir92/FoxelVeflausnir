@@ -3,41 +3,31 @@ import ProcessStep from "./ProcessStep";
 
 const steps = [
   {
-    title: "Sendu fyrirspurn",
+    title: "Segðu okkur frá fyrirtækinu",
     description:
-      "Fylltu út fyrirspurnarformið eða sendu okkur póst. Við förum yfir hvað þig vantar og útskýrum hvað hentar best.",
+      "Sendu okkur stuttar upplýsingar um þjónustuna, starfssvæðið og það sem vefsíðan á að hjálpa þér með.",
   },
   {
-    title: "Við komum með tillögu",
+    title: "Við söfnum efninu og smíðum síðuna",
     description:
-      "Við sendum einfalda tillögu með umfangi, næstu skrefum og því sem við mælum með.",
+      "Við hjálpum með texta og myndaval, hönnum síðuna og sendum þér drög. Tvær yfirferðir með breytingum eru innifaldar.",
   },
   {
-    title: "Við söfnum efninu",
+    title: "Við birtum og sjáum um tæknina",
     description:
-      "Við hjálpum þér að taka saman upplýsingar, texta og myndir. Þú þarft ekki að vera með allt tilbúið fyrirfram.",
-  },
-  {
-    title: "Við setjum síðuna upp",
-    description:
-      "Við hönnum og setjum síðuna upp. Þú færð drög til yfirferðar og við fínpússum áður en hún fer í loftið.",
-  },
-  {
-    title: "Síðan fer í loftið",
-    description:
-      "Þegar allt er tilbúið setjum við síðuna í loftið og tryggjum að helstu atriði virki eins og þau eiga að gera.",
+      "Síðan fer yfirleitt í loftið innan 7 til 10 virkra daga eftir að efnið berst. Eftir það sjáum við um hýsingu, viðhald og grunnvöktun.",
   },
 ];
 
 export default function ProcessSection() {
   return (
-    <section id="ferlid" className="bg-white py-20 sm:py-24">
+    <section id="ferlid" className="scroll-mt-16 bg-white py-16 sm:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <SectionHeading
             label="Ferlið"
-            title="Ferlið í stuttu máli"
-            subtitle="Frá fyrstu skilaboðum að tilbúinni vefsíðu."
+            title="Þrjú skref að tilbúinni vefsíðu"
+            subtitle="Frá fyrstu skilaboðum til tilbúinnar vefsíðu."
             centered={false}
           />
           <div className="mt-10 space-y-0">
@@ -53,9 +43,9 @@ export default function ProcessSection() {
           </div>
           <a
             href="#samband"
-            className="inline-block bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            className="inline-flex min-h-11 items-center justify-center rounded-xl bg-blue-700 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
           >
-            Hafa samband
+            Fá fast verð
           </a>
         </div>
       </div>

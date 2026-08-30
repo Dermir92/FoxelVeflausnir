@@ -1,88 +1,65 @@
 import SectionHeading from "./SectionHeading";
 
-const outcomes = [
+const includedGroups = [
   {
-    title: "Fyrstu kynni sem vinna með þér",
-    text: "Síðan útskýrir strax hver þú ert, hvað þú gerir og hvers vegna fólk ætti að treysta þér.",
+    number: "01",
+    title: "Skýr kynning á þjónustunni",
+    text: "Allt að fimm þjónustur, starfssvæði og einföld leið til að hringja eða biðja um tilboð.",
   },
   {
-    title: "Upplýsingar sem fólk finnur fljótt",
-    text: "Þjónusta, þjónustusvæði, myndir, sími og fyrirspurnarform eru sett fram án óþarfa flækju.",
+    number: "02",
+    title: "Myndir og umsagnir sem byggja traust",
+    text: "Myndasafn með allt að átta myndum frá þér og rými fyrir umsagnir viðskiptavina.",
   },
   {
-    title: "Texti á mannamáli",
-    text: "Við hjálpum þér að móta texta sem er skýr, eðlilegur og laus við tæknimál.",
+    number: "03",
+    title: "Aðstoð við íslenska textann",
+    text: "Þú sendir okkur helstu upplýsingarnar. Við mótum textann og fínpússum hann svo hann verði skýr og eðlilegur.",
   },
   {
-    title: "Síða sem virkar vel í síma",
-    text: "Við hönnum fyrir skjáina sem viðskiptavinir nota mest, frá síma upp í tölvu.",
+    number: "04",
+    title: "Hönnun fyrir alla skjái",
+    text: "Síðan er fyrst hönnuð fyrir farsíma og virkar vel í símum, spjaldtölvum og tölvum.",
   },
-];
-
-const included = [
-  "Forsíða með skýrri kynningu",
-  "Þjónustukaflar eða þjónustusíður",
-  "Kynning á fyrirtækinu",
-  "Myndir, verkefni eða dæmi um vinnu",
-  "Tengiliðaupplýsingar og fyrirspurnarform",
-  "Grunnstillingar fyrir leitarvélar",
+  {
+    number: "05",
+    title: "Grunnur að sýnileika á Google",
+    text: "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð fyrirtækjagögn.",
+  },
+  {
+    number: "06",
+    title: "Birting án tæknivesens",
+    text: "Við setjum upp lén, DNS, fyrirspurnarform og persónuverndarsíðu og birtum vefinn.",
+  },
 ];
 
 export default function SolutionSection() {
   return (
-    <section id="thjonustan" className="bg-white py-20 sm:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="innifalid" className="scroll-mt-16 bg-slate-50 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          label="Þjónustan"
-          title="Við byggjum síðuna út frá því sem viðskiptavinurinn þarf að vita"
-          subtitle="Markmiðið er að fólk skilji þjónustuna þína og viti hvernig það hefur samband."
+          label="Innifalið"
+          title="Það sem lítið þjónustufyrirtæki þarf á einum stað"
+          subtitle="Ein vönduð síða sem sýnir hvað þú gerir, hvar þú starfar og hvernig fólk nær í þig."
         />
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 items-start">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {outcomes.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-slate-100 bg-slate-50 p-6"
-              >
-                <h3 className="text-base font-semibold text-slate-900">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 className="text-base font-semibold text-slate-900">
-              Algengt innihald
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-slate-600">
-              Við veljum saman það sem á við, en oft inniheldur síðan þetta:
-            </p>
-            <ul className="mt-5 space-y-3">
-              {included.map((item) => (
-                <li key={item} className="flex items-start gap-2.5">
-                  <svg
-                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span className="text-sm text-slate-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {includedGroups.map((item) => (
+            <article
+              key={item.number}
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <p className="text-sm font-bold tracking-wide text-blue-700">
+                {item.number}
+              </p>
+              <h3 className="mt-3 text-lg font-semibold text-slate-900">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                {item.text}
+              </p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

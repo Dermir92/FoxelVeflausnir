@@ -4,15 +4,15 @@ import { CONTACT_EMAIL } from "@/lib/site";
 
 export default function ContactSection() {
   return (
-    <section id="samband" className="bg-white py-20 sm:py-24">
+    <section id="samband" className="scroll-mt-16 bg-white py-16 sm:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left side info */}
           <div>
             <SectionHeading
               label="Hafðu samband"
-              title="Segðu okkur frá verkefninu"
-              subtitle="Sendu okkur nokkrar línur um fyrirtækið og hvað þig vantar. Við svörum með næstu skrefum."
+              title="Fáðu fast verð fyrir vefsíðuna"
+              subtitle="Sendu okkur nokkrar línur um fyrirtækið og hvað þig vantar. Við svörum og leggjum til næstu skref."
               centered={false}
             />
             <div className="mt-8 space-y-5">
@@ -23,9 +23,9 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 text-sm">Fljótt svar</h3>
+                  <h3 className="font-semibold text-slate-900 text-sm">Skýrt verð</h3>
                   <p className="mt-0.5 text-sm text-slate-600">
-                    Við svörum yfirleitt innan eins til tveggja virkra daga.
+                    Grunnpakkinn kostar 129.000 kr. án vsk. og umfangið liggur fyrir áður en vinna hefst.
                   </p>
                 </div>
               </div>
@@ -36,9 +36,9 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 text-sm">Án skuldbindingar</h3>
+                  <h3 className="font-semibold text-slate-900 text-sm">Fljótt svar</h3>
                   <p className="mt-0.5 text-sm text-slate-600">
-                    Fyrirspurnin er ókeypis. Við komum með tillögu og þú ákveður framhaldið.
+                    Við svörum yfirleitt innan eins til tveggja virkra daga og leggjum til næstu skref.
                   </p>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export default function ContactSection() {
                   <p className="mt-0.5 text-sm text-slate-600">
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="text-blue-600 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded"
+                      className="inline-flex min-h-11 items-center rounded text-blue-700 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
                     >
                       {CONTACT_EMAIL}
                     </a>
@@ -64,7 +64,7 @@ export default function ContactSection() {
           </div>
 
           {/* Form */}
-          <div className="bg-slate-50 rounded-2xl border border-slate-100 p-7 sm:p-8">
+          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8">
             <ContactForm />
           </div>
         </div>
