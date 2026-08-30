@@ -8,119 +8,149 @@ type Project = {
   description: string;
   tags: string[];
   href: string;
-  linkLabel: string;
+  domain: string;
   footnote: string;
 };
 
 const projects: Project[] = [
   {
     kind: "client",
-    badge: "Verk okkar",
+    badge: "Verkefni Foxel",
     trade: "Ræsting og teppahreinsun",
     name: "HÁ Hreinu",
     description:
-      "Fjölskyldufyrirtæki í ræstingum frá 2001. Síðan setur þjónustuna fram í skýrum flokkum – húsfélagaþrif, flutningsþrif og teppahreinsun – og gerir tilboðsbeiðni að næsta skrefi.",
-    tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Samband og opnunartími"],
+      "Þjónustan er flokkuð skýrt og tilboðsbeiðni er áberandi næsta skref fyrir húsfélög, fyrirtæki og heimili.",
+    tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Opnunartími"],
     href: "https://hahreinu.is",
-    linkLabel: "Skoða hahreinu.is",
-    footnote: "Unnið af teyminu okkar.",
+    domain: "hahreinu.is",
+    footnote: "Raunverulegt viðskiptaverkefni.",
   },
   {
     kind: "client",
-    badge: "Verk okkar",
+    badge: "Verkefni Foxel",
     trade: "Sótthreinsun og háþrýstiþvottur",
     name: "I.J. Hreinsun",
     description:
-      "Systurfyrirtæki HÁ Hreinu. Sérhæfðari þjónusta – sótthreinsun og háþrýstiþvottur á sorptunnum, tunnuskipti og garðaúðun – sett fram þannig að húsfélög og fyrirtæki rati beint á það sem þau leita að. Síðurnar tvær vísa hvor á aðra.",
-    tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Systursíða"],
+      "Sérhæfð þjónusta sett fram þannig að húsfélög og fyrirtæki rati fljótt á rétta lausn og geti óskað eftir tilboði.",
+    tags: ["Sérhæfð þjónusta", "Tilboðsbeiðni", "Systursíða"],
     href: "https://ijhreinsun.is",
-    linkLabel: "Skoða ijhreinsun.is",
-    footnote: "Unnið af teyminu okkar.",
+    domain: "ijhreinsun.is",
+    footnote: "Raunverulegt viðskiptaverkefni.",
   },
   {
     kind: "demo",
-    badge: "Sýnidæmi",
+    badge: "Sýnidæmi · ekki viðskiptavinur",
     trade: "Heimilis- og handverksþjónusta",
     name: "Handverk & Þjónusta",
     description:
-      "Sýnidæmi sem við smíðuðum til að sýna aðra grein en verkefnin hér fyrir ofan: fyrirtæki sem býður margar handverksþjónustur – pípulagnir, rafmagn, smíði og málningu – á einni síðu, hverja í sínum kafla.",
-    tags: ["Margar þjónustur", "Kaflaskipting", "Samband"],
+      "Sýnidæmi um hvernig vefsíða fyrir iðnaðar- og þjónustufyrirtæki getur kynnt margar þjónustur á einni skýrri síðu.",
+    tags: ["Margar þjónustur", "Starfssvæði", "Samband"],
     href: "https://demo.foxel.is",
-    linkLabel: "Skoða demo.foxel.is",
-    footnote: "Ímyndað fyrirtæki, búið til af Foxel. Ekki viðskiptavinur.",
+    domain: "demo.foxel.is",
+    footnote: "Ímyndað fyrirtæki, búið til af Foxel.",
   },
 ];
 
 export default function PortfolioSection() {
   return (
-    <section className="bg-slate-50 py-20 sm:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="verkefni" className="scroll-mt-16 bg-white py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Verkefni"
-          title="Síður sem eru í loftinu"
-          subtitle="Tvö verkefni sem teymið okkar hefur unnið og eitt sýnidæmi. Þú getur skoðað þær allar."
+          title="Skoðaðu síður sem eru í loftinu"
+          subtitle="Tvö raunveruleg verkefni og eitt skýrt merkt sýnidæmi fyrir handverksþjónustu."
         />
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => {
             const isDemo = project.kind === "demo";
+
             return (
-              <div
+              <article
                 key={project.name}
-                className={`flex flex-col rounded-2xl border bg-white shadow-sm p-6 ${
-                  isDemo ? "border-amber-200" : "border-slate-100"
+                className={`flex flex-col overflow-hidden rounded-2xl border bg-white shadow-sm transition-shadow hover:shadow-md ${
+                  isDemo ? "border-amber-300" : "border-slate-200"
                 }`}
               >
-                <span
-                  className={`self-start text-xs font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full ${
+                <div
+                  className={`flex items-center gap-2.5 border-b px-4 py-3 ${
                     isDemo
-                      ? "border border-dashed border-amber-400 text-amber-700"
-                      : "bg-blue-600 text-white"
+                      ? "border-amber-200 bg-amber-50"
+                      : "border-slate-200 bg-slate-50"
                   }`}
                 >
-                  {project.badge}
-                </span>
-
-                <p className="mt-4 text-sm font-medium text-slate-500">
-                  {project.trade}
-                </p>
-                <h3 className="mt-1 text-lg font-semibold text-slate-900">
-                  {project.name}
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className={`inline-block text-xs font-medium px-2.5 py-1 rounded-full ${
-                        isDemo
-                          ? "bg-amber-50 text-amber-700"
-                          : "bg-slate-100 text-slate-700"
-                      }`}
-                    >
-                      {tag}
+                  <div className="flex flex-shrink-0 gap-1.5" aria-hidden="true">
+                    {[0, 1, 2].map((dot) => (
+                      <div
+                        key={dot}
+                        className={`h-2.5 w-2.5 rounded-full ${
+                          isDemo ? "bg-amber-300" : "bg-slate-300"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <div className="flex h-7 min-w-0 flex-1 items-center rounded-md border border-slate-200 bg-white px-2.5">
+                    <span className="truncate text-xs text-slate-700">
+                      {project.domain}
                     </span>
-                  ))}
+                  </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100">
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded"
+                <div className="flex flex-1 flex-col p-6">
+                  <span
+                    className={`self-start rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide ${
+                      isDemo
+                        ? "border border-dashed border-amber-500 text-amber-800"
+                        : "bg-blue-700 text-white"
+                    }`}
                   >
-                    {project.linkLabel}
-                    <span aria-hidden="true">↗</span>
-                    <span className="sr-only">opnast í nýjum flipa</span>
-                  </a>
-                  <p className="mt-2 text-xs text-slate-500 leading-relaxed">
-                    {project.footnote}
+                    {project.badge}
+                  </span>
+
+                  <p className="mt-4 text-sm font-medium text-slate-600">
+                    {project.trade}
                   </p>
+                  <h3 className="mt-1 text-lg font-semibold text-slate-900">
+                    {project.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className={`inline-block rounded-full px-2.5 py-1 text-xs font-medium ${
+                          isDemo
+                            ? "bg-amber-50 text-amber-800"
+                            : "bg-slate-100 text-slate-700"
+                        }`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-auto pt-6">
+                    <div className="border-t border-slate-100 pt-3">
+                      <a
+                        href={project.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex min-h-11 items-center gap-1.5 rounded font-semibold text-blue-700 transition-colors hover:text-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
+                      >
+                        Skoða {project.domain}
+                        <span aria-hidden="true">↗</span>
+                        <span className="sr-only">opnast í nýjum flipa</span>
+                      </a>
+                      <p className="text-xs leading-relaxed text-slate-600">
+                        {project.footnote}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>

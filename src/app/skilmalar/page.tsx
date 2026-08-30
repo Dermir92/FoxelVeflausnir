@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "Skilmálar | Foxel Veflausnir",
   description:
     "Þjónustuskilmálar Foxel Veflausna vegna vefsíðugerðar, ráðgjafar og tengdrar þjónustu.",
+  alternates: {
+    canonical: "/skilmalar",
+  },
 };
 
 const terms = [
@@ -81,7 +84,7 @@ const terms = [
     content: [
       "Viðskiptavinur heldur rétti yfir eigin efni, svo sem merki, myndum og texta sem hann leggur til.",
       "Eftir fulla greiðslu fær viðskiptavinur rétt til að nota endanlega vefsíðu í eigin rekstri. Ógreidd vinna, drög, vinnuskrár, aðferðir, endurnýtanlegir kóðabútar og innri verkferlar Foxel Veflausna eru áfram eign Foxel Veflausna nema annað sé skriflega samið.",
-      "Foxel Veflausnir má vísa til verkefnisins í eigin kynningarefni eða portfolio nema viðskiptavinur óski sérstaklega eftir öðru.",
+      "Foxel Veflausnir má vísa til verkefnisins í eigin kynningarefni eða verkefnasafni nema viðskiptavinur óski sérstaklega eftir öðru.",
     ],
   },
   {
@@ -127,7 +130,7 @@ export default function TermsPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="text-sm font-medium text-blue-600 hover:text-blue-700"
+            className="inline-flex min-h-11 items-center rounded text-sm font-medium text-blue-700 hover:text-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
           >
             Til baka á forsíðu
           </Link>
@@ -140,7 +143,7 @@ export default function TermsPage() {
             samið.
           </p>
           <p className="mt-4 text-sm text-slate-500">
-            Síðast uppfært: 13. maí 2026
+            Síðast uppfært: 30. ágúst 2026
           </p>
         </div>
       </section>

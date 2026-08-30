@@ -15,20 +15,23 @@ export const metadata: Metadata = {
   title: "Persónuverndarstefna | Foxel Veflausnir",
   description:
     "Persónuverndarstefna Foxel Veflausna vegna fyrirspurna, samskipta og notkunar á vefnum.",
+  alternates: {
+    canonical: "/personuvernd",
+  },
 };
 
 const sections = [
   {
     title: "1. Ábyrgðaraðili",
     content: [
-      "Foxel Veflausnir er ábyrgðaraðili að vinnslu persónuupplýsinga sem fer fram í tengslum við vefinn og fyrirspurnir sem berast í gegnum hann.",
+      "Foxel Veflausnir er ábyrgðaraðili vinnslu persónuupplýsinga sem fer fram í tengslum við vefinn og fyrirspurnir sem berast í gegnum hann.",
       `${LEGAL_NAME}, kt. ${KENNITALA}. Netfang: ${CONTACT_EMAIL}.`,
     ],
   },
   {
     title: "2. Hvaða upplýsingum söfnum við?",
     content: [
-      "Þegar þú sendir fyrirspurn í gegnum vefinn getum við unnið með nafn, netfang, símanúmer, nafn fyrirtækis, lýsingu á starfsemi, upplýsingar um núverandi vefsíðu, þarfir, tímalínu og þau skilaboð sem þú sendir okkur.",
+      "Þegar þú sendir fyrirspurn í gegnum vefinn getum við unnið með nafn, netfang, símanúmer og þau skilaboð sem þú sendir okkur.",
       "Við söfnum ekki viðkvæmum persónuupplýsingum og biðjum þig um að senda ekki slíkar upplýsingar í gegnum formið.",
     ],
   },
@@ -51,7 +54,7 @@ const sections = [
     content: [
       "Við seljum ekki persónuupplýsingar og miðlum þeim ekki til óviðkomandi aðila.",
       "Við kunnum að nota þjónustuaðila fyrir hýsingu, tölvupóst, eyðublöð, greiningar, bókhald eða verkefnastjórnun. Slíkir aðilar vinna þá upplýsingar fyrir okkar hönd eða sem sjálfstæðir ábyrgðaraðilar eftir eðli þjónustunnar.",
-      `Fyrirspurnir sem sendar eru í gegnum formið á vefnum fara um þjónustuna Formspree (Formspree, Inc., Bandaríkjunum), sem afhendir okkur þær í tölvupósti. Um er að ræða nafn, netfang, símanúmer og efni fyrirspurnarinnar. Formspree geymir afrit af fyrirspurnum í eigin kerfi. Þú getur óskað eftir því að afritinu verði eytt með því að senda okkur póst á ${CONTACT_EMAIL}.`,
+      `Fyrirspurnir sem sendar eru í gegnum formið á vefnum fara um þjónustuna Formspree (Formspree, Inc., í Bandaríkjunum), sem afhendir okkur þær í tölvupósti. Um er að ræða nafn, netfang, símanúmer og efni fyrirspurnarinnar. Formspree geymir afrit af fyrirspurnum í eigin kerfi. Þú getur óskað eftir því að afritinu verði eytt með því að senda okkur póst á ${CONTACT_EMAIL}.`,
     ],
   },
   {
@@ -96,7 +99,7 @@ export default function PrivacyPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="text-sm font-medium text-blue-600 hover:text-blue-700"
+            className="inline-flex min-h-11 items-center rounded text-sm font-medium text-blue-700 hover:text-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
           >
             Til baka á forsíðu
           </Link>
@@ -108,7 +111,7 @@ export default function PrivacyPage() {
             tengslum við fyrirspurnir, samskipti og notkun á vefnum.
           </p>
           <p className="mt-4 text-sm text-slate-500">
-            Síðast uppfært: 13. maí 2026
+            Síðast uppfært: 30. ágúst 2026
           </p>
         </div>
       </section>

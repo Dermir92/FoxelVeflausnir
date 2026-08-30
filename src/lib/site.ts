@@ -15,3 +15,11 @@ export const KENNITALA = "500925-0270";
 
 /** Public contact address. Do not use a personal address here. */
 export const CONTACT_EMAIL = "foxel@foxel.is";
+
+/** Canonical production origin. Change this once foxel.is resolves. */
+export const SITE_URL = "https://foxel-veflausnir.vercel.app";
+
+export const SITE_NAME = "Foxel Veflausnir";
+
+export const SITE_DESCRIPTION =
+  "Einfaldar vefsíður á föstu verði fyrir íslensk iðnaðar- og þjónustufyrirtæki.";

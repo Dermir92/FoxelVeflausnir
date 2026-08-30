@@ -3,36 +3,22 @@
 import { useState } from "react";
 import { CONTACT_EMAIL } from "@/lib/site";
 
-/**
- * Formspree form id (the part after /f/ in the endpoint, e.g. "xldbgkqw").
- * Set NEXT_PUBLIC_FORMSPREE_ID in .env.local and in the Vercel project env.
- * It is not a secret — Formspree endpoints are public by design.
- */
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
 interface FormData {
   name: string;
-  email: string;
   phone: string;
-  company: string;
-  business: string;
-  hasWebsite: string;
-  needs: string;
-  timeline: string;
+  email: string;
   message: string;
 }
 
 const initialData: FormData = {
   name: "",
-  email: "",
   phone: "",
-  company: "",
-  business: "",
-  hasWebsite: "",
-  needs: "",
-  timeline: "",
+  email: "",
   message: "",
 };
 
@@ -40,32 +26,30 @@ export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>(initialData);
   const [formState, setFormState] = useState<FormState>("idle");
   const [errors, setErrors] = useState<Partial<FormData>>({});
-  // Honeypot. Hidden from people, filled in by bots; Formspree discards any
-  // submission where _gotcha is non-empty.
   const [honeypot, setHoneypot] = useState("");
 
   function validate(): boolean {
     const newErrors: Partial<FormData> = {};
+
     if (!formData.name.trim()) newErrors.name = "Nafn vantar";
     if (!formData.email.trim()) {
       newErrors.email = "Netfang vantar";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    } else if (!EMAIL_PATTERN.test(formData.email)) {
       newErrors.email = "Netfang lítur ekki rétt út";
     }
-    if (!formData.company.trim()) newErrors.company = "Nafn fyrirtækis vantar";
-    if (!formData.business.trim()) newErrors.business = "Lýsing á starfsemi vantar";
-    if (!formData.hasWebsite) newErrors.hasWebsite = "Valkost vantar";
-    if (!formData.needs) newErrors.needs = "Valkost vantar";
-    if (!formData.timeline) newErrors.timeline = "Valkost vantar";
+    if (!formData.message.trim()) {
+      newErrors.message = "Segðu okkur stuttlega frá verkefninu";
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   }
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  async function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
     if (!validate()) return;
+
     if (!FORMSPREE_ID) {
-      // Fail loudly rather than showing a success screen for a lost inquiry.
       console.error(
         "NEXT_PUBLIC_FORMSPREE_ID is not set — the inquiry was NOT sent."
       );
@@ -74,8 +58,9 @@ export default function ContactForm() {
     }
 
     setFormState("submitting");
+
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,39 +68,64 @@ export default function ContactForm() {
         },
         body: JSON.stringify({ ...formData, _gotcha: honeypot }),
       });
-      if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
+
+      if (!response.ok) {
+        throw new Error(`Formspree responded ${response.status}`);
+      }
+
       setFormState("success");
-    } catch (err) {
-      console.error("Contact form submission failed:", err);
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
       setFormState("error");
     }
   }
 
   function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value } = event.target;
+    setFormData((previous) => ({ ...previous, [name]: value }));
+
     if (errors[name as keyof FormData]) {
-      setErrors((prev) => ({ ...prev, [name]: undefined }));
+      setErrors((previous) => ({ ...previous, [name]: undefined }));
     }
+  }
+
+  function resetForm() {
+    setFormState("idle");
+    setFormData(initialData);
+    setErrors({});
   }
 
   if (formState === "success") {
     return (
-      <div className="text-center py-16 px-4">
-        <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+      <div className="px-4 py-16 text-center" role="status">
+        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-700">
+          <svg
+            className="h-8 w-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 13l4 4L19 7"
+            />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-slate-900">Takk fyrir fyrirspurnina!</h3>
-        <p className="mt-3 text-slate-600 text-base max-w-md mx-auto">
-          Við höfum tekið við skilaboðunum og munum hafa samband við þig fljótlega.
+        <h3 className="text-2xl font-bold text-slate-900">
+          Takk fyrir fyrirspurnina!
+        </h3>
+        <p className="mx-auto mt-3 max-w-md text-base text-slate-600">
+          Við höfum tekið við skilaboðunum og svörum eins fljótt og við getum.
         </p>
         <button
-          onClick={() => { setFormState("idle"); setFormData(initialData); }}
-          className="mt-6 text-blue-600 text-sm font-medium hover:underline"
+          type="button"
+          onClick={resetForm}
+          className="mt-6 inline-flex min-h-11 items-center rounded-lg px-3 text-sm font-medium text-blue-700 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
         >
           Senda aðra fyrirspurn
         </button>
@@ -124,54 +134,50 @@ export default function ContactForm() {
   }
 
   const inputClass = (field: keyof FormData) =>
-    `w-full px-4 py-3 rounded-xl border text-sm text-slate-900 placeholder-slate-400 bg-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent ${
+    `w-full min-h-12 rounded-xl border bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 transition-colors focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-700 ${
       errors[field]
-        ? "border-red-300 bg-red-50"
-        : "border-slate-200 hover:border-slate-300"
+        ? "border-red-400 bg-red-50"
+        : "border-slate-300 hover:border-slate-400"
     }`;
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
-      {/* Name + Email */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1.5">
-            Nafn <span className="text-red-500">*</span>
-          </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            autoComplete="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Jón Jónsson"
-            className={inputClass("name")}
-          />
-          {errors.name && <p className="mt-1 text-xs text-red-600">{errors.name}</p>}
-        </div>
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1.5">
-            Netfang <span className="text-red-500">*</span>
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="jon@daemi.is"
-            className={inputClass("email")}
-          />
-          {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
-        </div>
+      <div>
+        <label
+          htmlFor="name"
+          className="mb-1.5 block text-sm font-medium text-slate-700"
+        >
+          Nafn{" "}
+          <span className="text-red-700" aria-hidden="true">
+            *
+          </span>
+        </label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          autoComplete="name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Jón Jónsson"
+          aria-invalid={Boolean(errors.name)}
+          aria-describedby={errors.name ? "name-error" : undefined}
+          className={inputClass("name")}
+        />
+        {errors.name ? (
+          <p id="name-error" className="mt-1 text-sm text-red-700">
+            {errors.name}
+          </p>
+        ) : null}
       </div>
 
-      {/* Phone + Company */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1.5">
+          <label
+            htmlFor="phone"
+            className="mb-1.5 block text-sm font-medium text-slate-700"
+          >
             Sími
           </label>
           <input
@@ -185,122 +191,67 @@ export default function ContactForm() {
             className={inputClass("phone")}
           />
         </div>
+
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-1.5">
-            Nafn fyrirtækis <span className="text-red-500">*</span>
+          <label
+            htmlFor="email"
+            className="mb-1.5 block text-sm font-medium text-slate-700"
+          >
+            Netfang{" "}
+            <span className="text-red-700" aria-hidden="true">
+              *
+            </span>
           </label>
           <input
-            id="company"
-            name="company"
-            type="text"
-            autoComplete="organization"
-            value={formData.company}
+            id="email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+            value={formData.email}
             onChange={handleChange}
-            placeholder="Dæmi ehf."
-            className={inputClass("company")}
+            placeholder="jon@daemi.is"
+            aria-invalid={Boolean(errors.email)}
+            aria-describedby={errors.email ? "email-error" : undefined}
+            className={inputClass("email")}
           />
-          {errors.company && <p className="mt-1 text-xs text-red-600">{errors.company}</p>}
+          {errors.email ? (
+            <p id="email-error" className="mt-1 text-sm text-red-700">
+              {errors.email}
+            </p>
+          ) : null}
         </div>
       </div>
 
-      {/* Business description */}
       <div>
-        <label htmlFor="business" className="block text-sm font-medium text-slate-700 mb-1.5">
-          Hvað gerir fyrirtækið? <span className="text-red-500">*</span>
-        </label>
-        <input
-          id="business"
-          name="business"
-          type="text"
-          value={formData.business}
-          onChange={handleChange}
-          placeholder="T.d. pípulagning, þrif, þjálfun…"
-          className={inputClass("business")}
-        />
-        {errors.business && <p className="mt-1 text-xs text-red-600">{errors.business}</p>}
-      </div>
-
-      {/* Has website */}
-      <div>
-        <label htmlFor="hasWebsite" className="block text-sm font-medium text-slate-700 mb-1.5">
-          Ertu með vefsíðu? <span className="text-red-500">*</span>
-        </label>
-        <select
-          id="hasWebsite"
-          name="hasWebsite"
-          value={formData.hasWebsite}
-          onChange={handleChange}
-          className={inputClass("hasWebsite")}
+        <label
+          htmlFor="message"
+          className="mb-1.5 block text-sm font-medium text-slate-700"
         >
-          <option value="">Veldu…</option>
-          <option value="nei">Nei</option>
-          <option value="ja">Já</option>
-          <option value="ja-laga">Já, en hana þarf að laga</option>
-        </select>
-        {errors.hasWebsite && <p className="mt-1 text-xs text-red-600">{errors.hasWebsite}</p>}
-      </div>
-
-      {/* Needs */}
-      <div>
-        <label htmlFor="needs" className="block text-sm font-medium text-slate-700 mb-1.5">
-          Hvað vantar þig helst? <span className="text-red-500">*</span>
-        </label>
-        <select
-          id="needs"
-          name="needs"
-          value={formData.needs}
-          onChange={handleChange}
-          className={inputClass("needs")}
-        >
-          <option value="">Veldu…</option>
-          <option value="einföld-heimasida">Einfalda vefsíðu</option>
-          <option value="ny-sida">Nýja síðu í stað gamallar</option>
-          <option value="landing-page">Lendingarsíða</option>
-          <option value="bokunarkerfi">Bókunarkerfi</option>
-          <option value="netverslun">Netverslun</option>
-          <option value="spjallbox">Netspjall eða spjallvélmenni</option>
-          <option value="annad">Annað</option>
-        </select>
-        {errors.needs && <p className="mt-1 text-xs text-red-600">{errors.needs}</p>}
-      </div>
-
-      {/* Timeline */}
-      <div>
-        <label htmlFor="timeline" className="block text-sm font-medium text-slate-700 mb-1.5">
-          Hvenær viltu helst fá síðuna tilbúna? <span className="text-red-500">*</span>
-        </label>
-        <select
-          id="timeline"
-          name="timeline"
-          value={formData.timeline}
-          onChange={handleChange}
-          className={inputClass("timeline")}
-        >
-          <option value="">Veldu…</option>
-          <option value="sem-fyrst">Sem fyrst</option>
-          <option value="innan-manadar">Innan mánaðar</option>
-          <option value="ekki-viss">Ekki viss</option>
-        </select>
-        {errors.timeline && <p className="mt-1 text-xs text-red-600">{errors.timeline}</p>}
-      </div>
-
-      {/* Message */}
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1.5">
-          Skilaboð
+          Segðu okkur stuttlega hvað þú gerir og hvað þig vantar{" "}
+          <span className="text-red-700" aria-hidden="true">
+            *
+          </span>
         </label>
         <textarea
           id="message"
           name="message"
-          rows={4}
+          rows={5}
+          required
           value={formData.message}
           onChange={handleChange}
-          placeholder="Segðu okkur meira um verkefnið eða spurðu okkur um það sem þú vilt vita."
-          className={`${inputClass("message")} resize-none`}
+          placeholder="T.d. „Ég er pípari á höfuðborgarsvæðinu og vil einfalda síðu sem sýnir þjónustuna og verkin mín.“"
+          aria-invalid={Boolean(errors.message)}
+          aria-describedby={errors.message ? "message-error" : undefined}
+          className={`${inputClass("message")} resize-y`}
         />
+        {errors.message ? (
+          <p id="message-error" className="mt-1 text-sm text-red-700">
+            {errors.message}
+          </p>
+        ) : null}
       </div>
 
-      {/* Honeypot — not visible to people, so anything in it came from a bot. */}
       <div className="hidden" aria-hidden="true">
         <label htmlFor="_gotcha">Ekki fylla út þennan reit</label>
         <input
@@ -310,31 +261,38 @@ export default function ContactForm() {
           tabIndex={-1}
           autoComplete="off"
           value={honeypot}
-          onChange={(e) => setHoneypot(e.target.value)}
+          onChange={(event) => setHoneypot(event.target.value)}
         />
       </div>
 
-      {formState === "error" && (
-        <p className="text-sm text-red-600" role="alert">
-          Ekki tókst að senda fyrirspurnina. Reyndu aftur, eða sendu okkur línu á{" "}
-          <a href={`mailto:${CONTACT_EMAIL}`} className="font-medium underline">
+      {formState === "error" ? (
+        <p className="text-sm text-red-700" role="alert">
+          Ekki tókst að senda fyrirspurnina. Reyndu aftur, eða sendu okkur línu
+          á{" "}
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="inline-flex min-h-11 items-center font-medium underline"
+          >
             {CONTACT_EMAIL}
           </a>
           .
         </p>
-      )}
+      ) : null}
 
       <button
         type="submit"
         disabled={formState === "submitting"}
-        className="w-full bg-blue-600 text-white font-semibold py-3.5 px-6 rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+        className="flex min-h-12 w-full items-center justify-center rounded-xl bg-blue-700 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
       >
-        {formState === "submitting" ? "Sendum…" : "Senda fyrirspurn"}
+        {formState === "submitting" ? "Sendum…" : "Fá fast verð"}
       </button>
-      <p className="text-xs text-slate-500 text-center">
-        Með því að senda fyrirspurn samþykkir þú að við notum upplýsingarnar til
-        að svara þér. Sjá nánar í{" "}
-        <a href="/personuvernd" className="text-blue-600 hover:underline">
+
+      <p className="text-center text-xs leading-relaxed text-slate-600">
+        Við notum upplýsingarnar aðeins til að svara fyrirspurninni. Nánar í{" "}
+        <a
+          href="/personuvernd"
+          className="inline-flex min-h-11 items-center text-blue-700 underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
+        >
           persónuverndarstefnu
         </a>
         .

@@ -3,45 +3,35 @@ import FAQItem from "./FAQItem";
 
 const faqs = [
   {
-    question: "Þarf ég að eiga lén?",
+    question: "Er verðið raunverulega fast?",
     answer:
-      "Nei. Við getum hjálpað þér að finna lén og setja það rétt upp.",
+      "Já. Grunnpakkinn kostar 129.000 kr. án vsk. svo lengi sem verkefnið er innan þess umfangs sem lýst er á síðunni. Við samþykkjum sérstaklega verð á viðbótum áður en vinna við þær hefst.",
   },
   {
     question: "Þarf ég að vera með tilbúna texta?",
     answer:
-      "Nei. Við getum mótað texta út frá stuttum upplýsingum frá þér. Þú segir okkur hvað þú gerir og við hjálpum til við að koma því skýrt frá.",
+      "Nei. Þú segir okkur hvað þú gerir, hvar þú starfar og hvað viðskiptavinir þurfa að vita. Við hjálpum þér að skrifa og fínpússa íslenska textann.",
   },
   {
-    question: "Get ég sent myndir úr símanum?",
+    question: "Þarf ég að eiga lén?",
     answer:
-      "Já. Við getum hjálpað þér að velja þær myndir sem henta best. Ef myndirnar eru of fáar eða ekki nógu skýrar finnum við lausn saman.",
+      "Nei. Við hjálpum þér að velja lén og sjáum um tæknilega uppsetningu þess. Lénið er skráð á þitt fyrirtæki og greitt sérstaklega.",
   },
   {
-    question: "Get ég breytt síðunni seinna?",
+    question: "Hvað gerist ef ég þarf stærri breytingar síðar?",
     answer:
-      "Já. Við getum séð um breytingarnar fyrir þig, eða sett upp einfalda leið fyrir þig til að uppfæra efnið.",
-  },
-  {
-    question: "Getið þið lagað gamla heimasíðu?",
-    answer:
-      "Já. Við skoðum hvort það borgi sig að laga núverandi síðu eða byggja nýja. Stundum er einfaldara og hagkvæmara að byrja upp á nýtt.",
-  },
-  {
-    question: "Bjóðið þið spjallvélmenni?",
-    answer:
-      "Já, í ákveðnum tilvikum. Fyrst skoðum við hvað fyrirtækið þarf. Stundum dugar einfalt fyrirspurnarform eða netspjall, en fyrir fyrirtæki sem fá margar endurteknar spurningar getur spjallvélmenni verið góður aukavalkostur.",
+      "Minniháttar textabreytingar falla undir mánaðarlega umsjón. Nýjar síður, bókunarkerfi, netverslanir og flóknari samþættingar eru metnar og verðlagðar sérstaklega.",
   },
 ];
 
 export default function FAQSection() {
   return (
-    <section id="spurningar" className="bg-slate-50 py-20 sm:py-24">
+    <section id="spurningar" className="scroll-mt-16 bg-slate-50 py-16 sm:py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Spurt og svarað"
-          title="Algengar spurningar"
-          subtitle="Finnur þú ekki svarið? Hafðu samband og við svörum."
+          title="Algengar spurningar áður en við byrjum"
+          subtitle="Ertu ekki viss um hvað hentar? Sendu okkur línu og við svörum og leggjum til næstu skref."
         />
         <div className="mt-10 space-y-3">
           {faqs.map((faq) => (

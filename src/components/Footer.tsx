@@ -1,13 +1,6 @@
 import Image from "next/image";
 import { CONTACT_EMAIL, KENNITALA, LEGAL_NAME } from "@/lib/site";
-
-const navLinks = [
-  { href: "#thjonustan", label: "Þjónustan" },
-  { href: "#pakkar", label: "Pakkar" },
-  { href: "#ferlid", label: "Ferlið" },
-  { href: "#spurningar", label: "Spurt og svarað" },
-  { href: "#samband", label: "Hafðu samband" },
-];
+import { NAV_LINKS } from "@/lib/navigation";
 
 const legalLinks = [
   { href: "/skilmalar", label: "Skilmálar" },
@@ -34,7 +27,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
               Við hönnum skýrar og traustvekjandi vefsíður fyrir lítil fyrirtæki
-              sem vilja vera sýnileg og aðgengileg.
+              í iðnaði og þjónustu.
             </p>
           </div>
 
@@ -44,11 +37,11 @@ export default function Footer() {
               Valmynd
             </h3>
             <ul className="space-y-2.5">
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+                    className="inline-flex min-h-11 min-w-11 items-center rounded text-sm text-slate-400 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
                   >
                     {link.label}
                   </a>
@@ -63,7 +56,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-slate-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+                    className="inline-flex min-h-11 min-w-11 items-center rounded text-sm text-slate-400 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
                   >
                     {link.label}
                   </a>
@@ -86,7 +79,7 @@ export default function Footer() {
                 </svg>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+                  className="inline-flex min-h-11 items-center rounded transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -95,16 +88,16 @@ export default function Footer() {
             <div className="mt-6">
               <a
                 href="#samband"
-                className="inline-block bg-blue-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                className="inline-flex min-h-11 items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
               >
-                Hafa samband
+                Fá fast verð
               </a>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-400">
             &copy; {new Date().getFullYear()} Foxel Veflausnir. Öll réttindi áskilin.
           </p>
         </div>

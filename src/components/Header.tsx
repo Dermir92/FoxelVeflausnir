@@ -2,14 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
-const navLinks = [
-  { href: "#thjonustan", label: "Þjónustan" },
-  { href: "#pakkar", label: "Pakkar" },
-  { href: "#ferlid", label: "Ferlið" },
-  { href: "#spurningar", label: "Spurt og svarað" },
-  { href: "#samband", label: "Hafðu samband" },
-];
+import { NAV_LINKS } from "@/lib/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +12,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-lg">
+          <a href="#" className="flex min-h-11 items-center gap-2.5 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">
             <Image
               src="/logo.png"
               alt=""
@@ -38,11 +31,11 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-7" aria-label="Aðalvalmynd">
-            {navLinks.map((link) => (
+            {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded"
+                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded text-sm font-medium text-slate-600 transition-colors hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
               >
                 {link.label}
               </a>
@@ -53,15 +46,15 @@ export default function Header() {
           <div className="hidden lg:block">
             <a
               href="#samband"
-              className="inline-block bg-blue-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+              className="inline-flex min-h-11 items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
             >
-              Hafa samband
+              Fá fast verð
             </a>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            className="flex h-11 w-11 items-center justify-center rounded-lg text-slate-600 transition-colors hover:bg-slate-50 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 lg:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-expanded={menuOpen}
             aria-label={menuOpen ? "Loka valmynd" : "Opna valmynd"}
@@ -85,12 +78,12 @@ export default function Header() {
             aria-label="Valmynd"
           >
             <div className="flex flex-col gap-1">
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="px-3 py-2.5 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-colors"
+                  className="flex min-h-11 items-center rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-blue-700"
                 >
                   {link.label}
                 </a>
@@ -98,9 +91,9 @@ export default function Header() {
               <a
                 href="#samband"
                 onClick={() => setMenuOpen(false)}
-                className="mt-3 mx-3 text-center bg-blue-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors"
+                className="mx-3 mt-3 flex min-h-11 items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-800"
               >
-                Hafa samband
+                Fá fast verð
               </a>
             </div>
           </nav>
