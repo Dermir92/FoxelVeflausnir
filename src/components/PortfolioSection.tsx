@@ -60,7 +60,6 @@ export default function PortfolioSection() {
           title="Skoðaðu síður sem eru í loftinu"
           subtitle="Tvö raunveruleg verkefni og eitt skýrt merkt sýnidæmi fyrir handverksþjónustu."
         />
-
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => {
             const isDemo = project.kind === "demo";
