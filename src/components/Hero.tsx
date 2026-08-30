@@ -7,8 +7,8 @@ const serviceItems = [
 ];
 
 const trustItems = [
-  "4,9 í einkunn",
-  "Þjónusta á höfuðborgarsvæðinu",
+  "4,9 af 5 frá viðskiptavinum",
+  "Löggiltur pípari",
 ];
 
 export default function Hero() {
@@ -37,8 +37,9 @@ export default function Hero() {
               Einföld vefsíða fyrir iðnaðar- og þjónustufyrirtæki
             </h1>
             <p className="reveal reveal-2 mx-auto mt-4 max-w-xl text-base leading-relaxed text-slate-600 sm:mt-6 sm:text-xl lg:mx-0">
-              Við setjum þjónustuna, starfssvæðið, myndir og leiðir til að hafa
-              samband á eina skýra síðu sem hjálpar fólki að taka næsta skref.
+              Við setjum þjónustuna, starfssvæðið, myndir af verkum og leiðir
+              til að hafa samband á eina skýra síðu sem auðveldar
+              viðskiptavinum að taka næsta skref.
             </p>
             <div className="reveal reveal-3 mt-5 flex flex-col items-center gap-1 sm:mt-7 lg:items-start">
               <p className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -72,7 +73,10 @@ export default function Hero() {
           </div>
 
           <div className="reveal reveal-4 mx-auto w-full max-w-sm flex-1 lg:mx-0 lg:max-w-md">
-            <div className="max-h-[280px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_85px_-50px_rgba(15,23,42,0.65),0_18px_45px_-34px_rgba(30,64,175,0.45)] sm:max-h-none">
+            <div
+              className="max-h-[280px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_85px_-50px_rgba(15,23,42,0.65),0_18px_45px_-34px_rgba(30,64,175,0.45)] sm:max-h-none"
+              aria-hidden="true"
+            >
               <div className="flex items-center gap-2 border-b border-slate-200 bg-slate-50 px-3 py-2.5 sm:px-4 sm:py-3">
                 <div className="flex gap-1.5" aria-hidden="true">
                   <div className="h-3 w-3 rounded-full bg-slate-200" />
@@ -80,7 +84,9 @@ export default function Hero() {
                   <div className="h-3 w-3 rounded-full bg-slate-200" />
                 </div>
                 <div className="mx-2 flex h-7 flex-1 items-center rounded-md border border-slate-200 bg-white px-3 shadow-sm">
-                  <span className="text-xs text-slate-600">pipari.is</span>
+                  <span className="text-xs text-slate-600">
+                    synidaemi.foxel.is
+                  </span>
                 </div>
               </div>
 
@@ -88,10 +94,10 @@ export default function Hero() {
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-sm font-bold text-slate-950">
-                      Jóns Pípulagnir
+                      Jóns pípulagnir
                     </p>
                     <p className="mt-0.5 text-xs text-slate-500">
-                      Löggilt pípulagningaþjónusta
+                      Löggiltur pípari
                     </p>
                   </div>
                   <div className="hidden items-center gap-4 text-xs font-medium text-slate-500 sm:flex">
@@ -126,8 +132,12 @@ export default function Hero() {
                       </span>
                     ))}
                   </div>
+                  <p className="mt-2 flex items-center gap-1.5 text-[11px] font-medium text-slate-600 sm:hidden">
+                    <span className="text-blue-800">★</span>
+                    {trustItems[0]}
+                  </p>
                   <div
-                    className="mt-4 inline-flex min-h-9 w-fit items-center rounded-lg bg-blue-800 px-3 text-xs font-semibold text-white sm:mt-5 sm:min-h-10 sm:px-4 sm:text-sm"
+                    className="mt-2 inline-flex min-h-9 w-fit items-center rounded-lg bg-blue-800 px-3 text-xs font-semibold text-white sm:mt-5 sm:min-h-10 sm:px-4 sm:text-sm"
                     aria-hidden="true"
                   >
                     Fá tilboð
