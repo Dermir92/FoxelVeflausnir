@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "./SectionHeading";
 
 type Project = {
@@ -12,6 +13,10 @@ type Project = {
   href: string;
   domain: string;
   footnote: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
   previewClass: string;
   accentClass: string;
   glowClass: string;
@@ -26,11 +31,15 @@ const projects: Project[] = [
     trade: "Ræsting og teppahreinsun",
     name: "HÁ Hreinu",
     description:
-      "Þjónustan er flokkuð skýrt og tilboðsbeiðni er áberandi næsta skref fyrir húsfélög, fyrirtæki og heimili.",
+      "Þjónustan er flokkuð skýrt og tilboðsbeiðni er áberandi næsta skref fyrir húsfélög og fyrirtæki.",
     tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Opnunartími"],
     href: "https://hahreinu.is",
     domain: "hahreinu.is",
     footnote: "Raunverulegt viðskiptaverkefni.",
+    image: {
+      src: "/projects/hahreinu-hero.jpg",
+      alt: "Íslenskt íbúðarhverfi, mynd af vef HÁ Hreinu",
+    },
     previewClass: "from-sky-950 via-blue-900 to-blue-700",
     accentClass: "bg-sky-300 text-sky-950",
     glowClass: "bg-sky-400",
@@ -48,6 +57,10 @@ const projects: Project[] = [
     href: "https://ijhreinsun.is",
     domain: "ijhreinsun.is",
     footnote: "Raunverulegt viðskiptaverkefni.",
+    image: {
+      src: "/projects/ijhreinsun-hero.jpg",
+      alt: "Reykjavík úr lofti, mynd af vef I.J. Hreinsunar",
+    },
     previewClass: "from-slate-950 via-cyan-950 to-cyan-700",
     accentClass: "bg-cyan-300 text-cyan-950",
     glowClass: "bg-cyan-400",
@@ -115,54 +128,87 @@ export default function PortfolioSection() {
                   </div>
                 </div>
 
-                <div
-                  className={`relative isolate min-h-52 overflow-hidden bg-gradient-to-br p-5 text-white ${project.previewClass}`}
-                  aria-hidden="true"
-                >
-                  <div
-                    className={`absolute -right-12 -top-16 h-44 w-44 rounded-full opacity-25 blur-3xl ${project.glowClass}`}
-                  />
-                  <div className="absolute -bottom-16 -left-8 h-36 w-36 rounded-full bg-white/15 blur-3xl" />
-
-                  <div className="relative flex items-start justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      <span
-                        className={`flex h-11 w-11 items-center justify-center rounded-xl text-sm font-black shadow-lg ${project.accentClass}`}
-                      >
-                        {project.initials}
-                      </span>
+                {project.image ? (
+                  <div className="relative isolate min-h-52 overflow-hidden text-white">
+                    <Image
+                      src={project.image.src}
+                      alt={project.image.alt}
+                      fill
+                      sizes="(min-width: 1024px) 352px, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover motion-safe:transition motion-safe:duration-500 motion-safe:group-hover:scale-[1.03]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-slate-950/10" />
+                    <div className="relative flex min-h-52 flex-col justify-between p-5">
+                      <div className="flex items-start justify-between gap-4">
+                        <span
+                          className={`flex h-11 w-11 items-center justify-center rounded-xl text-sm font-black shadow-lg ${project.accentClass}`}
+                        >
+                          {project.initials}
+                        </span>
+                        <span className="font-mono text-xs font-semibold tracking-wider text-white/80">
+                          {project.number}
+                        </span>
+                      </div>
                       <div>
-                        <p className="text-xs font-medium text-white/70">
+                        <p className="text-xs font-medium text-white/80">
                           {project.trade}
                         </p>
-                        <p className="mt-0.5 font-bold tracking-tight">
+                        <p className="mt-1 text-lg font-bold tracking-tight">
                           {project.name}
                         </p>
                       </div>
                     </div>
-                    <span className="font-mono text-xs font-semibold tracking-wider text-white/55">
-                      {project.number}
-                    </span>
                   </div>
+                ) : (
+                  <div
+                    className={`relative isolate min-h-52 overflow-hidden bg-gradient-to-br p-5 text-white ${project.previewClass}`}
+                    aria-hidden="true"
+                  >
+                    <div
+                      className={`absolute -right-12 -top-16 h-44 w-44 rounded-full opacity-25 blur-3xl ${project.glowClass}`}
+                    />
+                    <div className="absolute -bottom-16 -left-8 h-36 w-36 rounded-full bg-white/15 blur-3xl" />
 
-                  <div className="relative mt-5 rounded-2xl border border-white/15 bg-white/10 p-4 shadow-xl backdrop-blur-sm">
-                    <div className="h-2 w-20 rounded-full bg-white/35" />
-                    <div className="mt-3 h-3 w-4/5 rounded-full bg-white/90" />
-                    <div className="mt-2 h-3 w-3/5 rounded-full bg-white/75" />
-                    <div className="mt-4 flex items-center justify-between gap-3">
-                      <span
-                        className={`rounded-lg px-3 py-2 text-[11px] font-bold ${project.accentClass}`}
-                      >
-                        Fá tilboð
+                    <div className="relative flex items-start justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <span
+                          className={`flex h-11 w-11 items-center justify-center rounded-xl text-sm font-black shadow-lg ${project.accentClass}`}
+                        >
+                          {project.initials}
+                        </span>
+                        <div>
+                          <p className="text-xs font-medium text-white/70">
+                            {project.trade}
+                          </p>
+                          <p className="mt-0.5 font-bold tracking-tight">
+                            {project.name}
+                          </p>
+                        </div>
+                      </div>
+                      <span className="font-mono text-xs font-semibold tracking-wider text-white/55">
+                        {project.number}
                       </span>
-                      <div className="flex gap-1.5">
-                        <span className="h-7 w-7 rounded-lg bg-white/10" />
-                        <span className="h-7 w-7 rounded-lg bg-white/10" />
-                        <span className="h-7 w-7 rounded-lg bg-white/10" />
+                    </div>
+
+                    <div className="relative mt-5 rounded-2xl border border-white/15 bg-white/10 p-4 shadow-xl backdrop-blur-sm">
+                      <div className="h-2 w-20 rounded-full bg-white/35" />
+                      <div className="mt-3 h-3 w-4/5 rounded-full bg-white/90" />
+                      <div className="mt-2 h-3 w-3/5 rounded-full bg-white/75" />
+                      <div className="mt-4 flex items-center justify-between gap-3">
+                        <span
+                          className={`rounded-lg px-3 py-2 text-[11px] font-bold ${project.accentClass}`}
+                        >
+                          Fá tilboð
+                        </span>
+                        <div className="flex gap-1.5">
+                          <span className="h-7 w-7 rounded-lg bg-white/10" />
+                          <span className="h-7 w-7 rounded-lg bg-white/10" />
+                          <span className="h-7 w-7 rounded-lg bg-white/10" />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
 
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-center justify-between gap-3">
