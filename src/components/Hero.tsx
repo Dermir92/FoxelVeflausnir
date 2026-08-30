@@ -14,7 +14,7 @@ const serviceItems = [
 ];
 
 const trustItems = [
-  "Raunverulegt verkefni Foxel",
+  "Raunverulegt verkefni frá Foxel",
   "hahreinu.is",
 ];
 
@@ -78,11 +78,11 @@ export default function Hero() {
             </ul>
           </div>
 
-          <div className="reveal reveal-4 mx-auto w-full max-w-sm flex-1 lg:mx-0 lg:max-w-lg 2xl:max-w-xl">
-            <div
-              className="max-h-[280px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_85px_-50px_rgba(15,23,42,0.65),0_18px_45px_-34px_rgba(30,64,175,0.45)] sm:max-h-none"
-              aria-hidden="true"
-            >
+          <div
+            className="reveal reveal-4 relative mx-auto w-full max-w-sm flex-1 pb-8 pr-8 sm:max-w-lg sm:pb-10 sm:pr-12 lg:mx-0 lg:max-w-[38rem] 2xl:max-w-[42rem] 2xl:pr-16"
+            aria-hidden="true"
+          >
+            <div className="max-h-[280px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_85px_-50px_rgba(15,23,42,0.55),0_18px_45px_-34px_rgba(30,64,175,0.28)] sm:max-h-none">
               <div className="flex items-center gap-2 border-b border-slate-200 bg-slate-50 px-3 py-2.5 sm:px-4 sm:py-3">
                 <div className="flex gap-1.5" aria-hidden="true">
                   <div className="h-3 w-3 rounded-full bg-slate-200" />
@@ -160,9 +160,9 @@ export default function Hero() {
                     fetchPriority="high"
                     className="object-cover"
                   />
-                  <div className="absolute inset-x-2 bottom-2 rounded-md bg-white/95 px-2.5 py-2 shadow-sm backdrop-blur-sm">
+                  <div className="absolute left-2 top-2 hidden rounded-md bg-white/95 px-2.5 py-2 shadow-sm backdrop-blur-sm sm:block">
                     <p className="text-[10px] font-semibold leading-tight text-slate-700 sm:text-xs">
-                      Mynd úr raunverulegu verkefni
+                      Mynd úr verkefninu
                     </p>
                   </div>
                 </div>
@@ -177,6 +177,52 @@ export default function Hero() {
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+
+            <div className="absolute bottom-0 right-0 w-[36%] min-w-32 max-w-[11.25rem] overflow-hidden rounded-[1.45rem] border-[4px] border-slate-900 bg-white shadow-[0_24px_55px_-28px_rgba(15,23,42,0.75),0_12px_28px_-18px_rgba(30,64,175,0.35)] sm:w-[34%] sm:rounded-[1.75rem] sm:border-[5px]">
+              <div className="flex h-5 items-center justify-center bg-slate-950 sm:h-6">
+                <span className="h-1 w-8 rounded-full bg-slate-600" />
+              </div>
+
+              <div className="flex items-center justify-between gap-2 border-b border-slate-200 px-2.5 py-2 sm:px-3 sm:py-2.5">
+                <div>
+                  <p className="text-[9px] font-bold leading-none text-slate-950 sm:text-[11px]">
+                    HÁ Hreinu
+                  </p>
+                  <p className="mt-1 text-[7px] leading-none text-slate-500 sm:text-[8px]">
+                    Ræsting og teppahreinsun
+                  </p>
+                </div>
+                <span className="flex h-5 w-5 items-center justify-center rounded-md bg-blue-800 text-[7px] font-bold text-white sm:h-6 sm:w-6 sm:text-[8px]">
+                  HÁ
+                </span>
+              </div>
+
+              <div className="relative h-20 overflow-hidden bg-slate-200 sm:h-28">
+                <Image
+                  src={hahreinuHero}
+                  alt=""
+                  fill
+                  sizes="180px"
+                  placeholder="blur"
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="p-2.5 sm:p-3">
+                <p className="text-[7px] font-bold uppercase tracking-[0.11em] text-blue-800 sm:text-[8px]">
+                  Fyrirtæki og húsfélög
+                </p>
+                <p className="mt-1 text-[11px] font-bold leading-tight text-slate-950 sm:text-sm">
+                  Ræsting og teppahreinsun
+                </p>
+                <p className="mt-2 hidden text-[9px] leading-relaxed text-slate-600 sm:block">
+                  Einföld leið til að skoða þjónustu og óska eftir tilboði.
+                </p>
+                <span className="mt-2.5 inline-flex min-h-7 items-center rounded-md bg-blue-800 px-2.5 text-[8px] font-bold text-white sm:mt-3 sm:min-h-8 sm:px-3 sm:text-[9px]">
+                  Fá tilboð
+                </span>
               </div>
             </div>
           </div>
