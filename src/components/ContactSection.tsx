@@ -11,8 +11,8 @@ export default function ContactSection() {
           <div>
             <SectionHeading
               label="Hafðu samband"
-              title="Fáðu fast verð fyrir vefsíðuna"
-              subtitle="Sendu okkur nokkrar línur um fyrirtækið og hvað þig vantar. Við svörum og leggjum til næstu skref."
+              title="Fáðu verðtilboð í vefsíðuna"
+              subtitle="Sendu okkur nokkrar línur um fyrirtækið og verkefnið. Við svörum og leggjum til næstu skref."
               centered={false}
             />
             <div className="mt-8 space-y-5">
@@ -25,7 +25,7 @@ export default function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-slate-900 text-sm">Skýrt verð</h3>
                   <p className="mt-0.5 text-sm text-slate-600">
-                    Grunnpakkinn kostar 129.000 kr. án vsk. og umfangið liggur fyrir áður en vinna hefst.
+                    Grunnpakkinn kostar 129.000 kr. án vsk. og umfangið liggur fyrir áður en vinnan hefst.
                   </p>
                 </div>
               </div>

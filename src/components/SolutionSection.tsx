@@ -4,32 +4,32 @@ const includedGroups = [
   {
     number: "01",
     title: "Skýr kynning á þjónustunni",
-    text: "Allt að fimm þjónustur, starfssvæði og einföld leið til að hringja eða biðja um tilboð.",
+    text: "Allt að fimm þjónustuflokkar, starfssvæði og skýr leið til að hringja eða óska eftir tilboði.",
   },
   {
     number: "02",
-    title: "Myndir og umsagnir sem byggja traust",
-    text: "Myndasafn með allt að átta myndum frá þér og rými fyrir umsagnir viðskiptavina.",
+    title: "Myndir og umsagnir sem auka traust",
+    text: "Myndasafn með allt að átta myndum frá fyrirtækinu og rými fyrir umsagnir viðskiptavina.",
   },
   {
     number: "03",
-    title: "Aðstoð við íslenska textann",
-    text: "Þú sendir okkur helstu upplýsingarnar. Við mótum textann og fínpússum hann svo hann verði skýr og eðlilegur.",
+    title: "Aðstoð við íslenskan texta",
+    text: "Þú sendir helstu upplýsingarnar. Við mótum textann svo hann verði skýr, eðlilegur og tilbúinn á vefinn.",
   },
   {
     number: "04",
     title: "Hönnun fyrir alla skjái",
-    text: "Síðan er fyrst hönnuð fyrir farsíma og virkar vel í símum, spjaldtölvum og tölvum.",
+    text: "Síðan er hönnuð með farsíma í forgangi og virkar vel í símum, spjaldtölvum og tölvum.",
   },
   {
     number: "05",
     title: "Grunnur að sýnileika á Google",
-    text: "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð fyrirtækjagögn.",
+    text: "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð gögn um fyrirtækið.",
   },
   {
     number: "06",
     title: "Birting án tæknivesens",
-    text: "Við setjum upp lén, DNS, fyrirspurnarform og persónuverndarsíðu og birtum vefinn.",
+    text: "Við setjum upp lén, DNS, fyrirspurnarform og persónuverndarsíðu og komum vefnum í loftið.",
   },
 ];
 
@@ -39,8 +39,8 @@ export default function SolutionSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Innifalið"
-          title="Það sem lítið þjónustufyrirtæki þarf á einum stað"
-          subtitle="Ein vönduð síða sem sýnir hvað þú gerir, hvar þú starfar og hvernig fólk nær í þig."
+          title="Það sem lítil þjónustufyrirtæki þurfa á einum stað"
+          subtitle="Ein vönduð síða sem sýnir þjónustuna, starfssvæðið og hvernig fólk nær sambandi."
         />
 
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

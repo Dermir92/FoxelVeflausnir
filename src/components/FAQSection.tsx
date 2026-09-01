@@ -5,22 +5,22 @@ const faqs = [
   {
     question: "Af hverju ætti fyrirtækið mitt að vera með vefsíðu?",
     answer:
-      "Eigin vefsíða gefur fyrirtækinu fastan stað sem þú stjórnar sjálfur. Þar sér fólk hvað þú gerir, hvar þú starfar og hvernig það nær í þig, hvort sem það fann þig á Google, samfélagsmiðlum eða með meðmælum. Skýr vefsíða styrkir traust og auðveldar viðskiptavinum að taka næsta skref.",
+      "Eigin vefsíða gefur fyrirtækinu traustan stað á netinu sem þú stjórnar sjálfur. Þar sér fólk hvaða þjónustu þú býður, hvar þú starfar og hvernig það nær í þig, hvort sem það finnur þig á Google, samfélagsmiðlum eða með meðmælum. Skýr vefsíða styrkir traust og gerir næsta skref einfalt.",
   },
   {
     question: "Er verðið raunverulega fast?",
     answer:
-      "Já. Grunnpakkinn kostar 129.000 kr. án vsk. svo lengi sem verkefnið er innan þess umfangs sem lýst er á síðunni. Ef þú vilt bæta einhverju við samþykkjum við verðið áður en sú vinna hefst.",
+      "Já. Grunnpakkinn kostar 129.000 kr. án vsk. ef verkefnið helst innan umfangsins sem lýst er hér á síðunni. Ef þú vilt bæta einhverju við samþykkjum við verðið áður en sú vinna hefst.",
   },
   {
-    question: "Þarf ég að vera með tilbúna texta?",
+    question: "Þarf ég að vera með tilbúinn texta?",
     answer:
-      "Nei. Þú segir okkur hvað þú gerir, hvar þú starfar og hvað viðskiptavinir þurfa að vita. Við hjálpum þér að skrifa íslenska textann og fínpússa hann.",
+      "Nei. Þú segir okkur frá þjónustunni, starfssvæðinu og því sem viðskiptavinir þurfa að vita. Við hjálpum þér að móta íslenskan texta sem hljómar eðlilega.",
   },
   {
     question: "Þarf ég að eiga lén?",
     answer:
-      "Nei. Við hjálpum þér að velja lén og sjáum um tæknilega uppsetningu þess. Lénið er skráð á þitt fyrirtæki og greitt sérstaklega.",
+      "Nei. Við hjálpum þér að velja lén og sjáum um tæknilega uppsetningu þess. Lénið er skráð á fyrirtækið þitt og greitt sérstaklega.",
   },
   {
     question: "Hvað gerist ef ég þarf stærri breytingar síðar?",
@@ -36,7 +36,7 @@ export default function FAQSection() {
         <SectionHeading
           label="Spurt og svarað"
           title="Algengar spurningar áður en við byrjum"
-          subtitle="Ertu ekki viss um hvað hentar? Sendu okkur línu og við svörum og leggjum til næstu skref."
+          subtitle="Ertu ekki viss um hvað hentar? Sendu okkur línu og við leggjum til næstu skref."
         />
         <div className="mt-10 space-y-3">
           {faqs.map((faq) => (
