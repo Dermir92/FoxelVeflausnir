@@ -2,9 +2,9 @@ import Image from "next/image";
 import hahreinuHero from "../../public/projects/hahreinu-hero.jpg";
 
 const highlights = [
-  "Tvö verkefni í loftinu",
-  "Tvær yfirferðir",
-  "7 til 10 virkir dagar",
+  "Tvö raunveruleg verkefni í loftinu",
+  "Tvær umferðir af breytingum",
+  "7-10 virkir dagar",
 ];
 
 const serviceItems = [
@@ -14,7 +14,7 @@ const serviceItems = [
 ];
 
 const trustItems = [
-  "Raunverulegt verkefni frá Foxel",
+  "Verkefni eftir Foxel",
   "hahreinu.is",
 ];
 
@@ -28,9 +28,9 @@ const project = {
   eyebrow: "Fyrirtæki og húsfélög",
   headline: "Ræsting og teppahreinsun",
   blurb:
-    "Skýr þjónusta fyrir fyrirtæki og húsfélög með einfaldri leið til að óska eftir tilboði.",
+    "Þjónustan er skýr, tilboðsbeiðnin einföld og næsta skref alltaf augljóst.",
   blurbShort: "Einföld leið til að skoða þjónustu og óska eftir tilboði.",
-  cta: "Fá tilboð",
+  cta: "Óska eftir tilboði",
 };
 
 // Sama gildi á báðum myndunum svo þær leysist í sama srcset-kandídat og
@@ -57,14 +57,14 @@ export default function Hero() {
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-20 2xl:gap-28">
           <div className="flex-1 text-center lg:text-left">
             <p className="reveal reveal-1 text-sm font-bold uppercase tracking-[0.16em] text-blue-800">
-              Ein skýr lausn á föstu verði
+              Skýr vefsíða á föstu verði
             </p>
             <h1 className="reveal reveal-1 mt-3 text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05] 2xl:text-[4rem]">
-              Einföld vefsíða fyrir iðnaðar- og þjónustufyrirtæki
+              Vefsíða fyrir iðnaðar- og þjónustufyrirtæki
             </h1>
             <p className="reveal reveal-2 mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:mt-6 sm:text-xl lg:mx-0 2xl:text-[1.35rem]">
-              Við smíðum vandaða vefsíðu sem sýnir þjónustuna, starfssvæðið og
-              verkin þín og auðveldar viðskiptavinum að taka næsta skref.
+              Við hönnum og setjum upp vandaða vefsíðu sem kynnir þjónustuna,
+              starfssvæðið og fyrri verk og gerir fólki auðvelt að hafa samband.
             </p>
             <div className="reveal reveal-3 mt-5 flex flex-col items-center gap-1 sm:mt-7 lg:items-start">
               <p className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl 2xl:text-[2rem]">
@@ -74,7 +74,7 @@ export default function Hero() {
                 </span>
               </p>
               <p className="text-sm text-slate-600">
-                Hýsing og umsjón: 5.900 kr./mán. án vsk.
+                Hýsing og umsjón: 5.900 kr. á mánuði án vsk.
               </p>
             </div>
             <div className="reveal reveal-3 mt-6 flex justify-center sm:mt-8 lg:justify-start">
@@ -82,7 +82,7 @@ export default function Hero() {
                 href="#samband"
                 className="inline-flex min-h-11 items-center justify-center rounded-xl bg-blue-800 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-800 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f7f5f0] 2xl:px-9 2xl:text-lg"
               >
-                Fá fast verð
+                Fá verðtilboð
               </a>
             </div>
             <ul className="reveal reveal-4 mt-8 hidden flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-slate-600 sm:flex lg:justify-start 2xl:text-base">
@@ -128,7 +128,7 @@ export default function Hero() {
                     </div>
                     <div className="hidden items-center gap-4 text-xs font-medium text-slate-500 sm:flex">
                       <span>Þjónusta</span>
-                      <span>Verk</span>
+                      <span>Verkefni</span>
                       <span>Samband</span>
                     </div>
                   </div>

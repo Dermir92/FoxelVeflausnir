@@ -22,4 +22,4 @@ export const SITE_URL = "https://foxel-veflausnir.vercel.app";
 export const SITE_NAME = "Foxel Veflausnir";
 
 export const SITE_DESCRIPTION =
-  "Einfaldar vefsíður á föstu verði fyrir íslensk iðnaðar- og þjónustufyrirtæki.";
+  "Skýrar vefsíður á föstu verði fyrir íslensk iðnaðar- og þjónustufyrirtæki.";

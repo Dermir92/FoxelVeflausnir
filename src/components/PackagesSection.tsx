@@ -1,23 +1,23 @@
 import SectionHeading from "./SectionHeading";
 
 const packageFeatures = [
-  "Ein vefsíða með 5 til 7 köflum",
-  "Allt að fimm þjónustur",
-  "Starfssvæði og símanúmer sem hægt er að smella á",
-  "Myndasafn með allt að átta myndum frá þér",
-  "Umsagnir viðskiptavina",
-  "Sambands- og tilboðsform",
-  "Aðstoð við að skrifa og fínpússa íslenskan texta",
-  "Hönnun sem miðar fyrst við farsíma",
-  "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð fyrirtækjagögn",
-  "Uppsetning á léni og DNS",
-  "Persónuverndarsíða fyrir fyrirspurnarformið",
-  "Tvær yfirferðir með breytingum",
-  "Birting innan 7 til 10 virkra daga eftir að efni berst",
+  "Ein vefsíða með 5-7 köflum",
+  "Allt að fimm þjónustuflokkar",
+  "Starfssvæði og smellanlegt símanúmer",
+  "Myndasafn með allt að átta myndum frá fyrirtækinu",
+  "Umsagnir frá viðskiptavinum",
+  "Sambandsform og tilboðsbeiðnir",
+  "Aðstoð við að skrifa og yfirfara íslenskan texta",
+  "Hönnun með farsíma í forgangi",
+  "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð gögn um fyrirtækið",
+  "Uppsetning léns og DNS",
+  "Persónuverndarsíða vegna fyrirspurnarforms",
+  "Tvær umferðir af breytingum",
+  "Birting innan 7-10 virkra daga eftir að efni berst",
 ];
 
 const managementFeatures = [
-  "Hýsing",
+  "Hýsing vefsins",
   "Tæknilegt viðhald",
   "Öryggisuppfærslur",
   "Grunnvöktun á aðgengi vefsins og virkni formsins",
@@ -25,10 +25,10 @@ const managementFeatures = [
 ];
 
 const addOns = [
-  { title: "Auka þjónustusíða", price: "25.000 kr." },
+  { title: "Aukasíða fyrir þjónustu", price: "25.000 kr." },
   { title: "Ensk útgáfa", price: "39.000 kr." },
-  { title: "Uppsetning á Google Business Profile", price: "29.000 kr." },
-  { title: "Auka yfirferð", price: "15.000 kr." },
+  { title: "Uppsetning Google Business Profile", price: "29.000 kr." },
+  { title: "Viðbótaryfirferð", price: "15.000 kr." },
 ];
 
 function CheckIcon() {
@@ -57,7 +57,7 @@ export default function PackagesSection() {
         <SectionHeading
           label="Pakkinn"
           title="Einföld vefsíða á föstu verði"
-          subtitle="Skýrt umfang fyrir lítil iðnaðar- og þjónustufyrirtæki. Eitt verð og enginn falinn stofnkostnaður."
+          subtitle="Skýrt umfang fyrir lítil iðnaðar- og þjónustufyrirtæki. Fast verð og enginn falinn stofnkostnaður."
         />
 
         <div className="mt-10 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60">
@@ -69,7 +69,7 @@ export default function PackagesSection() {
                     Einföld fyrirtækjasíða
                   </p>
                   <h3 className="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">
-                    Allt sem þarf til að byrja
+                    Allt sem þarf til að komast í loftið
                   </h3>
                 </div>
                 <div className="sm:text-right">
@@ -136,7 +136,7 @@ export default function PackagesSection() {
                 href="#samband"
                 className="mt-8 inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-blue-600 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
               >
-                Fá fast verð
+                Fá verðtilboð
               </a>
             </aside>
           </div>
@@ -147,7 +147,7 @@ export default function PackagesSection() {
             <div>
               <h3 className="text-xl font-bold text-slate-900">Viðbætur</h3>
               <p className="mt-1 text-sm text-slate-600">
-                Fyrir skýrt afmarkaðar viðbætur við grunnpakkann.
+                Fyrir afmarkaðar viðbætur við grunnpakkann.
               </p>
             </div>
             <p className="text-sm text-slate-600">Öll verð eru án vsk.</p>

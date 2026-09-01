@@ -10,10 +10,10 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: `${SITE_NAME} | Vefsíður fyrir iðnaðar- og þjónustufyrirtæki`,
+  title: `${SITE_NAME} | Vefsíður fyrir iðnað og þjónustu`,
   description: SITE_DESCRIPTION,
   openGraph: {
-    title: `${SITE_NAME} | Einfaldar vefsíður á föstu verði`,
+    title: `${SITE_NAME} | Skýrar vefsíður á föstu verði`,
     description: SITE_DESCRIPTION,
     siteName: SITE_NAME,
     locale: "is_IS",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: `${SITE_NAME} | Einfaldar vefsíður á föstu verði`,
+    title: `${SITE_NAME} | Skýrar vefsíður á föstu verði`,
     description: SITE_DESCRIPTION,
     images: ["/logo.png"],
   },

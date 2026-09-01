@@ -35,10 +35,10 @@ export default function ContactForm() {
     if (!formData.email.trim()) {
       newErrors.email = "Netfang vantar";
     } else if (!EMAIL_PATTERN.test(formData.email)) {
-      newErrors.email = "Netfang lítur ekki rétt út";
+      newErrors.email = "Netfangið lítur ekki rétt út";
     }
     if (!formData.message.trim()) {
-      newErrors.message = "Segðu okkur stuttlega frá verkefninu";
+      newErrors.message = "Segðu okkur stuttlega frá verkefninu.";
     }
 
     setErrors(newErrors);
@@ -117,10 +117,10 @@ export default function ContactForm() {
           </svg>
         </div>
         <h3 className="text-2xl font-bold text-slate-900">
-          Takk fyrir fyrirspurnina!
+          Takk fyrir fyrirspurnina.
         </h3>
         <p className="mx-auto mt-3 max-w-md text-base text-slate-600">
-          Við höfum móttekið skilaboðin og svörum eins fljótt og við getum.
+          Við höfum móttekið skilaboðin og svörum eins fljótt og auðið er.
         </p>
         <button
           type="button"
@@ -228,7 +228,7 @@ export default function ContactForm() {
           htmlFor="message"
           className="mb-1.5 block text-sm font-medium text-slate-700"
         >
-          Segðu okkur stuttlega hvað þú gerir og hvað þig vantar{" "}
+          Segðu okkur stuttlega frá verkefninu{" "}
           <span className="text-red-700" aria-hidden="true">
             *
           </span>
@@ -240,7 +240,7 @@ export default function ContactForm() {
           required
           value={formData.message}
           onChange={handleChange}
-          placeholder="T.d. „Ég er pípari á höfuðborgarsvæðinu og vil einfalda síðu sem sýnir þjónustuna og verkin mín.“"
+          placeholder="T.d. „Ég er pípari á höfuðborgarsvæðinu og vantar einfalda síðu sem kynnir þjónustuna og sýnir fyrri verk.“"
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? "message-error" : undefined}
           className={`${inputClass("message")} resize-y`}
@@ -267,7 +267,7 @@ export default function ContactForm() {
 
       {formState === "error" ? (
         <p className="text-sm text-red-700" role="alert">
-          Ekki tókst að senda fyrirspurnina. Reyndu aftur, eða sendu okkur línu
+          Ekki tókst að senda fyrirspurnina. Prófaðu aftur eða sendu okkur línu
           á{" "}
           <a
             href={`mailto:${CONTACT_EMAIL}`}
@@ -284,7 +284,7 @@ export default function ContactForm() {
         disabled={formState === "submitting"}
         className="flex min-h-12 w-full items-center justify-center rounded-xl bg-blue-700 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
       >
-        {formState === "submitting" ? "Sendum…" : "Fá fast verð"}
+        {formState === "submitting" ? "Sendi..." : "Fá verðtilboð"}
       </button>
 
       <p className="text-center text-xs leading-relaxed text-slate-600">
@@ -293,7 +293,7 @@ export default function ContactForm() {
           href="/personuvernd"
           className="inline-flex min-h-11 items-center text-blue-700 underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
         >
-          persónuverndarstefnu
+          persónuverndarstefnunni
         </a>
         .
       </p>

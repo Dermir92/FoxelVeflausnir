@@ -31,11 +31,11 @@ const projects: Project[] = [
     trade: "Ræsting og teppahreinsun",
     name: "HÁ Hreinu",
     description:
-      "Þjónustan er flokkuð skýrt og tilboðsbeiðni er áberandi næsta skref fyrir húsfélög og fyrirtæki.",
+      "Þjónustan er flokkuð skýrt og tilboðsbeiðnin er áberandi fyrir húsfélög og fyrirtæki.",
     tags: ["Þjónustuflokkar", "Tilboðsbeiðni", "Opnunartími"],
     href: "https://hahreinu.is",
     domain: "hahreinu.is",
-    footnote: "Raunverulegt viðskiptaverkefni.",
+    footnote: "Raunverulegt verkefni fyrir viðskiptavin.",
     image: {
       src: "/projects/hahreinu-hero.jpg",
       alt: "Íslenskt íbúðarhverfi, mynd af vef HÁ Hreinu",
@@ -52,11 +52,11 @@ const projects: Project[] = [
     trade: "Sótthreinsun og háþrýstiþvottur",
     name: "I.J. Hreinsun",
     description:
-      "Sérhæfð þjónusta sett fram þannig að húsfélög og fyrirtæki rati fljótt á rétta lausn og geti óskað eftir tilboði.",
+      "Sérhæfð þjónusta er sett fram þannig að húsfélög og fyrirtæki rati fljótt á rétta lausn og geti óskað eftir tilboði.",
     tags: ["Sérhæfð þjónusta", "Tilboðsbeiðni", "Systursíða"],
     href: "https://ijhreinsun.is",
     domain: "ijhreinsun.is",
-    footnote: "Raunverulegt viðskiptaverkefni.",
+    footnote: "Raunverulegt verkefni fyrir viðskiptavin.",
     image: {
       src: "/projects/ijhreinsun-hero.jpg",
       alt: "Reykjavík úr lofti, mynd af vef I.J. Hreinsunar",
@@ -68,12 +68,12 @@ const projects: Project[] = [
   {
     number: "03",
     kind: "demo",
-    badge: "Sýnidæmi · ekki viðskiptavinur",
+    badge: "Sýnidæmi, ekki viðskiptavinur",
     initials: "HÞ",
     trade: "Heimilis- og handverksþjónusta",
     name: "Handverk & Þjónusta",
     description:
-      "Sýnidæmi um hvernig vefsíða fyrir iðnaðar- og þjónustufyrirtæki getur kynnt margar þjónustur á einni skýrri síðu.",
+      "Sýnidæmi um hvernig ein skýr vefsíða getur kynnt margar þjónustur fyrir iðnaðar- og þjónustufyrirtæki.",
     tags: ["Margar þjónustur", "Starfssvæði", "Samband"],
     href: "https://demo.foxel.is",
     domain: "demo.foxel.is",
@@ -90,7 +90,7 @@ export default function PortfolioSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Verkefni"
-          title="Skoðaðu síður sem eru í loftinu"
+          title="Skoðaðu vefi sem eru í loftinu"
           subtitle="Tvö raunveruleg verkefni og eitt skýrt merkt sýnidæmi fyrir þjónustufyrirtæki."
         />
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -198,7 +198,7 @@ export default function PortfolioSection() {
                         <span
                           className={`rounded-lg px-3 py-2 text-[11px] font-bold ${project.accentClass}`}
                         >
-                          Fá tilboð
+                          Óska eftir tilboði
                         </span>
                         <div className="flex gap-1.5">
                           <span className="h-7 w-7 rounded-lg bg-white/10" />

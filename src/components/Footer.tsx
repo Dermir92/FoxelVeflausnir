@@ -26,8 +26,8 @@ export default function Footer() {
               <span className="text-white font-semibold text-lg">Veflausnir</span>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-slate-400">
-              Við hönnum skýrar og traustvekjandi vefsíður fyrir lítil fyrirtæki
-              í iðnaði og þjónustu.
+              Við hönnum og setjum upp skýrar, traustvekjandi vefsíður fyrir
+              lítil fyrirtæki í iðnaði og þjónustu.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function Footer() {
                 href="#samband"
                 className="inline-flex min-h-11 items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
               >
-                Fá fast verð
+                Fá verðtilboð
               </a>
             </div>
           </div>

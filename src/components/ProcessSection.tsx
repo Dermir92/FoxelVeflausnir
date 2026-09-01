@@ -3,19 +3,19 @@ import ProcessStep from "./ProcessStep";
 
 const steps = [
   {
-    title: "Segðu okkur frá fyrirtækinu",
+    title: "Segðu okkur frá rekstrinum",
     description:
-      "Sendu okkur stuttar upplýsingar um þjónustuna, starfssvæðið og það sem vefsíðan á að hjálpa þér með.",
+      "Sendu stuttar upplýsingar um þjónustuna, starfssvæðið og markmiðið með vefsíðunni.",
   },
   {
-    title: "Við söfnum efninu og smíðum síðuna",
+    title: "Við tökum saman efnið og setjum síðuna upp",
     description:
-      "Við hjálpum með texta og myndaval, hönnum síðuna og sendum þér drög. Tvær yfirferðir með breytingum eru innifaldar.",
+      "Við hjálpum með texta og myndaval, hönnum síðuna og sendum þér drög. Tvær umferðir af breytingum eru innifaldar.",
   },
   {
-    title: "Við birtum og sjáum um tæknina",
+    title: "Við komum síðunni í loftið og sjáum um tæknina",
     description:
-      "Síðan fer yfirleitt í loftið innan 7 til 10 virkra daga eftir að efnið berst. Eftir það sjáum við um hýsingu, viðhald og grunnvöktun.",
+      "Vefurinn fer yfirleitt í loftið innan 7-10 virkra daga eftir að efnið berst. Eftir birtingu sjáum við um hýsingu, viðhald og grunnvöktun.",
   },
 ];
 
@@ -26,8 +26,8 @@ export default function ProcessSection() {
         <div className="max-w-2xl">
           <SectionHeading
             label="Ferlið"
-            title="Þrjú skref að tilbúinni vefsíðu"
-            subtitle="Frá fyrstu skilaboðum til tilbúinnar vefsíðu."
+            title="Þrjú skref að birtri vefsíðu"
+            subtitle="Frá fyrstu línu til vefsíðu í loftinu."
             centered={false}
           />
           <div className="mt-10 space-y-0">
@@ -45,7 +45,7 @@ export default function ProcessSection() {
             href="#samband"
             className="inline-flex min-h-11 items-center justify-center rounded-xl bg-blue-700 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
           >
-            Fá fast verð
+            Fá verðtilboð
           </a>
         </div>
       </div>

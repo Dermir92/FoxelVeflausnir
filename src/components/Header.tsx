@@ -48,7 +48,7 @@ export default function Header() {
               href="#samband"
               className="inline-flex min-h-11 items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 2xl:px-6 2xl:text-base"
             >
-              Fá fast verð
+              Fá verðtilboð
             </a>
           </div>
 
@@ -93,7 +93,7 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className="mx-3 mt-3 flex min-h-11 items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-800"
               >
-                Fá fast verð
+                Fá verðtilboð
               </a>
             </div>
           </nav>
