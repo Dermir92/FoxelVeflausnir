@@ -73,11 +73,11 @@ const projects: Project[] = [
     trade: "Heimilis- og handverksþjónusta",
     name: "Handverk & Þjónusta",
     description:
-      "Sýnidæmi um hvernig ein skýr vefsíða getur kynnt margar þjónustur fyrir iðnaðar- og þjónustufyrirtæki.",
+      "Sýnidæmi um hvernig ein einföld vefsíða getur kynnt margar þjónustur fyrir iðnaðar- og þjónustufyrirtæki.",
     tags: ["Margar þjónustur", "Starfssvæði", "Samband"],
     href: "https://demo.foxel.is",
     domain: "demo.foxel.is",
-    footnote: "Ímyndað fyrirtæki, búið til af Foxel.",
+    footnote: "Ekki raunverulegt fyrirtæki.",
     previewClass: "from-slate-950 via-amber-950 to-amber-700",
     accentClass: "bg-amber-300 text-amber-950",
     glowClass: "bg-amber-400",
@@ -91,7 +91,7 @@ export default function PortfolioSection() {
         <SectionHeading
           label="Verkefni"
           title="Skoðaðu vefi sem eru í loftinu"
-          subtitle="Tvö raunveruleg verkefni og eitt skýrt merkt sýnidæmi fyrir þjónustufyrirtæki."
+          subtitle="Tvö raunveruleg verkefni og eitt sýnidæmi fyrir þjónustufyrirtæki."
         />
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => {
