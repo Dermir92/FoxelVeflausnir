@@ -13,11 +13,6 @@ const serviceItems = [
   "Húsfélög",
 ];
 
-const trustItems = [
-  "Verkefni eftir Foxel",
-  "hahreinu.is",
-];
-
 // Efni sýnidæmisins. Bæði vafra- og símamockupið lesa úr þessu svo þau
 // haldist í takt þegar textanum er breytt.
 const project = {
@@ -56,10 +51,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-[88rem]">
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-20 2xl:gap-28">
           <div className="flex-1 text-center lg:text-left">
-            <p className="reveal reveal-1 text-sm font-bold uppercase tracking-[0.16em] text-blue-800">
-              Skýr vefsíða á föstu verði
-            </p>
-            <h1 className="reveal reveal-1 mt-3 text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05] 2xl:text-[4rem]">
+            <h1 className="reveal reveal-1 text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05] 2xl:text-[4rem]">
               Vefsíða fyrir iðnaðar- og þjónustufyrirtæki
             </h1>
             <p className="reveal reveal-2 mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:mt-6 sm:text-xl lg:mx-0 2xl:text-[1.35rem]">
@@ -229,18 +221,6 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-
-            <figcaption className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-600 sm:mt-5 lg:justify-start 2xl:text-base">
-              {trustItems.map((item) => (
-                <span key={item} className="flex items-center gap-2">
-                  <span
-                    className="h-2 w-2 rounded-full bg-blue-800"
-                    aria-hidden="true"
-                  />
-                  {item}
-                </span>
-              ))}
-            </figcaption>
           </figure>
         </div>
       </div>

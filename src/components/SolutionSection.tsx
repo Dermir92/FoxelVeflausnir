@@ -4,7 +4,7 @@ const includedGroups = [
   {
     number: "01",
     title: "Skýr kynning á þjónustunni",
-    text: "Allt að fimm þjónustuflokkar, starfssvæði og skýr leið til að hringja eða óska eftir tilboði.",
+    text: "Allt að fimm þjónustuflokkar, starfssvæði og skýr leið til að hafa samband eða óska eftir tilboði.",
   },
   {
     number: "02",
@@ -18,18 +18,13 @@ const includedGroups = [
   },
   {
     number: "04",
-    title: "Hönnun fyrir alla skjái",
-    text: "Síðan er hönnuð með farsíma í forgangi og virkar vel í símum, spjaldtölvum og tölvum.",
-  },
-  {
-    number: "05",
-    title: "Grunnur að sýnileika á Google",
+    title: "Sýnileiki á Google",
     text: "Grunnstillingar fyrir staðbundna leit, síðukort og skipulögð gögn um fyrirtækið.",
   },
   {
-    number: "06",
-    title: "Birting án tæknivesens",
-    text: "Við setjum upp lén, DNS, fyrirspurnarform og persónuverndarsíðu og komum vefnum í loftið.",
+    number: "05",
+    title: "Ekkert tæknivesen",
+    text: "Við sjáum um lén, DNS, fyrirspurnarform og persónuverndarsíðu — þú þarft ekki að snerta tæknihliðina.",
   },
 ];
 

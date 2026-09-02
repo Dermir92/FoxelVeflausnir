@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "Þarf ég að vera með tilbúinn texta?",
     answer:
-      "Nei. Þú segir okkur frá þjónustunni, starfssvæðinu og því sem viðskiptavinir þurfa að vita. Við hjálpum þér að móta íslenskan texta sem hljómar eðlilega.",
+      "Nei. Þú segir okkur frá þjónustunni, starfssvæðinu og því sem viðskiptavinir þurfa að vita. Við hjálpum þér að setja upp íslenskan texta svo það eigi vel við.",
   },
   {
     question: "Þarf ég að eiga lén?",
