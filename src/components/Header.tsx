@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { NAV_LINKS } from "@/lib/navigation";
+import Link from "next/link";
+import { CONTACT_HREF, NAV_LINKS } from "@/lib/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-[88rem]">
         <div className="flex h-16 items-center justify-between 2xl:h-[4.5rem]">
           {/* Logo */}
-          <a href="#" className="flex min-h-11 items-center gap-2.5 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">
+          <Link href="/" className="flex min-h-11 items-center gap-2.5 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">
             <Image
               src="/logo.png"
               alt=""
@@ -27,29 +28,29 @@ export default function Header() {
             <span className="text-xl font-semibold tracking-tight text-slate-700 2xl:text-2xl">
               Veflausnir
             </span>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-7 lg:flex 2xl:gap-9" aria-label="Aðalvalmynd">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="inline-flex min-h-11 min-w-11 items-center justify-center rounded text-sm font-medium text-slate-600 transition-colors hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 2xl:text-base"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden lg:block">
-            <a
-              href="#samband"
+            <Link
+              href={CONTACT_HREF}
               className="inline-flex min-h-11 items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2 2xl:px-6 2xl:text-base"
             >
               Fá verðtilboð
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -79,22 +80,22 @@ export default function Header() {
           >
             <div className="flex flex-col gap-1">
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
                   className="flex min-h-11 items-center rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-blue-700"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#samband"
+              <Link
+                href={CONTACT_HREF}
                 onClick={() => setMenuOpen(false)}
                 className="mx-3 mt-3 flex min-h-11 items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-800"
               >
                 Fá verðtilboð
-              </a>
+              </Link>
             </div>
           </nav>
         )}
