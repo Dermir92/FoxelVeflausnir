@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import SolutionSection from "@/components/SolutionSection";
 import PackagesSection from "@/components/PackagesSection";
@@ -7,7 +6,6 @@ import ProcessSection from "@/components/ProcessSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
 import {
   CONTACT_EMAIL,
   KENNITALA,
@@ -50,8 +48,7 @@ export default function Home() {
           __html: JSON.stringify(localBusinessJsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <Header />
-      <main>
+      <main className="flex-1">
         <Hero />
         <SolutionSection />
         <PortfolioSection />
@@ -60,7 +57,6 @@ export default function Home() {
         <FAQSection />
         <ContactSection />
       </main>
-      <Footer />
     </>
   );
 }

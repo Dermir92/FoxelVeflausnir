@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { CONTACT_EMAIL, KENNITALA, LEGAL_NAME } from "@/lib/site";
-import { NAV_LINKS } from "@/lib/navigation";
+import { CONTACT_HREF, NAV_LINKS } from "@/lib/navigation";
 
 const legalLinks = [
   { href: "/skilmalar", label: "Skilmálar" },
@@ -39,12 +40,12 @@ export default function Footer() {
             <ul className="space-y-1">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="inline-flex min-h-11 min-w-11 items-center rounded text-sm text-slate-400 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -58,12 +59,12 @@ export default function Footer() {
             <ul className="space-y-1">
               {legalLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="inline-flex min-h-11 min-w-11 items-center rounded text-sm text-slate-400 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -90,12 +91,12 @@ export default function Footer() {
               </li>
             </ul>
             <div className="mt-4">
-              <a
-                href="#samband"
+              <Link
+                href={CONTACT_HREF}
                 className="inline-flex min-h-11 items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
               >
                 Fá verðtilboð
-              </a>
+              </Link>
             </div>
           </div>
         </div>
