@@ -18,9 +18,12 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/*
+ * Ekkert `scroll-behavior: smooth` hér. Það kom í veg fyrir að vafrinn skrunaði
+ * á akkeri við hleðslu, sem braut alla djúptengla ("/#verd") og alla
+ * valmyndarhlekki af /skilmalar og /personuvernd. Mælt: með hana á skrunaði
+ * bein hleðsla á /#verd aldrei, án hennar lendir hún rétt á kaflanum.
+ */
 
 /*
  * Hero entrance. One-shot, on load only. No scroll-triggered motion anywhere
@@ -48,10 +51,6 @@ html {
 .reveal-4 { animation-delay: 0.35s; }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   .reveal,
   .reveal-1,
   .reveal-2,
