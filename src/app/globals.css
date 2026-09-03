@@ -53,21 +53,6 @@ body {
   box-shadow: 7px 7px 0 var(--color-ink);
 }
 
-/* Vafragluggi í hero: cyan-lag og svo blek, eins og staflað pappírsspjald. */
-.hs-shadow-stack {
-  box-shadow:
-    16px 16px 0 var(--color-brand-cyan),
-    28px 28px 0 var(--color-ink);
-}
-
-@media (max-width: 640px) {
-  .hs-shadow-stack {
-    box-shadow:
-      8px 8px 0 var(--color-brand-cyan),
-      14px 14px 0 var(--color-ink);
-  }
-}
-
 /* Rúðunetið í hero-kaflanum. */
 .hs-grid-bg {
   background-image:
