@@ -6,7 +6,7 @@ import { CONTACT_EMAIL } from "@/lib/site";
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-type FormState = "idle" | "submitting" | "success" | "error";
+type FormState = "idle" | "submitting" | "success" | "error" | "unconfigured";
 
 interface FormData {
   name: string;
@@ -49,11 +49,14 @@ export default function ContactForm() {
     event.preventDefault();
     if (!validate()) return;
 
+    // Ótengt form er ekki það sama og sending sem mistókst. Í fyrra tilvikinu
+    // þýðir ekkert að reyna aftur, breytan verður jafn tóm næst, svo þá er
+    // boðið upp á tölvupóst með fyrirspurnina þegar útfyllta í staðinn.
     if (!FORMSPREE_ID) {
       console.error(
         "NEXT_PUBLIC_FORMSPREE_ID is not set. The inquiry was NOT sent."
       );
-      setFormState("error");
+      setFormState("unconfigured");
       return;
     }
 
@@ -89,6 +92,25 @@ export default function ContactForm() {
     if (errors[name as keyof FormData]) {
       setErrors((previous) => ({ ...previous, [name]: undefined }));
     }
+  }
+
+  /** Fyrirspurnin sjálf sem tölvupóstur, svo hún tapist ekki þótt formið sé ótengt. */
+  function mailtoHref(): string {
+    const body = [
+      `Nafn: ${formData.name}`,
+      formData.phone ? `Sími: ${formData.phone}` : null,
+      `Netfang: ${formData.email}`,
+      "",
+      formData.message,
+    ]
+      .filter((line) => line !== null)
+      .join("\n");
+
+    // encodeURIComponent en ekki URLSearchParams: sá síðarnefndi kóðar bil sem
+    // "+", sem mörg póstforrit sýna bókstaflega í mailto-texta í stað bils.
+    const subject = encodeURIComponent("Fyrirspurn af vefnum");
+
+    return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${encodeURIComponent(body)}`;
   }
 
   function resetForm() {
@@ -264,6 +286,25 @@ export default function ContactForm() {
           onChange={(event) => setHoneypot(event.target.value)}
         />
       </div>
+
+      {formState === "unconfigured" ? (
+        <div
+          className="border-2 border-red-600 bg-red-50 px-4 py-3 text-sm text-red-800"
+          role="alert"
+        >
+          <p>
+            Formið er ekki tengt sendingarþjónustu, svo fyrirspurnin fór ekki af
+            stað. Smelltu hér fyrir neðan til að senda hana í tölvupósti í
+            staðinn, hún fylgir með þegar útfyllt.
+          </p>
+          <a
+            href={mailtoHref()}
+            className="mt-2 inline-flex min-h-11 items-center font-bold underline underline-offset-2"
+          >
+            Senda á {CONTACT_EMAIL}
+          </a>
+        </div>
+      ) : null}
 
       {formState === "error" ? (
         <p className="border-2 border-red-600 bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
