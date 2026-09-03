@@ -56,8 +56,8 @@ body {
 /* Vafragluggi í hero: cyan-lag og svo blek, eins og staflað pappírsspjald. */
 .hs-shadow-stack {
   box-shadow:
-    16px 16px 0 var(--color-brand-cyan),
-    28px 28px 0 var(--color-ink);
+    12px 12px 0 var(--color-brand-cyan),
+    22px 22px 0 var(--color-ink);
 }
 
 @media (max-width: 640px) {
