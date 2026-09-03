@@ -4,8 +4,8 @@
  * Hönnunarkerfi Heimasíðunnar.
  *
  * Litirnir koma úr merkinu: navy-blátt blek, appelsínugult sem aðallitur,
- * cyan og blátt sem stuðningslitir. Útlitið er "pixla-brutalismi" — harðar
- * línur, engir mjúkir skuggar, heldur föst offset-skuggi í blekinu.
+ * cyan og blátt sem stuðningslitir. Útlitið er "pixla-brutalismi":
+ * harðar línur, engir mjúkir skuggar, heldur fastur offset-skuggi í blekinu.
  */
 @theme {
   --color-ink: #0c1f3c;

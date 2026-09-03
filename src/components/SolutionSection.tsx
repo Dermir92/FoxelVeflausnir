@@ -35,7 +35,7 @@ const includedGroups = [
   {
     number: "05",
     title: "Ekkert tæknivesen",
-    text: "Við sjáum um lén, DNS, fyrirspurnarform og persónuverndarsíðu — þú þarft ekki að snerta tæknihliðina.",
+    text: "Við sjáum um lén, DNS, fyrirspurnarform og persónuverndarsíðu. Þú þarft ekki að snerta tæknihliðina.",
   },
 ];
 

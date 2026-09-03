@@ -1,7 +1,7 @@
 /**
  * Slóðirnar eru skrifaðar frá rót ("/#verd") en ekki sem ber akkeri ("#verd").
  * Hausinn og fóturinn birtast núna á öllum síðum, og á /skilmalar og
- * /personuvernd eru þessi akkeri ekki til — bert akkeri myndi því ekki gera
+ * /personuvernd eru þessi akkeri ekki til, svo bert akkeri myndi ekki gera
  * neitt. Á forsíðunni sjálfri leysist "/#verd" áfram sem skrun innan síðunnar.
  */
 export const NAV_LINKS = [

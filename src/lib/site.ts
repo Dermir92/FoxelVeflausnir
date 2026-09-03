@@ -12,7 +12,7 @@
  *
  * Þetta er ekki ófrágengið: Heimasíðan er vörumerki Foxel ehf. og sami
  * lögaðili stendur að baki, staðfest af eiganda. Nafnið og kennitalan hér
- * fyrir neðan eiga því alltaf að fylgjast að — aldrei breyta öðru án hins.
+ * fyrir neðan eiga því alltaf að fylgjast að. Aldrei breyta öðru án hins.
  */
 export const LEGAL_NAME = "Foxel ehf.";
 

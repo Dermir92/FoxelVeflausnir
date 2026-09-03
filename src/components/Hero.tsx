@@ -46,7 +46,7 @@ export default function Hero() {
             </h1>
             <p className="reveal reveal-2 mt-5 max-w-[38rem] text-base leading-relaxed text-copy sm:text-lg">
               Við hönnum og setjum upp skýra, hraða og traustvekjandi vefsíðu
-              sem kynnir þjónustuna, starfssvæðið og fyrri verk — og gerir
+              sem kynnir þjónustuna, starfssvæðið og fyrri verk og gerir
               viðskiptavinum auðvelt að hafa samband.
             </p>
 
@@ -55,7 +55,7 @@ export default function Hero() {
                 129.000 kr.
               </span>
               <span className="text-sm font-semibold text-copy">
-                án vsk. — hýsing 5.900 kr./mán.
+                án vsk. Hýsing 5.900 kr./mán.
               </span>
             </p>
 
