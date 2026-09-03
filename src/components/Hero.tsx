@@ -5,15 +5,15 @@ import hahreinuHero from "../../public/projects/hahreinu-hero.jpg";
 
 const proofPoints = ["Fast verð", "7-10 virkir dagar", "Tvær breytingaumferðir"];
 
-// Efni sýnidæmisins. Aðeins það sem sést: fyrirsögnin og hnappurinn bera
-// kaflann, meginmálið er teiknað sem strik. Mockupið á að lesast sem mynd af
-// vefsíðu, ekki sem önnur sölukynning við hliðina á þeirri sem stendur
-// vinstra megin.
+// Efni sýnidæmisins. Mockupið les úr þessu svo textinn haldist í takt við
+// verkefnakaflann þegar honum er breytt.
 const project = {
-  name: "HÁ Hreinu",
   domain: "hahreinu.is",
   eyebrow: "Fyrirtæki og húsfélög",
   headline: "Ræsting og iðnaðarþrif",
+  blurb:
+    "Þjónustan er skýr, tilboðsbeiðnin einföld og næsta skref alltaf augljóst.",
+  services: ["Fyrirtækjaræsting", "Iðnaðarþrif", "Húsfélög"],
   cta: "Óska eftir tilboði",
 };
 
@@ -82,55 +82,67 @@ export default function Hero() {
             </ul>
           </div>
 
-          {/* Vafragluggi með sýnidæmi. Skreyting, ekki efni. */}
+          {/*
+            Vafragluggi með sýnidæmi. Skreyting, ekki efni.
+
+            Umgjörðin fylgir sama kerfi og öll önnur spjöld á vefnum: 2px lína
+            og einn fastur offset-skuggi. Áður var hún 6-8px blek utan um 6px
+            blek utan um myndina, með tvöföldum 16/28 skugga undir, sem gerði
+            hlutinn margfalt þyngri en allt annað á síðunni.
+          */}
           <figure
-            className="reveal reveal-4 mx-auto w-full max-w-lg lg:mx-0 lg:mr-6"
+            className="reveal reveal-4 hs-shadow-lg mx-auto w-full max-w-lg rounded-2xl border-2 border-ink bg-paper p-4 lg:mx-0"
             aria-hidden="true"
           >
-            <div className="hs-shadow-stack rounded-2xl border-[6px] border-ink bg-paper p-3 sm:p-3.5">
-              <div className="flex items-center gap-2.5 border-b-4 border-ink pb-3">
-                <span className="flex gap-1.5">
-                  <i className="h-2.5 w-2.5 bg-brand-orange" />
-                  <i className="h-2.5 w-2.5 bg-brand-yellow" />
-                  <i className="h-2.5 w-2.5 bg-brand-cyan" />
-                </span>
-                <span className="flex h-6 flex-1 items-center border-2 border-ink bg-soft px-2 text-[10px] font-bold text-copy">
-                  {project.domain}
-                </span>
-              </div>
+            <div className="flex items-center gap-2.5 border-b-2 border-line pb-3">
+              <span className="flex gap-1.5">
+                <i className="h-2.5 w-2.5 bg-brand-orange" />
+                <i className="h-2.5 w-2.5 bg-brand-yellow" />
+                <i className="h-2.5 w-2.5 bg-brand-cyan" />
+              </span>
+              <span className="flex h-6 flex-1 items-center border-2 border-line bg-soft px-2 text-[10px] font-bold text-copy">
+                {project.domain}
+              </span>
+            </div>
 
-              {/* Myndin fær breiddina alla. Áður sat hún í mjórri hliðarsúlu
-                  og barðist við textann um plássið. */}
-              <div className="relative mt-3 h-36 border-4 border-ink sm:h-44">
-                <Image
-                  src={hahreinuHero}
-                  alt=""
-                  fill
-                  sizes="(min-width: 1024px) 460px, (min-width: 640px) 480px, 88vw"
-                  placeholder="blur"
-                  fetchPriority="high"
-                  className="object-cover"
-                />
-                <span className="absolute bottom-0 left-0 bg-ink px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.1em] text-white">
-                  {project.name}
-                </span>
-              </div>
+            {/* Myndin fær breiddina alla. Áður sat hún í mjórri hliðarsúlu og
+                barðist við textann um plássið, sem braut merkimiðana í tvær
+                línur. */}
+            <div className="relative mt-4 h-40 border-2 border-line sm:h-44">
+              <Image
+                src={hahreinuHero}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 460px, (min-width: 640px) 480px, 88vw"
+                placeholder="blur"
+                fetchPriority="high"
+                className="object-cover"
+              />
+            </div>
 
-              <div className="mt-4">
-                <p className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-brand-blue">
-                  {project.eyebrow}
-                </p>
-                <p className="mt-1.5 text-lg font-extrabold tracking-tight text-ink sm:text-xl">
-                  {project.headline}
-                </p>
-                <div className="mt-3 space-y-2">
-                  <span className="block h-2 w-full bg-line" />
-                  <span className="block h-2 w-3/5 bg-line" />
-                </div>
-                <span className="mt-4 flex h-10 w-fit items-center border-4 border-ink bg-brand-orange px-3.5 text-xs font-bold text-white">
-                  {project.cta}
-                </span>
+            <div className="mt-4">
+              <p className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-brand-blue">
+                {project.eyebrow}
+              </p>
+              <p className="mt-1.5 text-lg font-extrabold tracking-tight text-ink sm:text-xl">
+                {project.headline}
+              </p>
+              <p className="mt-2 text-xs leading-relaxed text-copy">
+                {project.blurb}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {project.services.map((item) => (
+                  <span
+                    key={item}
+                    className="bg-soft px-2 py-1 text-[10px] font-bold text-copy"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
+              <span className="hs-shadow-sm mt-4 flex h-10 w-fit items-center rounded-lg bg-brand-orange px-4 text-xs font-bold text-white">
+                {project.cta}
+              </span>
             </div>
           </figure>
         </div>
