@@ -1,21 +1,32 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-}
+/*
+ * Hönnunarkerfi Heimasíðunnar.
+ *
+ * Litirnir koma úr merkinu: navy-blátt blek, appelsínugult sem aðallitur,
+ * cyan og blátt sem stuðningslitir. Útlitið er "pixla-brutalismi" — harðar
+ * línur, engir mjúkir skuggar, heldur föst offset-skuggi í blekinu.
+ */
+@theme {
+  --color-ink: #0c1f3c;
+  --color-copy: #4d5d70;
+  --color-paper: #fffdfa;
+  --color-soft: #f4f8fb;
+  --color-line: #dbe5ec;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-brand-orange: #ff6b00;
+  --color-brand-cyan: #17b7e8;
+  --color-brand-blue: #1267ce;
+  --color-brand-yellow: #ffc62a;
+
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
 }
 
 /*
@@ -24,6 +35,46 @@ body {
  * valmyndarhlekki af /skilmalar og /personuvernd. Mælt: með hana á skrunaði
  * bein hleðsla á /#verd aldrei, án hennar lendir hún rétt á kaflanum.
  */
+
+/*
+ * Offset-skuggar. Skrifaðir sem venjulegar CSS-klasar en ekki Tailwind-utilities
+ * því þeir koma fyrir á tugum staða og `shadow-[4px_4px_0_#0c1f3c]` er
+ * ólæsilegt í hvert skipti. Skuggarnir eru alltaf í blekinu, aldrei mjúkir.
+ */
+.hs-shadow {
+  box-shadow: 4px 4px 0 var(--color-ink);
+}
+
+.hs-shadow-sm {
+  box-shadow: 3px 3px 0 var(--color-ink);
+}
+
+.hs-shadow-lg {
+  box-shadow: 7px 7px 0 var(--color-ink);
+}
+
+/* Vafragluggi í hero: cyan-lag og svo blek, eins og staflað pappírsspjald. */
+.hs-shadow-stack {
+  box-shadow:
+    16px 16px 0 var(--color-brand-cyan),
+    28px 28px 0 var(--color-ink);
+}
+
+@media (max-width: 640px) {
+  .hs-shadow-stack {
+    box-shadow:
+      8px 8px 0 var(--color-brand-cyan),
+      14px 14px 0 var(--color-ink);
+  }
+}
+
+/* Rúðunetið í hero-kaflanum. */
+.hs-grid-bg {
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
 
 /*
  * Hero entrance. One-shot, on load only. No scroll-triggered motion anywhere

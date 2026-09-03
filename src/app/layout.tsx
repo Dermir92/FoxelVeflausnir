@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { LOGO_SIZE, LOGO_SRC, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.png",
-        width: 1024,
-        height: 1024,
-        alt: "Merki Foxel Veflausna",
+        url: LOGO_SRC,
+        width: LOGO_SIZE.width,
+        height: LOGO_SIZE.height,
+        alt: `Merki ${SITE_NAME}`,
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: `${SITE_NAME} | Skýrar vefsíður á föstu verði`,
     description: SITE_DESCRIPTION,
-    images: ["/logo.png"],
+    images: [LOGO_SRC],
   },
 };
 
@@ -44,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="is" className={`${geistSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-slate-900">
+      <body className="flex min-h-full flex-col bg-paper text-ink">
         <Header />
         {children}
         <Footer />

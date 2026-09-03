@@ -12,9 +12,9 @@ import Link from "next/link";
 import { CONTACT_EMAIL, KENNITALA, LEGAL_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Persónuverndarstefna | Foxel Veflausnir",
+  title: "Persónuverndarstefna | Heimasíðan",
   description:
-    "Persónuverndarstefna Foxel Veflausna vegna fyrirspurna, samskipta og notkunar á vefnum.",
+    "Persónuverndarstefna Heimasíðunnar vegna fyrirspurna, samskipta og notkunar á vefnum.",
   alternates: {
     canonical: "/personuvernd",
   },
@@ -24,8 +24,8 @@ const sections = [
   {
     title: "1. Ábyrgðaraðili",
     content: [
-      "Foxel Veflausnir er ábyrgðaraðili vinnslu persónuupplýsinga í tengslum við vefinn og fyrirspurnir sem berast í gegnum hann.",
-      `${LEGAL_NAME}, kt. ${KENNITALA}. Netfang: ${CONTACT_EMAIL}.`,
+      `${LEGAL_NAME}, rekstraraðili Heimasíðunnar, er ábyrgðaraðili vinnslu persónuupplýsinga í tengslum við vefinn og fyrirspurnir sem berast í gegnum hann.`,
+      `Kt. ${KENNITALA}. Netfang: ${CONTACT_EMAIL}.`,
     ],
   },
   {
@@ -94,41 +94,41 @@ const sections = [
 
 export default function PrivacyPage() {
   return (
-    <main className="flex-1 bg-white">
-      <section className="border-b border-slate-100 bg-slate-50 py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <main className="flex-1 bg-paper">
+      <section className="border-b-2 border-line bg-soft py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-[52rem] px-5 sm:px-6">
           <Link
             href="/"
-            className="inline-flex min-h-11 items-center rounded text-sm font-medium text-blue-700 hover:text-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
+            className="inline-flex min-h-11 items-center rounded-sm text-sm font-bold text-brand-blue underline-offset-4 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
           >
             Til baka á forsíðu
           </Link>
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="mt-6 text-[clamp(2.1rem,5vw,3.25rem)] font-extrabold leading-[1.05] tracking-[-0.045em] text-ink">
             Persónuverndarstefna
           </h1>
-          <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
-            Hér má sjá hvernig Foxel Veflausnir vinnur með persónuupplýsingar í
+          <p className="mt-5 text-base leading-relaxed text-copy sm:text-lg">
+            Hér má sjá hvernig Heimasíðan vinnur með persónuupplýsingar í
             tengslum við fyrirspurnir, samskipti og notkun á vefnum.
           </p>
-          <p className="mt-4 text-sm text-slate-500">
+          <p className="mt-4 text-sm text-copy">
             Síðast uppfært: 30. ágúst 2026
           </p>
         </div>
       </section>
 
       <section className="py-14 sm:py-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-[52rem] px-5 sm:px-6">
           <div className="space-y-10">
             {sections.map((section) => (
               <article key={section.title}>
-                <h2 className="text-xl font-semibold text-slate-900">
+                <h2 className="border-l-4 border-brand-orange pl-3.5 text-xl font-extrabold tracking-tight text-ink">
                   {section.title}
                 </h2>
                 <div className="mt-3 space-y-3">
                   {section.content.map((paragraph) => (
                     <p
                       key={paragraph}
-                      className="text-base leading-relaxed text-slate-600"
+                      className="text-base leading-relaxed text-copy"
                     >
                       {paragraph}
                     </p>
