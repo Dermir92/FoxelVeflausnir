@@ -11,9 +11,9 @@ import Link from "next/link";
 import { KENNITALA, LEGAL_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Skilmálar | Foxel Veflausnir",
+  title: "Skilmálar | Heimasíðan",
   description:
-    "Þjónustuskilmálar Foxel Veflausna vegna vefsíðugerðar, ráðgjafar og tengdrar þjónustu.",
+    "Þjónustuskilmálar Heimasíðunnar vegna vefsíðugerðar, ráðgjafar og tengdrar þjónustu.",
   alternates: {
     canonical: "/skilmalar",
   },
@@ -23,7 +23,7 @@ const terms = [
   {
     title: "1. Um þjónustuna",
     content: [
-      `${LEGAL_NAME}, kt. ${KENNITALA} (hér eftir „Foxel Veflausnir“), veitir þjónustu við hönnun, uppsetningu og þróun vefsíðna fyrir lítil fyrirtæki og sjálfstætt starfandi einstaklinga.`,
+      `${LEGAL_NAME}, kt. ${KENNITALA} (hér eftir „Heimasíðan“), veitir þjónustu við hönnun, uppsetningu og þróun vefsíðna fyrir lítil fyrirtæki og sjálfstætt starfandi einstaklinga.`,
       "Þjónustan getur meðal annars falið í sér ráðgjöf, textavinnu, uppsetningu vefsíðu, aðlögun fyrir farsíma, grunnstillingar fyrir leitarvélar, tengiliðaform, einfaldar sérlausnir og aðstoð við birtingu síðu.",
     ],
   },
@@ -38,8 +38,8 @@ const terms = [
     title: "3. Efni frá viðskiptavini",
     content: [
       "Viðskiptavinur ber ábyrgð á að útvega rétt og lögmætt efni, þar á meðal texta, myndir, merki, vörumerki, verð, þjónustulýsingar og tengiliðaupplýsingar.",
-      "Viðskiptavinur staðfestir að hann hafi rétt til að nota það efni sem hann afhendir Foxel Veflausnum. Þetta á sérstaklega við um ljósmyndir, merki, letur, texta og annað höfundarréttarvarið efni.",
-      "Foxel Veflausnir getur aðstoðað við texta og uppbyggingu, en viðskiptavinur ber ábyrgð á að yfirfara og samþykkja endanlegt efni áður en vefur fer í loftið.",
+      "Viðskiptavinur staðfestir að hann hafi rétt til að nota það efni sem hann afhendir Heimasíðunni. Þetta á sérstaklega við um ljósmyndir, merki, letur, texta og annað höfundarréttarvarið efni.",
+      "Heimasíðan getur aðstoðað við texta og uppbyggingu, en viðskiptavinur ber ábyrgð á að yfirfara og samþykkja endanlegt efni áður en vefur fer í loftið.",
     ],
   },
   {
@@ -62,105 +62,105 @@ const terms = [
     title: "6. Afhending og birting",
     content: [
       "Vefsíða telst tilbúin til afhendingar þegar samþykkt umfang hefur verið unnið og viðskiptavinur hefur fengið tækifæri til yfirferðar.",
-      "Birting vefsíðu getur verið háð þáttum sem eru utan beinnar stjórnar Foxel Veflausna, svo sem lénum, DNS-stillingum, hýsingu, aðgangi að kerfum eða samþykki þriðju aðila.",
+      "Birting vefsíðu getur verið háð þáttum sem eru utan beinnar stjórnar Heimasíðunnar, svo sem lénum, DNS-stillingum, hýsingu, aðgangi að kerfum eða samþykki þriðju aðila.",
     ],
   },
   {
     title: "7. Lén, hýsing og þjónusta þriðju aðila",
     content: [
       "Viðskiptavinur ber almennt ábyrgð á kostnaði vegna léns, hýsingar, tölvupóstþjónustu, greiðslugátta, bókunarkerfa, myndefnis, viðbóta, áskrifta og annarrar þjónustu þriðju aðila nema annað sé sérstaklega samið.",
-      "Foxel Veflausnir getur aðstoðað við val og uppsetningu slíkrar þjónustu, en ábyrgist ekki rekstur, verðbreytingar, skilmála eða þjónusturof þriðju aðila.",
+      "Heimasíðan getur aðstoðað við val og uppsetningu slíkrar þjónustu, en ábyrgist ekki rekstur, verðbreytingar, skilmála eða þjónusturof þriðju aðila.",
     ],
   },
   {
     title: "8. Viðhald og uppfærslur",
     content: [
       "Viðhald, efnisbreytingar og uppfærslur eftir afhendingu eru aðeins innifalin ef það kemur fram í tilboði eða sérstöku samkomulagi.",
-      "Ef viðskiptavinur gerir sjálfur breytingar á vef, stillingum, kóða, hýsingu eða tengdum kerfum getur það haft áhrif á ábyrgð Foxel Veflausna á virkni vefsins.",
+      "Ef viðskiptavinur gerir sjálfur breytingar á vef, stillingum, kóða, hýsingu eða tengdum kerfum getur það haft áhrif á ábyrgð Heimasíðunnar á virkni vefsins.",
     ],
   },
   {
     title: "9. Höfundarréttur og eignarhald",
     content: [
       "Viðskiptavinur heldur rétti yfir eigin efni, svo sem merki, myndum og texta sem hann leggur til.",
-      "Eftir fulla greiðslu fær viðskiptavinur rétt til að nota endanlega vefsíðu í eigin rekstri. Ógreidd vinna, drög, vinnuskrár, aðferðir, endurnýtanlegir kóðabútar og innri verkferlar Foxel Veflausna eru áfram eign Foxel Veflausna nema annað sé skriflega samið.",
-      "Foxel Veflausnir má vísa til verkefnisins í eigin kynningarefni eða verkefnasafni nema viðskiptavinur óski sérstaklega eftir öðru.",
+      "Eftir fulla greiðslu fær viðskiptavinur rétt til að nota endanlega vefsíðu í eigin rekstri. Ógreidd vinna, drög, vinnuskrár, aðferðir, endurnýtanlegir kóðabútar og innri verkferlar Heimasíðunnar eru áfram eign Heimasíðunnar nema annað sé skriflega samið.",
+      "Heimasíðan má vísa til verkefnisins í eigin kynningarefni eða verkefnasafni nema viðskiptavinur óski sérstaklega eftir öðru.",
     ],
   },
   {
     title: "10. Ábyrgðartakmarkanir",
     content: [
-      "Foxel Veflausnir leitast við að afhenda vandaða og örugga vefsíðu, en ábyrgist ekki tiltekin viðskiptaleg árangursmarkmið, stöðu í leitarvélum, fjölda fyrirspurna eða sölu.",
-      "Foxel Veflausnir ber ekki ábyrgð á tjóni sem rekja má til rangra upplýsinga frá viðskiptavini, þjónusturofs hjá þriðja aðila, breytinga sem aðrir gera á vefnum, öryggisbrests hjá hýsingaraðila eða annarra atvika utan eðlilegrar stjórnar Foxel Veflausna.",
+      "Heimasíðan leitast við að afhenda vandaða og örugga vefsíðu, en ábyrgist ekki tiltekin viðskiptaleg árangursmarkmið, stöðu í leitarvélum, fjölda fyrirspurna eða sölu.",
+      "Heimasíðan ber ekki ábyrgð á tjóni sem rekja má til rangra upplýsinga frá viðskiptavini, þjónusturofs hjá þriðja aðila, breytinga sem aðrir gera á vefnum, öryggisbrests hjá hýsingaraðila eða annarra atvika utan eðlilegrar stjórnar Heimasíðunnar.",
     ],
   },
   {
     title: "11. Trúnaður",
     content: [
-      "Foxel Veflausnir fer með trúnaðarupplýsingar viðskiptavina af varúð og miðlar þeim ekki til óviðkomandi aðila.",
-      "Trúnaður tekur ekki til upplýsinga sem eru opinberar, verða opinberar án brots Foxel Veflausna eða þarf að afhenda samkvæmt lögum.",
+      "Heimasíðan fer með trúnaðarupplýsingar viðskiptavina af varúð og miðlar þeim ekki til óviðkomandi aðila.",
+      "Trúnaður tekur ekki til upplýsinga sem eru opinberar, verða opinberar án brots Heimasíðunnar eða þarf að afhenda samkvæmt lögum.",
     ],
   },
   {
     title: "12. Uppsögn verkefnis",
     content: [
-      "Ef viðskiptavinur hættir við verkefni eftir að vinna hefst getur Foxel Veflausnir rukkað fyrir þá vinnu sem þegar hefur verið unnin og kostnað sem hefur fallið til.",
-      "Ef Foxel Veflausnir getur ekki haldið verkefni áfram af málefnalegum ástæðum skal viðskiptavini tilkynnt það eins fljótt og auðið er.",
+      "Ef viðskiptavinur hættir við verkefni eftir að vinna hefst getur Heimasíðan rukkað fyrir þá vinnu sem þegar hefur verið unnin og kostnað sem hefur fallið til.",
+      "Ef Heimasíðan getur ekki haldið verkefni áfram af málefnalegum ástæðum skal viðskiptavini tilkynnt það eins fljótt og auðið er.",
     ],
   },
   {
     title: "13. Lög og ágreiningur",
     content: [
-      "Um skilmálana og þjónustu Foxel Veflausna gilda íslensk lög.",
+      "Um skilmálana og þjónustu Heimasíðunnar gilda íslensk lög.",
       "Komi upp ágreiningur skulu aðilar fyrst leitast við að leysa málið með samtali. Takist það ekki má reka málið fyrir íslenskum dómstólum, nema annað sé samið.",
     ],
   },
   {
     title: "14. Breytingar á skilmálum",
     content: [
-      "Foxel Veflausnir getur uppfært þessa skilmála eftir þörfum. Skilmálar sem gilda um einstakt verkefni ráðast þó af því samkomulagi sem var samþykkt við upphaf verkefnis nema aðilar semji um annað.",
+      "Heimasíðan getur uppfært þessa skilmála eftir þörfum. Skilmálar sem gilda um einstakt verkefni ráðast þó af því samkomulagi sem var samþykkt við upphaf verkefnis nema aðilar semji um annað.",
     ],
   },
 ];
 
 export default function TermsPage() {
   return (
-    <main className="flex-1 bg-white">
-      <section className="border-b border-slate-100 bg-slate-50 py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <main className="flex-1 bg-paper">
+      <section className="border-b-2 border-line bg-soft py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-[52rem] px-5 sm:px-6">
           <Link
             href="/"
-            className="inline-flex min-h-11 items-center rounded text-sm font-medium text-blue-700 hover:text-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
+            className="inline-flex min-h-11 items-center rounded-sm text-sm font-bold text-brand-blue underline-offset-4 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
           >
             Til baka á forsíðu
           </Link>
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="mt-6 text-[clamp(2.1rem,5vw,3.25rem)] font-extrabold leading-[1.05] tracking-[-0.045em] text-ink">
             Skilmálar
           </h1>
-          <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
-            Þessir skilmálar gilda um þjónustu Foxel Veflausna vegna
+          <p className="mt-5 text-base leading-relaxed text-copy sm:text-lg">
+            Þessir skilmálar gilda um þjónustu Heimasíðunnar vegna
             vefsíðugerðar, ráðgjafar og tengdrar þjónustu nema annað sé skriflega
             samið.
           </p>
-          <p className="mt-4 text-sm text-slate-500">
+          <p className="mt-4 text-sm text-copy">
             Síðast uppfært: 30. ágúst 2026
           </p>
         </div>
       </section>
 
       <section className="py-14 sm:py-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-[52rem] px-5 sm:px-6">
           <div className="space-y-10">
             {terms.map((section) => (
               <article key={section.title}>
-                <h2 className="text-xl font-semibold text-slate-900">
+                <h2 className="border-l-4 border-brand-orange pl-3.5 text-xl font-extrabold tracking-tight text-ink">
                   {section.title}
                 </h2>
                 <div className="mt-3 space-y-3">
                   {section.content.map((paragraph) => (
                     <p
                       key={paragraph}
-                      className="text-base leading-relaxed text-slate-600"
+                      className="text-base leading-relaxed text-copy"
                     >
                       {paragraph}
                     </p>

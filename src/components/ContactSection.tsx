@@ -2,69 +2,73 @@ import SectionHeading from "./SectionHeading";
 import ContactForm from "./ContactForm";
 import { CONTACT_EMAIL } from "@/lib/site";
 
+const points = [
+  {
+    badge: "kr.",
+    title: "Skýrt verð",
+    text: "Grunnpakkinn kostar 129.000 kr. án vsk. og umfangið liggur fyrir áður en vinnan hefst.",
+  },
+  {
+    badge: "1-2",
+    title: "Fljótt svar",
+    text: "Við svörum yfirleitt innan eins til tveggja virkra daga og leggjum til næstu skref.",
+  },
+];
+
 export default function ContactSection() {
   return (
-    <section id="samband" className="scroll-mt-16 bg-white py-16 sm:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left side info */}
+    <section id="samband" className="scroll-mt-20 bg-paper py-16 sm:py-20">
+      <div className="mx-auto w-full max-w-[70rem] px-5 sm:px-6">
+        <div className="grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
           <div>
             <SectionHeading
               label="Hafðu samband"
-              title="Fáðu verðtilboð í vefsíðuna"
-              subtitle="Sendu okkur nokkrar línur um fyrirtækið og verkefnið. Við svörum og leggjum til næstu skref."
+              title="Fáðu verðtilboð í heimasíðuna"
+              subtitle="Sendu nokkrar línur um fyrirtækið og verkefnið. Við svörum með næstu skrefum."
               centered={false}
             />
+
             <div className="mt-8 space-y-5">
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              {points.map((point) => (
+                <div key={point.title} className="flex gap-3.5">
+                  <span
+                    className="grid h-10 w-10 flex-shrink-0 place-items-center bg-brand-cyan text-xs font-black text-ink"
+                    aria-hidden="true"
+                  >
+                    {point.badge}
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-extrabold text-ink">
+                      {point.title}
+                    </h3>
+                    <p className="mt-1 text-sm leading-relaxed text-copy">
+                      {point.text}
+                    </p>
+                  </div>
                 </div>
+              ))}
+
+              <div className="flex gap-3.5">
+                <span
+                  className="grid h-10 w-10 flex-shrink-0 place-items-center bg-brand-cyan text-base font-black text-ink"
+                  aria-hidden="true"
+                >
+                  @
+                </span>
                 <div>
-                  <h3 className="font-semibold text-slate-900 text-sm">Skýrt verð</h3>
-                  <p className="mt-0.5 text-sm text-slate-600">
-                    Grunnpakkinn kostar 129.000 kr. án vsk. og umfangið liggur fyrir áður en vinnan hefst.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 text-sm">Fljótt svar</h3>
-                  <p className="mt-0.5 text-sm text-slate-600">
-                    Við svörum yfirleitt innan eins til tveggja virkra daga og leggjum til næstu skref.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 text-sm">Netfang</h3>
-                  <p className="mt-0.5 text-sm text-slate-600">
-                    <a
-                      href={`mailto:${CONTACT_EMAIL}`}
-                      className="inline-flex min-h-11 items-center rounded text-blue-700 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
-                    >
-                      {CONTACT_EMAIL}
-                    </a>
-                  </p>
+                  <h3 className="text-sm font-extrabold text-ink">Netfang</h3>
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="mt-1 inline-flex min-h-11 items-center rounded-sm text-sm font-semibold text-brand-blue underline-offset-4 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+                  >
+                    {CONTACT_EMAIL}
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Form */}
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8">
+          <div className="rounded-2xl border-2 border-line bg-paper p-6 sm:p-8">
             <ContactForm />
           </div>
         </div>

@@ -31,16 +31,24 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section id="spurningar" className="scroll-mt-16 bg-slate-50 py-16 sm:py-20">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="spurningar"
+      className="scroll-mt-20 border-b-2 border-line bg-soft py-16 sm:py-20"
+    >
+      <div className="mx-auto w-full max-w-[52rem] px-5 sm:px-6">
         <SectionHeading
           label="Spurt og svarað"
-          title="Algengar spurningar áður en við byrjum"
+          title="Áður en við byrjum"
           subtitle="Ertu ekki viss um hvað hentar? Sendu okkur línu og við leggjum til næstu skref."
         />
-        <div className="mt-10 space-y-3">
-          {faqs.map((faq) => (
-            <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
+        <div className="mt-10">
+          {faqs.map((faq, index) => (
+            <FAQItem
+              key={faq.question}
+              question={faq.question}
+              answer={faq.answer}
+              defaultOpen={index === 0}
+            />
           ))}
         </div>
       </div>

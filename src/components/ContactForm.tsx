@@ -100,7 +100,7 @@ export default function ContactForm() {
   if (formState === "success") {
     return (
       <div className="px-4 py-16 text-center" role="status">
-        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-700">
+        <div className="hs-shadow mx-auto mb-5 flex h-16 w-16 items-center justify-center bg-brand-cyan text-ink">
           <svg
             className="h-8 w-8"
             fill="none"
@@ -116,16 +116,16 @@ export default function ContactForm() {
             />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-slate-900">
+        <h3 className="text-2xl font-extrabold tracking-tight text-ink">
           Takk fyrir fyrirspurnina.
         </h3>
-        <p className="mx-auto mt-3 max-w-md text-base text-slate-600">
+        <p className="mx-auto mt-3 max-w-md text-base text-copy">
           Við höfum móttekið skilaboðin og svörum eins fljótt og auðið er.
         </p>
         <button
           type="button"
           onClick={resetForm}
-          className="mt-6 inline-flex min-h-11 items-center rounded-lg px-3 text-sm font-medium text-blue-700 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
+          className="mt-6 inline-flex min-h-11 items-center rounded-sm px-3 text-sm font-bold text-brand-blue underline-offset-4 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
         >
           Senda aðra fyrirspurn
         </button>
@@ -134,10 +134,10 @@ export default function ContactForm() {
   }
 
   const inputClass = (field: keyof FormData) =>
-    `w-full min-h-12 rounded-xl border bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 transition-colors focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-700 ${
+    `w-full min-h-12 border-2 bg-paper px-3.5 py-3 text-sm text-ink placeholder-copy/60 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-1 ${
       errors[field]
-        ? "border-red-400 bg-red-50"
-        : "border-slate-300 hover:border-slate-400"
+        ? "border-red-600 bg-red-50"
+        : "border-line hover:border-copy"
     }`;
 
   return (
@@ -145,10 +145,10 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="name"
-          className="mb-1.5 block text-sm font-medium text-slate-700"
+          className="mb-2 block text-[13px] font-bold text-ink"
         >
           Nafn{" "}
-          <span className="text-red-700" aria-hidden="true">
+          <span className="text-brand-orange" aria-hidden="true">
             *
           </span>
         </label>
@@ -166,7 +166,7 @@ export default function ContactForm() {
           className={inputClass("name")}
         />
         {errors.name ? (
-          <p id="name-error" className="mt-1 text-sm text-red-700">
+          <p id="name-error" className="mt-1.5 text-sm font-semibold text-red-700">
             {errors.name}
           </p>
         ) : null}
@@ -176,7 +176,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="phone"
-            className="mb-1.5 block text-sm font-medium text-slate-700"
+            className="mb-2 block text-[13px] font-bold text-ink"
           >
             Sími
           </label>
@@ -195,10 +195,10 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="mb-1.5 block text-sm font-medium text-slate-700"
+            className="mb-2 block text-[13px] font-bold text-ink"
           >
             Netfang{" "}
-            <span className="text-red-700" aria-hidden="true">
+            <span className="text-brand-orange" aria-hidden="true">
               *
             </span>
           </label>
@@ -216,7 +216,7 @@ export default function ContactForm() {
             className={inputClass("email")}
           />
           {errors.email ? (
-            <p id="email-error" className="mt-1 text-sm text-red-700">
+            <p id="email-error" className="mt-1.5 text-sm font-semibold text-red-700">
               {errors.email}
             </p>
           ) : null}
@@ -226,10 +226,10 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="mb-1.5 block text-sm font-medium text-slate-700"
+          className="mb-2 block text-[13px] font-bold text-ink"
         >
           Segðu okkur stuttlega frá verkefninu{" "}
-          <span className="text-red-700" aria-hidden="true">
+          <span className="text-brand-orange" aria-hidden="true">
             *
           </span>
         </label>
@@ -246,7 +246,7 @@ export default function ContactForm() {
           className={`${inputClass("message")} resize-y`}
         />
         {errors.message ? (
-          <p id="message-error" className="mt-1 text-sm text-red-700">
+          <p id="message-error" className="mt-1.5 text-sm font-semibold text-red-700">
             {errors.message}
           </p>
         ) : null}
@@ -266,7 +266,7 @@ export default function ContactForm() {
       </div>
 
       {formState === "error" ? (
-        <p className="text-sm text-red-700" role="alert">
+        <p className="border-2 border-red-600 bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
           Ekki tókst að senda fyrirspurnina. Prófaðu aftur eða sendu okkur línu
           á{" "}
           <a
@@ -282,16 +282,16 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={formState === "submitting"}
-        className="flex min-h-12 w-full items-center justify-center rounded-xl bg-blue-700 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
+        className="hs-shadow flex min-h-12 w-full items-center justify-center rounded-lg bg-brand-orange px-6 font-bold text-white transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_var(--color-ink)] disabled:cursor-not-allowed disabled:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2"
       >
         {formState === "submitting" ? "Sendi..." : "Fá verðtilboð"}
       </button>
 
-      <p className="text-center text-xs leading-relaxed text-slate-600">
+      <p className="text-center text-xs leading-relaxed text-copy">
         Við notum upplýsingarnar aðeins til að svara fyrirspurninni. Nánar í{" "}
         <a
           href="/personuvernd"
-          className="inline-flex min-h-11 items-center text-blue-700 underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700"
+          className="inline-flex min-h-11 items-center font-semibold text-brand-blue underline-offset-2 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
         >
           persónuverndarstefnunni
         </a>

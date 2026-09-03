@@ -1,5 +1,16 @@
 import SectionHeading from "./SectionHeading";
 
+/**
+ * Litirnir efst á spjöldunum ganga í hring: appelsínugult, cyan, blátt.
+ * Þeir eru bundnir við röðina en ekki innihaldið, þannig að ef kafla er bætt
+ * við heldur mynstrið áfram af sjálfu sér.
+ */
+const topBorders = [
+  "border-t-brand-orange",
+  "border-t-brand-cyan",
+  "border-t-brand-blue",
+];
+
 const includedGroups = [
   {
     number: "01",
@@ -24,33 +35,38 @@ const includedGroups = [
   {
     number: "05",
     title: "Ekkert tæknivesen",
-    text: "Við sjáum um lén, DNS, fyrirspurnarform og persónuverndarsíðu — þú þarft ekki að snerta tæknihliðina.",
+    text: "Við sjáum um lén, DNS, fyrirspurnarform og persónuverndarsíðu. Þú þarft ekki að snerta tæknihliðina.",
   },
 ];
 
 export default function SolutionSection() {
   return (
-    <section id="innifalid" className="scroll-mt-16 bg-slate-50 py-16 sm:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section
+      id="innifalid"
+      className="scroll-mt-20 border-b-2 border-line bg-soft py-16 sm:py-20"
+    >
+      <div className="mx-auto w-full max-w-[70rem] px-5 sm:px-6">
         <SectionHeading
           label="Innifalið"
-          title="Það sem lítil þjónustufyrirtæki þurfa á einum stað"
+          title="Allt sem lítið fyrirtæki þarf á einum stað"
           subtitle="Ein vönduð síða sem sýnir þjónustuna, starfssvæðið og hvernig fólk nær sambandi."
         />
 
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {includedGroups.map((item) => (
+        <div className="mt-10 grid grid-cols-1 gap-4.5 sm:grid-cols-2 lg:grid-cols-3">
+          {includedGroups.map((item, index) => (
             <article
               key={item.number}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+              className={`rounded-2xl border-2 border-t-[7px] border-line bg-paper p-6 ${
+                topBorders[index % topBorders.length]
+              }`}
             >
-              <p className="text-sm font-bold tracking-wide text-blue-700">
+              <p className="text-sm font-extrabold text-brand-orange">
                 {item.number}
               </p>
-              <h3 className="mt-3 text-lg font-semibold text-slate-900">
+              <h3 className="mt-6 text-lg font-extrabold tracking-tight text-ink">
                 {item.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              <p className="mt-2.5 text-sm leading-relaxed text-copy">
                 {item.text}
               </p>
             </article>
