@@ -22,7 +22,7 @@ const projects: Project[] = [
     number: "01",
     kind: "client",
     badge: "Verkefni okkar",
-    trade: "Ræsting og teppahreinsun",
+    trade: "Ræsting og iðnaðarþrif",
     name: "HÁ Hreinu",
     description:
       "Þjónustan er flokkuð skýrt og tilboðsbeiðnin er áberandi fyrir húsfélög og fyrirtæki.",
