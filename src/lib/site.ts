@@ -20,7 +20,7 @@ export const LEGAL_NAME = "Foxel ehf.";
 export const KENNITALA = "500925-0270";
 
 /** Public contact address. Do not use a personal address here. */
-export const CONTACT_EMAIL = "info@heimasidan.is";
+export const CONTACT_EMAIL = "heimasidan@heimasidan.is";
 
 /**
  * Canonical production origin. Still the Vercel host: change this the moment
