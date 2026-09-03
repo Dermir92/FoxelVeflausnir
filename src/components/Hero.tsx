@@ -5,17 +5,15 @@ import hahreinuHero from "../../public/projects/hahreinu-hero.jpg";
 
 const proofPoints = ["Fast verð", "7-10 virkir dagar", "Tvær breytingaumferðir"];
 
-const serviceItems = ["Fyrirtækjaræsting", "Teppahreinsun", "Húsfélög"];
-
 // Efni sýnidæmisins. Mockupið les úr þessu svo textinn haldist í takt við
 // verkefnakaflann þegar honum er breytt.
 const project = {
-  name: "HÁ Hreinu",
   domain: "hahreinu.is",
   eyebrow: "Fyrirtæki og húsfélög",
-  headline: "Ræsting og teppahreinsun",
+  headline: "Ræsting og iðnaðarþrif",
   blurb:
     "Þjónustan er skýr, tilboðsbeiðnin einföld og næsta skref alltaf augljóst.",
+  services: ["Fyrirtækjaræsting", "Iðnaðarþrif", "Húsfélög"],
   cta: "Óska eftir tilboði",
 };
 
@@ -84,61 +82,67 @@ export default function Hero() {
             </ul>
           </div>
 
-          {/* Vafragluggi með sýnidæmi. Skreyting, ekki efni. */}
+          {/*
+            Vafragluggi með sýnidæmi. Skreyting, ekki efni.
+
+            Umgjörðin fylgir sama kerfi og öll önnur spjöld á vefnum: 2px lína
+            og einn fastur offset-skuggi. Áður var hún 6-8px blek utan um 6px
+            blek utan um myndina, með tvöföldum 16/28 skugga undir, sem gerði
+            hlutinn margfalt þyngri en allt annað á síðunni.
+          */}
           <figure
-            className="reveal reveal-4 mx-auto w-full max-w-lg lg:mx-0 lg:mr-8"
+            className="reveal reveal-4 hs-shadow-lg mx-auto w-full max-w-lg rounded-2xl border-2 border-ink bg-paper p-4 lg:mx-0"
             aria-hidden="true"
           >
-            <div className="hs-shadow-stack rounded-2xl border-[6px] border-ink bg-paper p-3.5 sm:border-8 sm:p-4">
-              <div className="grid grid-cols-[auto_1fr] items-center gap-3 border-b-4 border-ink pb-3.5 sm:border-b-[5px]">
-                <span className="flex gap-1.5">
-                  <i className="h-2.5 w-2.5 bg-brand-orange" />
-                  <i className="h-2.5 w-2.5 bg-brand-yellow" />
-                  <i className="h-2.5 w-2.5 bg-brand-cyan" />
-                </span>
-                <span className="flex h-7 items-center border-[3px] border-ink bg-soft px-2 text-[11px] font-semibold text-copy">
-                  {project.domain}
-                </span>
-              </div>
+            <div className="flex items-center gap-2.5 border-b-2 border-line pb-3">
+              <span className="flex gap-1.5">
+                <i className="h-2.5 w-2.5 bg-brand-orange" />
+                <i className="h-2.5 w-2.5 bg-brand-yellow" />
+                <i className="h-2.5 w-2.5 bg-brand-cyan" />
+              </span>
+              <span className="flex h-6 flex-1 items-center border-2 border-line bg-soft px-2 text-[10px] font-bold text-copy">
+                {project.domain}
+              </span>
+            </div>
 
-              <div className="grid grid-cols-[1.15fr_0.85fr] gap-4 px-1 pb-1 pt-6">
-                <div className="flex flex-col">
-                  <p className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-brand-blue">
-                    {project.eyebrow}
-                  </p>
-                  <p className="mt-2 text-base font-extrabold leading-tight tracking-tight text-ink sm:text-xl">
-                    {project.headline}
-                  </p>
-                  <p className="mt-2 hidden text-xs leading-relaxed text-copy sm:block">
-                    {project.blurb}
-                  </p>
-                  <div className="mt-3 hidden flex-wrap gap-1.5 sm:flex">
-                    {serviceItems.map((item) => (
-                      <span
-                        key={item}
-                        className="bg-soft px-2 py-1 text-[10px] font-bold text-copy"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="mt-auto flex h-9 w-fit items-center border-4 border-ink bg-brand-orange px-3 text-[11px] font-bold text-white">
-                    {project.cta}
+            {/* Myndin fær breiddina alla. Áður sat hún í mjórri hliðarsúlu og
+                barðist við textann um plássið, sem braut merkimiðana í tvær
+                línur. */}
+            <div className="relative mt-4 h-40 border-2 border-line sm:h-44">
+              <Image
+                src={hahreinuHero}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 460px, (min-width: 640px) 480px, 88vw"
+                placeholder="blur"
+                fetchPriority="high"
+                className="object-cover"
+              />
+            </div>
+
+            <div className="mt-4">
+              <p className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-brand-blue">
+                {project.eyebrow}
+              </p>
+              <p className="mt-1.5 text-lg font-extrabold tracking-tight text-ink sm:text-xl">
+                {project.headline}
+              </p>
+              <p className="mt-2 text-xs leading-relaxed text-copy">
+                {project.blurb}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {project.services.map((item) => (
+                  <span
+                    key={item}
+                    className="bg-soft px-2 py-1 text-[10px] font-bold text-copy"
+                  >
+                    {item}
                   </span>
-                </div>
-
-                <div className="relative min-h-40 border-[6px] border-ink bg-brand-cyan shadow-[inset_-34px_-34px_0_var(--color-brand-blue)]">
-                  <Image
-                    src={hahreinuHero}
-                    alt=""
-                    fill
-                    sizes="(min-width: 1024px) 200px, 40vw"
-                    placeholder="blur"
-                    fetchPriority="high"
-                    className="object-cover"
-                  />
-                </div>
+                ))}
               </div>
+              <span className="hs-shadow-sm mt-4 flex h-10 w-fit items-center rounded-lg bg-brand-orange px-4 text-xs font-bold text-white">
+                {project.cta}
+              </span>
             </div>
           </figure>
         </div>
