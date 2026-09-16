@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CONTACT_HREF } from "@/lib/navigation";
 import hahreinuHero from "../../public/projects/hahreinu-hero.jpg";
 
-const proofPoints = ["Fast verð", "7-10 virkir dagar", "Tvær breytingaumferðir"];
+const proofPoints = ["Fljótlegt og einfalt", "Skýrt verð", "Faglegt"];
 
 // Efni sýnidæmisins. Mockupið les úr þessu svo textinn haldist í takt við
 // verkefnakaflann þegar honum er breytt.
@@ -40,12 +40,12 @@ export default function Hero() {
               Heimili fyrirtækisins á vefnum
             </p>
             <h1 className="reveal reveal-1 mt-4 max-w-[15ch] text-[clamp(2.4rem,7vw,4.2rem)] font-extrabold leading-[0.98] tracking-[-0.055em] text-ink">
-              Heimasíðan þín. Tilbúin til að vinna.
+              Heimasíður fyrir iðnaðarmenn og lítil fyrirtæki.
             </h1>
             <p className="reveal reveal-2 mt-5 max-w-[38rem] text-base leading-relaxed text-copy sm:text-lg">
-              Við hönnum og setjum upp skýra, hraða og traustvekjandi vefsíðu
-              sem kynnir þjónustuna, starfssvæðið og fyrri verk og gerir
-              viðskiptavinum auðvelt að hafa samband.
+              Hönnun og uppsetning á faglegri og einfaldri heimasíðu sem
+              kynnir fyrirtækið þitt, sýnir fyrri verk og gerir viðskiptavinum
+              auðvelt að hafa samband.
             </p>
 
             <p className="reveal reveal-3 mt-6 inline-flex flex-wrap items-baseline gap-x-2 border-2 border-ink bg-paper px-4 py-2.5 text-ink hs-shadow-sm">
